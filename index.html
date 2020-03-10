@@ -4,8 +4,15 @@
 		<title>Yo Dawg</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<script src="scripts/main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
+		<script>
+			$(document).ready(function(){
+				$('#yo').load('yo.html');
+			});
+		</script>
+		
 		<nav>
     		<ul>
         		<li><a href="index.html">Home</a></li>
@@ -18,6 +25,9 @@
         		<h1>Yo Dawg!</h1>
 				<p>Bruh <em>Bruh</em> Bruh. <a href="about.html"> Bruh</a></p>
     		</div><!-- /.blurb -->
+			
+		<div id="yo">kk</div>
+		
 		</div><!-- /.container -->
 		<footer>
     		<ul>
