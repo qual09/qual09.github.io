@@ -10,20 +10,19 @@
 
 		<script>
 			$(document).ready(function(){
-				$('#yo').load('yo.html');
+				$('#mainContent').load('home.html');
 			});
 		</script>
 		
 		<nav>
     		<ul>
-        		<li><a href="index.html">Home</a></li>
-        		<li><a href="blog.html">Blog</a></li>
-	        	<li><a href="about.html">About</a></li>
-	        	<li><a href="#" onclick="javascript:myFunc()">onclick</a></li>
+	        	<li><a href="#" onclick="javascript:openHome()">Home</a></li>
+	        	<li><a href="#" onclick="javascript:openBlog()">Blog</a></li>
+	        	<li><a href="#" onclick="javascript:openAbout()">About</a></li>
     		</ul>
 		</nav>
 		<div class="container">
-    		<div id="yo" class="blurb">
+    		<div id="mainContent" class="blurb">
         		<!-- DYNAMIC -->
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
