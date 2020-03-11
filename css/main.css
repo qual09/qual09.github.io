@@ -44,9 +44,13 @@ ul.posts li {
 }
 
 .logo {
-	background-color: yellow;
-	border: 3px dotted black;
+	/* background-color: yellow; */
+	background: url(../gfx/logo.png);
+	border: 3px solid black;
 	height: 90px;
 	display: block;
-	width: 100%;
+	width: auto;
+}
+.currentMenu {
+	color: black;
 }

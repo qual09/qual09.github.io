@@ -7,7 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
-
+	
 		<script>
 			$(document).ready(function(){
 				$('#mainContent').load('home.html');
@@ -17,22 +17,22 @@
 		<div class="logo"></div>
 		
 		<nav>
-    		<ul>
-        		<li><a href="index.html">Home</a></li>
-	        	<li><a href="#" onclick="javascript:openBlog()">Blog</a></li>
-	        	<li><a href="#" onclick="javascript:openAbout()">About</a></li>
-    		</ul>
+			<ul>
+				<li><a href="#" onclick="javascript:openHome()" id="home" class="currentMenu">Home</a></li>
+				<li><a href="#" onclick="javascript:openBlog()" id="blog">Blog</a></li>
+				<li><a href="#" onclick="javascript:openAbout()" id="about">About</a></li>
+			</ul>
 		</nav>
+		
 		<div class="container">
-    		<div id="mainContent" class="blurb">
-        		<!-- DYNAMIC -->
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
+			<div id="mainContent" class="dynamiContent"><!-- DYNAMIC --></div>
+		</div>
+		
 		<footer>
-    		<ul>
-        		<li>Bruh</li>
-        		<li>Bruh</li>
+			<ul>
+				<li>&copy; 2020 All rights reserved.</li>
 			</ul>
 		</footer>
+		
 	</body>
 </html>
