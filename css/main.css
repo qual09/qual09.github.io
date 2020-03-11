@@ -48,8 +48,10 @@ ul.posts li {
 	/* background-color: yellow; */
 	background: url(../gfx/logo.png);
 	border: 2px solid black;
-	height: 90px;
+	height: auto;
 	display: block;
+	font-family: Verdana;
+	padding: 40px;
 	width: auto;
 }
 .currentMenu {
