@@ -1,3 +1,7 @@
+function yo(){
+	alert("yo!");
+}
+
 function openHome(){
 	$('#mainContent').load('home.html');
 	document.getElementById("home").classList.add('currentMenu');

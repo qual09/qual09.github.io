@@ -51,8 +51,13 @@ ul.posts li {
 	height: auto;
 	display: block;
 	font-family: Verdana;
+	font-size: 1.1em;
+	font-style: italic;
 	padding: 40px;
 	width: auto;
+}
+.logo a {
+	color: black;
 }
 .currentMenu {
 	color: black;
