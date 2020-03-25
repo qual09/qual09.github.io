@@ -1,5 +1,5 @@
 function yo(){
-	alert("yo!");
+	alert("Yo Dawg!");
 }
 
 function openHome(){
