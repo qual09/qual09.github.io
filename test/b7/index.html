@@ -1,0 +1,138 @@
+<html>
+<head>
+	<title>Beata Patrzałek Fotografia</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Beata Patrzałek Fotografia" />
+	<meta name="keywords" content="fotografia, pies, psy" />
+	<meta name="author" content="Beata Patrzałek" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+	<link rel="shortcut icon" href="gfx/favicon.ico" /> 
+	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+	
+	<link rel="stylesheet" type="text/css" href="styles/style.css" />
+	<script src="scripts/main.js"></script>
+	
+	
+</head>
+
+<body id="home">
+
+<div class="mySlides" style="background: url('gfx/bg0.jpg') no-repeat center center fixed; background-size: cover;">
+	<div class="slideBox" style="top:40%; right:10%;">
+		<h2><a href="sesje.html">SESJE ZDJĘCIOWE</a></h2>
+		<a href="sesje.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+	</div>
+</div>
+
+<div class="mySlides" style="background: url('gfx/bg1.jpg') no-repeat center center fixed; background-size: cover;">
+	<div class="slideBox" style="top:30%; right:10%;">
+		<h2><a href="warsztaty.html">WARSZTATY</a></h2>
+		<a href="warsztaty.html">Zapraszam na indywidualne, a także grupowe warsztaty fotografii psów oraz obróbki zdjęć. </a>
+	</div>
+</div>
+
+<div class="mySlides" style="background: url('gfx/bg2.jpg') no-repeat center center fixed; background-size: cover;">
+	<div class="slideBox" style="top:60%; right:10%;">
+		<h2><a href="kontakt.html">KONTAKT</a></h2>
+		<a href="kontakt.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+	</div>
+</div>
+
+<div class="mySlides" style="background: url('gfx/bg3.jpg') no-repeat center center fixed; background-size: cover;">
+	<div class="slideBox" style="top:40%; right:10%;">
+		<h2><a href="omnie.html">O MNIE</a></h2>
+		<a href="omnie.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+	</div>
+</div>
+
+<div class="mySlides" style="background: url('gfx/bg4.jpg') no-repeat center center fixed; background-size: cover;">
+	<div class="slideBox" style="top:40%; left:20%;">
+		<h2><a href="galeria.html">GALERIA</a></h2>
+		<a href="galeria.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </a>
+	</div>
+</div>
+
+<div class="main">
+
+<button class="slideButton slideButtonLeft" onclick="plusDivs(-1)">&#10094;</button>
+<button class="slideButton slideButtonRight" onclick="plusDivs(1)">&#10095;</button>
+
+<div class="title" id="home">
+	<a href="index.html">BEATA</a> 
+</div>
+<div class="title title2">
+	<a href="index.html">PATRZAŁEK</a> 
+</div>
+
+<div class="mainMenuWrapper">
+	<div class="mainmenu" id="home">
+		<div class="menuElement" id="home">
+			<a href="index.html" style="color:white; font-weight: 600;">Home</a>
+		</div>
+		<div class="menuElement" id="home">
+			<a href="galeria.html">Galeria</a>
+		</div>
+		<div class="menuElement" id="home">
+			<a href="sesje.html">Sesje zdjęciowe</a>
+		</div>
+		<div class="menuElement" id="home">
+			<a href="warsztaty.html">Warsztaty</a>
+		</div>
+		<div class="menuElement" id="home">
+			<a href="omnie.html">O mnie</a>
+		</div>
+		<div class="menuElement" id="home">
+			<a href="kontakt.html">Kontakt</a>
+		</div>
+	</div>
+</div>
+
+<div class="socialMenu">
+	<div class="menuElement social">
+		<a href="https://www.facebook.com/beatapatrzalekfotografia/" target="_blank">
+			<img src="gfx/facebook.png" title="facebook" />
+		</a>
+	</div>
+	<div class="menuElement social">
+		<a href="https://www.instagram.com/beatapatrzalekphotography/" target="_blank">
+			<img src="gfx/instagram.png" title="instagram" />
+		</a>
+	</div>
+	<div class="menuElement social">
+		<a href="https://www.flickr.com/photos/beatapatrzalek/" target="_blank">
+			<img src="gfx/flickr.png" title="flickr" />
+		</a>
+	</div>
+	<div class="menuElement social">
+		<a href="mailto:ras.beata@gmail.com" target="_blank">
+			<img src="gfx/email.png" title="email" />
+		</a>
+	</div>
+</div>
+
+<div class="bgswitch">
+	<span class="bgDot" onclick="currentDiv(1)"></span>
+	<span class="bgDot" onclick="currentDiv(2)"></span>
+	<span class="bgDot" onclick="currentDiv(3)"></span>
+	<span class="bgDot" onclick="currentDiv(4)"></span>
+	<span class="bgDot" onclick="currentDiv(5)"></span>
+</div>
+
+<div class="footer" id="home">
+	<span>Copyright 2019</span>
+</div>
+
+</div>
+
+<!-- SLIDESHOW -->
+<script>
+	var slideIndex = 0;
+	var carouselTimeout;
+	//showDivs(slideIndex);
+	carousel();
+</script>
+
+</body>
+</html>
