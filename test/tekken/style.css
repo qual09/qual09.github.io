@@ -13,11 +13,13 @@ h1, h2, h3, h4, h5 {
 
 .container {
     background-image: url('https://images8.alphacoders.com/632/thumb-1920-632051.png');
+    background-size: cover;
+    border: 2px solid black;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
     height: 570px;
-    width: 90%;
+    width: 1100px;
 }
 
 .title {
@@ -51,10 +53,12 @@ h1, h2, h3, h4, h5 {
     width: 50%;
 }
 
+
+
 .char1 {
     background-image: url('img/jin.png');
     background-position: 40px 0px;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -82,12 +86,12 @@ h1, h2, h3, h4, h5 {
 .charList ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .charList ul a {
-    /* background-color: yellow; */
     background-image: url('https://cdn1.iconfinder.com/data/icons/web-interface-part-2/32/square-question-mark-512.png');
-    background-size: 100%;
+    background-size: cover;
     border: 2px black solid;
     margin: 0px 0px 10px 10px;
     height: 50px;
@@ -96,20 +100,24 @@ h1, h2, h3, h4, h5 {
 
 .charList ul a:nth-child(1) {
     background-image: url('https://tekken7combo.kagewebsite.com/tpl/img/char/jin.jpg');
-    background-size: 100%;
+    background-size: cover;
 }
 
 
 .charList ul a:nth-child(2) {
     background-image: url('https://store.playstation.com/store/api/chihiro/00_09_000/container/GB/en/999/EP0700-CUSA06014_00-AV00000000000009/1584963561000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000 ');
-    background-size: 100%;
+    background-size: cover;
 }
 
 .charList ul a:nth-child(3) {
     background-image: url('https://tekken7combo.kagewebsite.com/tpl/img/char/king.jpg');
-    background-size: 100%;
+    background-size: cover;
 }
 
 .charList ul a:hover {
     border: 2px red solid;
+}
+
+.selected {
+    border: 2px solid red !important;
 }
