@@ -24,13 +24,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .title {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
-}
-
-.title h1 {
-    color: white;
-    font-size: 60px;
 }
 
 .charNames {
@@ -87,6 +85,7 @@ h1, h2, h3, h4, h5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 20px 0px 0px 0px;
 }
 
 .charList ul a {
