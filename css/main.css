@@ -1,22 +1,11 @@
 body {
+	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 	margin: 10px auto;
 	width: 70%;
 }
 
-nav ul, footer ul {
-	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-	padding: 0px;
-	list-style: none;
-	font-weight: bold;
-}
-
-nav ul li, footer ul li {
-	display: inline;
-	margin-right: 20px;
-}
-
 a {
-	color: #999;
+	color: inherit;
 	text-decoration: none;
 }
 
@@ -25,13 +14,20 @@ a:hover {
 	text-decoration: underline;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 10px 0;
+}
+
 h1 {
-	font-size: 3em;
-	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+	font-size: 2.4em;
+}
+
+ul {
+	padding-left: 25px;
 }
 
 p {
-	font-size: 1.5em;
+	font-size: 1.4em;
 	line-height: 1.4em;
 	color: #333;
 }
@@ -40,15 +36,43 @@ footer {
 	border-top: 1px solid black;
 	color: #999;
 	font-size: .8em;
+	margin-top: 20px;
 }
 
-ul.posts {
-	margin: 20px auto 40px;
-	font-size: 1.5em;
+.mainMenu a {
+	color: #999;
 }
 
-ul.posts li {
+nav.mainMenu ul, footer ul {
+	padding: 0px;
 	list-style: none;
+	font-weight: bold;
+}
+
+nav.mainMenu ul li, footer ul li {
+	display: inline;
+	margin-right: 20px;
+}
+
+.currentMenu {
+	color: black !important;
+}
+
+.home {
+	display: grid;
+	grid-gap: 20px;
+}
+
+.home div {
+	background: #eeeeee;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.home div ul li {
+	font-size: 1.2em;
+	line-height: 1.4em;
 }
 
 .logo {
@@ -67,8 +91,5 @@ ul.posts li {
 
 .logo a {
 	color: black;
-}
-
-.currentMenu {
-	color: black;
+	font-size: 1.2em;
 }
