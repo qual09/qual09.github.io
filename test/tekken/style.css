@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5 {
     background-image: url('https://images8.alphacoders.com/632/thumb-1920-632051.png');
     background-size: cover;
     border: 2px solid black;
+    border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -52,8 +53,6 @@ h1, h2, h3, h4, h5 {
     height: 300px;
     width: 50%;
 }
-
-
 
 .char1 {
     background-image: url('img/jin.png');
@@ -93,6 +92,7 @@ h1, h2, h3, h4, h5 {
     background-image: url('https://cdn1.iconfinder.com/data/icons/web-interface-part-2/32/square-question-mark-512.png');
     background-size: cover;
     border: 2px black solid;
+    border-radius: 4px;
     margin: 0px 0px 10px 10px;
     height: 50px;
     width: 50px;
