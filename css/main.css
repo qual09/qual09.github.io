@@ -70,6 +70,16 @@ nav.mainMenu ul li, footer ul li {
 	padding: 20px;
 }
 
+.home div h1::before {
+	content: "";
+    display: inline-block;
+    height: 28px;
+    width: 10px;
+    background-color: black;
+    transform: skew(-21deg,0);
+    margin-right: 10px;
+}
+
 .home div ul li {
 	font-size: 1.2em;
 	line-height: 1.4em;
