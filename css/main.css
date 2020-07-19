@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 	margin: 10px auto;
@@ -39,17 +43,22 @@ footer {
 	margin-top: 20px;
 }
 
-.mainMenu a {
-	color: #999;
+.mainMenu {
+	padding-left: 10px;
 }
 
-nav.mainMenu ul, footer ul {
+.mainMenu a {
+	color: #999;
+	font-size: 1.2em;
+}
+
+.mainMenu ul, footer ul {
 	padding: 0px;
 	list-style: none;
 	font-weight: bold;
 }
 
-nav.mainMenu ul li, footer ul li {
+.mainMenu ul li, footer ul li {
 	display: inline;
 	margin-right: 20px;
 }
@@ -72,12 +81,12 @@ nav.mainMenu ul li, footer ul li {
 
 .home div h1::before {
 	content: "";
-    display: inline-block;
-    height: 28px;
-    width: 10px;
-    background-color: black;
-    transform: skew(-21deg,0);
-    margin-right: 10px;
+	display: inline-block;
+	height: 28px;
+	width: 10px;
+	background-color: black;
+	transform: skew(-21deg, 0);
+	margin-right: 10px;
 }
 
 .home div ul li {
@@ -87,19 +96,25 @@ nav.mainMenu ul li, footer ul li {
 
 .logo {
 	/* background-color: yellow; */
+	align-items: center;
 	background: url(../gfx/logo.png);
 	background-size: 100% 400%;
 	border: 2px solid black;
 	height: auto;
-	display: block;
+	display: flex;
 	font-family: Verdana;
 	font-size: 1.1em;
 	font-style: italic;
-	padding: 40px;
+	padding: 20px;
 	width: auto;
 }
 
 .logo a {
 	color: black;
 	font-size: 1.2em;
+}
+
+.logo>img {
+	height: 70px;
+	width: auto;
 }
