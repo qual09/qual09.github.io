@@ -1,8 +1,8 @@
 # qual09.github.io
 
 Homepage:  
-https://qual09.github.io/
+https://qual09.github.io/  
 
-Github Pages:
+Github Pages:  
 https://pages.github.com/  
-https://guides.github.com/features/pages/
+https://guides.github.com/features/pages/  
