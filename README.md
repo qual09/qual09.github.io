@@ -6,3 +6,7 @@ https://qual09.github.io/
 Github Pages:  
 https://pages.github.com/  
 https://guides.github.com/features/pages/  
+
+---
+
+![Logo](gfx/q09-raster.png) 
