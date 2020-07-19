@@ -3,6 +3,7 @@
 }
 
 body {
+	background-color: #eeeeee;
 	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 	margin: 10px auto;
 	width: 70%;
@@ -23,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 2.4em;
+	font-size: 2.2em;
 }
 
 ul {
@@ -31,8 +32,8 @@ ul {
 }
 
 p {
-	font-size: 1.4em;
-	line-height: 1.4em;
+	font-size: 1.2em;
+	line-height: 1.2em;
 	color: #333;
 }
 
@@ -73,10 +74,14 @@ footer {
 }
 
 .home div {
-	background: #eeeeee;
+	background: white;
 	border: 1px solid black;
 	border-radius: 10px;
 	padding: 20px;
+}
+
+.home div h1 {
+	color: #21293d;
 }
 
 .home div h1::before {
@@ -84,7 +89,7 @@ footer {
 	display: inline-block;
 	height: 28px;
 	width: 10px;
-	background-color: black;
+	background-color: #ff780a;
 	transform: skew(-21deg, 0);
 	margin-right: 10px;
 }
