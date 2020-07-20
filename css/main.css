@@ -21,7 +21,7 @@ a {
 
 a:hover {
 	/* border-bottom: 2px solid black; */
-	color: black !important;
+	color: #21293d !important;
 	text-decoration: underline;
 	transition: 0.3s ease;
 }
@@ -77,7 +77,7 @@ footer ul li {
 
 .currentMenu {
 	/* border-bottom: 2px solid black; */
-	color: black !important;
+	color: #21293d !important;
 	transition: 0.3s ease;
 }
 
@@ -87,8 +87,10 @@ footer ul li {
 }
 
 .home div {
+	animation-duration: 0.8s;
+	animation-name: fadein;
 	background: white;
-	border-left: 3px solid black;
+	border-left: 3px solid #21293d;
 	/* border-radius: 10px; */
 	padding: 20px;
 	transition: 0.3s ease;
@@ -107,7 +109,7 @@ footer ul li {
 	content: "";
 	display: inline-block;
 	height: 28px;
-	width: 10px;
+	width: 6px;
 	background-color: #ff780a;
 	transform: skew(-21deg, 0);
 	margin-right: 10px;
@@ -123,7 +125,7 @@ footer ul li {
 	align-items: center;
 	/* background: url(../gfx/logo.png); */
 	background-size: 100% 400%;
-	border-left: 3px solid black;
+	border-left: 3px solid #21293d;
 	height: auto;
 	display: flex;
 	font-family: Verdana;
@@ -140,11 +142,33 @@ footer ul li {
 }
 
 .logo a {
-	color: black;
+	color: #21293d;
 	font-size: 1.2em;
 }
 
 .logo>img {
 	height: 70px;
 	width: auto;
+}
+
+/* animations */
+
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
