@@ -5,7 +5,11 @@
 body {
 	background-color: #eeeeee;
 	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+.mainContainer {
 	margin: 10px auto;
+	max-width: 1200px;
 	width: 70%;
 }
 
