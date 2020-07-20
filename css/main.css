@@ -91,6 +91,12 @@ footer ul li {
 	border-left: 3px solid black;
 	/* border-radius: 10px; */
 	padding: 20px;
+	transition: 0.3s ease;
+}
+
+.home div:hover {
+	border-left: 3px solid #ff780a;
+	transition: 0.3s ease;
 }
 
 .home div h1 {
@@ -124,7 +130,13 @@ footer ul li {
 	font-size: 1.1em;
 	font-style: italic;
 	padding: 5px 0px;
+	transition: 0.3s ease;
 	width: auto;
+}
+
+.logo:hover {
+	border-left: 3px solid #ff780a;
+	transition: 0.3s ease;
 }
 
 .logo a {
