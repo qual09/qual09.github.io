@@ -12,11 +12,14 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
+	transition: 0.3s ease;
 }
 
 a:hover {
-	color: black;
+	/* border-bottom: 2px solid black; */
+	color: black !important;
 	text-decoration: underline;
+	transition: 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,10 +41,14 @@ p {
 }
 
 footer {
-	border-top: 1px solid black;
+	/* border-top: 3px solid black; */
 	color: #999;
 	font-size: .8em;
 	margin-top: 20px;
+}
+
+footer ul li {
+	text-align: right;
 }
 
 .mainMenu {
@@ -59,13 +66,15 @@ footer {
 	font-weight: bold;
 }
 
-.mainMenu ul li, footer ul li {
+.mainMenu ul li {
 	display: inline;
 	margin-right: 20px;
 }
 
 .currentMenu {
+	/* border-bottom: 2px solid black; */
 	color: black !important;
+	transition: 0.3s ease;
 }
 
 .home {
@@ -75,8 +84,8 @@ footer {
 
 .home div {
 	background: white;
-	border: 1px solid black;
-	border-radius: 10px;
+	border-left: 3px solid black;
+	/* border-radius: 10px; */
 	padding: 20px;
 }
 
@@ -100,17 +109,17 @@ footer {
 }
 
 .logo {
-	/* background-color: yellow; */
+	background-color: white;
 	align-items: center;
-	background: url(../gfx/logo.png);
+	/* background: url(../gfx/logo.png); */
 	background-size: 100% 400%;
-	border: 2px solid black;
+	border-left: 3px solid black;
 	height: auto;
 	display: flex;
 	font-family: Verdana;
 	font-size: 1.1em;
 	font-style: italic;
-	padding: 10px 5px;
+	padding: 5px 0px;
 	width: auto;
 }
 
