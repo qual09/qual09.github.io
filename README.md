@@ -6,8 +6,8 @@ Homepage:
 https://qual09.github.io/
 
 Github Pages Guides:  
-https://pages.github.com/  
-https://guides.github.com/features/pages/  
+https://pages.github.com  
+https://guides.github.com/features/pages  
 https://www.youtube.com/watch?v=SKXkC4SqtRk  
 
 <!-- --- -->
