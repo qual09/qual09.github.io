@@ -18,7 +18,8 @@ function selectCurrentNav(content) {
 window.onscroll = () => stickyHeader();
 function stickyHeader() {
 	var header = document.getElementById("stickyHeader");
-	var sticky = header.offsetTop;
+	var headerPosition = document.getElementById("mainContent");
+	var sticky = headerPosition.offsetTop;
 	if (window.pageYOffset > sticky) {
 		header.classList.add("stickyHeader");
 	} else {
