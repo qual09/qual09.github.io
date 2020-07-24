@@ -39,9 +39,9 @@ ul {
 }
 
 p {
+	color: #333;
 	font-size: 1.2em;
 	line-height: 1.2em;
-	color: #333;
 }
 
 footer {
@@ -76,9 +76,9 @@ footer ul li {
 }
 
 .mainMenu ul, footer ul {
-	padding: 0px;
-	list-style: none;
 	font-weight: bold;
+	list-style: none;
+	padding: 0px;
 }
 
 .mainMenu ul li {
@@ -117,13 +117,13 @@ footer ul li {
 }
 
 .home div h1::before {
+	background-color: #ff780a;
 	content: "";
 	display: inline-block;
 	height: 28px;
-	width: 6px;
-	background-color: #ff780a;
-	transform: skew(-21deg, 0);
 	margin-right: 10px;
+	width: 6px;
+	transform: skew(-21deg, 0);
 }
 
 .home div ul li {
@@ -132,16 +132,16 @@ footer ul li {
 }
 
 .logo {
-	background-color: white;
 	align-items: center;
+	background-color: white;
 	/* background: url(../gfx/logo.png); */
 	background-size: 100% 400%;
 	border-left: 3px solid #21293d;
-	height: auto;
 	display: flex;
 	font-family: Verdana;
 	font-size: 1.1em;
 	font-style: italic;
+	height: auto;
 	padding: 5px 0px;
 	transition: 0.3s ease;
 	width: auto;
