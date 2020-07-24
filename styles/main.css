@@ -55,8 +55,19 @@ footer ul li {
 	text-align: right;
 }
 
+.stickyHeader {
+	background-color: #eeeeee;
+	opacity: 1;
+	position: fixed;
+	top: 0;
+	transition: 0.3s ease;
+	width: 100%;
+	z-index: 900;
+}
+
 .mainMenu {
 	padding-left: 10px;
+	transition: 0.3s ease;
 }
 
 .mainMenu a {
