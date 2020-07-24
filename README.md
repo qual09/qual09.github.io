@@ -1,5 +1,7 @@
 # qual09.github.io
 
+<img align="right" width="100" height="100" src="gfx/q09-raster.png">
+
 Homepage:  
 https://qual09.github.io/
 
@@ -9,4 +11,5 @@ https://guides.github.com/features/pages/
 
 ---
 
-![Logo](gfx/q09-raster.png) 
+<!-- ![Logo](gfx/q09-raster.png)  -->
+
