@@ -1,6 +1,6 @@
-# qual09.github.io
-
 <img src="gfx/q09-raster.png" align="right" width="150" height="150" >
+
+# qual09.github.io
 
 Homepage:  
 https://qual09.github.io/
