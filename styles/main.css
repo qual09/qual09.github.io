@@ -134,7 +134,7 @@ footer ul li {
 .logo {
 	align-items: center;
 	background-color: white;
-	/* background: url(../gfx/logo.png); */
+	/* background: url(../images/logo.png); */
 	background-size: 100% 400%;
 	border-left: 3px solid #21293d;
 	display: flex;

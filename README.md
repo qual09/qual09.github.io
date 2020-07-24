@@ -1,4 +1,4 @@
-<img src="gfx/q09-raster.png" align="right" width="150" height="150" >
+<img src="images/q09-raster.png" align="right" width="150" height="150" >
 
 # qual09.github.io
 
@@ -12,5 +12,5 @@ https://www.youtube.com/watch?v=SKXkC4SqtRk
 
 <!-- --- -->
 
-<!-- ![Logo](gfx/q09-raster.png)  -->
+<!-- ![Logo](images/q09-raster.png)  -->
 

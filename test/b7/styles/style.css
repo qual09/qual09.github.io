@@ -231,7 +231,7 @@ img {}
 }
 
 .main {
-	/* background: url("../gfx/bg0.jpg") no-repeat center center fixed; */
+	/* background: url("../images/bg0.jpg") no-repeat center center fixed; */
 	background-size: cover;
 	background-color: transparent;
 	height: 100%;
@@ -241,7 +241,7 @@ img {}
 }
 
 .main1 {
-	/* background: url("../gfx/bgSub.jpg") no-repeat center center fixed; */
+	/* background: url("../images/bgSub.jpg") no-repeat center center fixed; */
 	background-color: black;
 	background-size: cover;
 	height: auto;
@@ -374,28 +374,28 @@ img {}
 }
 
 .mainBanner#kontakt {
-	background: url("../gfx/kontakt.jpg") no-repeat center center fixed;
+	background: url("../images/kontakt.jpg") no-repeat center center fixed;
 	background-position: 100% 35%;
 	background-size: cover;
 	height: 100%;
 }
 
 .mainBanner#omnie {
-	background: url("../gfx/omnie.jpg") no-repeat center center fixed;
+	background: url("../images/omnie.jpg") no-repeat center center fixed;
 	background-position: 0% 48%;
 	background-size: cover;
 	height: 100%;
 }
 
 .mainBanner#sesje {
-	background: url("../gfx/sesje.jpg") no-repeat center center fixed;
+	background: url("../images/sesje.jpg") no-repeat center center fixed;
 	background-position: 50% 75%;
 	background-size: cover;
 	height: 100%;
 }
 
 .mainBanner#warsztaty {
-	background: url("../gfx/warsztaty.jpg") no-repeat center center fixed;
+	background: url("../images/warsztaty.jpg") no-repeat center center fixed;
 	background-position: 15% 35%;
 	background-size: cover;
 	height: 100%;
@@ -587,7 +587,7 @@ input#slider {
 }
 
 #compare::before {
-	background: url(../gfx/comparision.png) no-repeat scroll 0 center transparent;
+	background: url(../images/comparision.png) no-repeat scroll 0 center transparent;
 	background-size: contain;
 	content: " ";
 	float: right;
