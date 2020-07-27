@@ -10,7 +10,9 @@ body {
 .mainContainer {
 	margin: 10px auto;
 	max-width: 1200px;
-	width: 70%;
+	min-width: 400px;
+	padding: 0px 15px;
+	width: 100%;
 }
 
 a {
@@ -92,9 +94,18 @@ footer ul li {
 	transition: 0.3s ease;
 }
 
-.home {
+.dynamiContent>div {
 	display: grid;
+	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
+}
+
+.dynamiContent>.home {
+	grid-template-columns: 1fr 1fr;
+}
+
+.dynamiContent>.blog {
+	grid-template-columns: 1fr;
 }
 
 .home div {
@@ -182,4 +193,17 @@ footer ul li {
 	to {
 		opacity: 1;
 	}
+}
+
+/* Responsive */
+
+@media screen and (max-width: 800px) {
+	.dynamiContent>.home {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	/* .mainContainer {
+	} */
 }
