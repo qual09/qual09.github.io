@@ -1,6 +1,7 @@
 html, body {
 	margin: 0;
-	width: fit-content;
+	min-width: fit-content;
+	width: 100%;
 }
 
 * {
