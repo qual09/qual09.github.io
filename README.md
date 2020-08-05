@@ -1,4 +1,4 @@
-<img src="images/q09-raster.png" align="right" width="150" height="150" >
+<img src="images/q09-vector.svg" align="right" width="150" height="150" >
 
 # qual09.github.io
 
