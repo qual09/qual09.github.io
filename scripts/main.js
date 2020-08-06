@@ -1,3 +1,6 @@
+console.log("Yo Dawg!");
+console.log(location.hostname);
+
 function yo() {
 	const searchCriteria = {
 		a: "aaa",
