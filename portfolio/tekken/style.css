@@ -103,7 +103,6 @@ h1, h2, h3, h4, h5 {
     background-size: cover;
 }
 
-
 .charList ul a:nth-child(2) {
     background-image: url('https://store.playstation.com/store/api/chihiro/00_09_000/container/GB/en/999/EP0700-CUSA06014_00-AV00000000000009/1584963561000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000 ');
     background-size: cover;
@@ -120,4 +119,12 @@ h1, h2, h3, h4, h5 {
 
 .selected {
     border: 2px solid red !important;
+}
+
+footer {
+    /* border-top: 3px solid black; */
+    color: #999;
+    font-size: .8em;
+    margin-top: 20px;
+    text-align: center;
 }
