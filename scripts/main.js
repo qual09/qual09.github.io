@@ -1,5 +1,12 @@
 function yo() {
-	alert("Yo Dawg!");
+	const searchCriteria = {
+		a: "aaa",
+		b: "bbb",
+		c: "bbb"
+	};
+	for (let prop in searchCriteria) {
+		console.log(prop, searchCriteria[prop]);
+	}
 }
 
 function openContent(content) {
