@@ -4,7 +4,11 @@ function yo() {
 		b: "bbb",
 		c: "bbb"
 	};
+
+	// console.log(Object.keys(searchCriteria));
+
 	for (let prop in searchCriteria) {
+		// if (searchCriteria.hasOwnProperty(prop))
 		console.log(prop, searchCriteria[prop]);
 	}
 }
