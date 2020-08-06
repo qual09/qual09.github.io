@@ -100,6 +100,10 @@ p {
 	margin-block-end: 1em;
 }
 
+strong {
+	font-weight: bold;
+}
+
 footer {
 	/* border-top: 3px solid black; */
 	color: #999;
