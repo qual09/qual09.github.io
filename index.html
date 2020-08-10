@@ -1,53 +1,74 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Q09</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link
+      rel="shortcut icon"
+      href="images/q09-vector-transparent.svg"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="scripts/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
 
-<head>
-	<title>Q09</title>
-	<link rel="stylesheet" type="text/css" href="styles/main.css" />
-	<link rel="shortcut icon" href="images/q09-vector-transparent.svg" type="image/x-icon">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="scripts/main.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
+  <body>
+    <script>
+      $(document).ready(() => {
+        $("#mainContent").load("home.html");
+      });
+    </script>
 
-<body>
+    <div class="mainContainer">
+      <div class="logo">
+        <a
+          href="#"
+          onclick="javascript:openContent('home')"
+          class="currentMenu"
+        >
+          <img src="images/q09-vector-transparent.svg" alt="" />
+        </a>
+        <a href="https://github.com/qual09/qual09.github.io" target="_blank"
+          >../qual09.github.io-master</a
+        >
+      </div>
 
-	<script>
-		$(document).ready(() => {
-			$('#mainContent').load('home.html');
-		});
-	</script>
+      <nav id="stickyHeader" class="mainMenu">
+        <ul>
+          <li>
+            <a
+              href="#"
+              class="currentMenu"
+              onclick="javascript:openContent('home')"
+              id="home"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="javascript:openContent('blog')" id="blog"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="javascript:openContent('about')" id="about"
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
 
-	<div class="mainContainer">
+      <div class="container">
+        <div id="mainContent" class="dynamiContent">
+          <!-- DYNAMIC CONTENT HERE -->
+        </div>
+      </div>
 
-		<div class="logo">
-			<a href="#" onclick="javascript:openContent('home')" class="currentMenu">
-				<img src="images/q09-vector-transparent.svg" alt="">
-			</a>
-			<a href="https://github.com/qual09/qual09.github.io" target="_blank">../qual09.github.io-master</a>
-		</div>
-
-		<nav id="stickyHeader" class="mainMenu">
-			<ul>
-				<li><a href="#" class="currentMenu" onclick="javascript:openContent('home')" id="home">Home</a></li>
-				<li><a href="#" onclick="javascript:openContent('blog')" id="blog">Blog</a></li>
-				<li><a href="#" onclick="javascript:openContent('about')" id="about">About</a></li>
-			</ul>
-		</nav>
-
-		<div class="container">
-			<div id="mainContent" class="dynamiContent">
-				<!-- DYNAMIC CONTENT HERE -->
-			</div>
-		</div>
-
-		<footer>
-			<a href="#" onclick="javascript:yo()">
-				&copy; Copyright 2020 Hieu CPX. All rights reserved.</a>
-		</footer>
-
-	</div>
-
-</body>
-
+      <footer>
+        <a href="#" onclick="javascript:yo()">
+          &copy; Copyright 2020 Hieu CPX. All rights reserved.</a
+        >
+      </footer>
+    </div>
+  </body>
 </html>
