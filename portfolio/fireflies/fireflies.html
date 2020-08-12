@@ -3,10 +3,6 @@
 <body onload="Fireflies();">
 
 	<script>
-		function yo() {
-			alert("yo");
-		}
-
 		function Fireflies() {
 			let c = init("canvas"),
 				w = (canvas.width = window.innerWidth),
@@ -55,8 +51,7 @@
 			let mouse = {};
 			let last_mouse = {};
 
-			canvas.addEventListener(
-				"mousemove",
+			canvas.addEventListener("mousemove",
 				function (e) {
 					last_mouse.x = mouse.x;
 					last_mouse.y = mouse.y;
@@ -66,6 +61,7 @@
 				},
 				false
 			);
+			
 			function init(elemid) {
 				let canvas = document.getElementById(elemid),
 					c = canvas.getContext("2d"),
