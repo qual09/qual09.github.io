@@ -9,7 +9,7 @@ class UI {
     this.profile.innerHTML = `
       <div class="card card-body mb-3">
         <div class="row">
-          <div class="col-md-3 mb-2">
+          <div class="col-md-3 mb-2 text-center">
             <img class="img-fluid mb-2" src="${user.avatar_url}">
             <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block">View Profile</a>
           </div>
@@ -20,10 +20,10 @@ class UI {
             <span class="badge badge-info mb-1">Following: ${user.following}</span>
             <br>
             <ul class="list-group mt-1">
-              <li class="list-group-item">Company: ${user.company}</li>
-              <li class="list-group-item">Website/Blog: <a href="${user.blog}" target="_blank">${user.blog}</a></li>
-              <li class="list-group-item">Location: ${user.location}</li>
-              <li class="list-group-item">Member Since: ${user.created_at.substring(0, 10)}</li>
+              <li class="list-group-item"><strong>Company</strong>: ${user.company}</li>
+              <li class="list-group-item"><strong>Website/Blog</strong>: <a href="${user.blog}" target="_blank">${user.blog}</a></li>
+              <li class="list-group-item"><strong>Location</strong>: ${user.location}</li>
+              <li class="list-group-item"><strong>Member Since</strong>: ${user.created_at.substring(0, 10)}</li>
             </ul>
           </div>
         </div>      
