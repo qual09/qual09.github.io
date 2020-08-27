@@ -28,9 +28,39 @@ class UI {
           </div>
         </div>      
       </div>
-      <h3 class="page-heading mb-3>Latest Repos</h3>
+      <h3 class="page-heading mb-3">Latest Repos</h3>
       <div id="repos></div>
     `;
+  }
+
+  // Clear profile
+  clearProfile() {
+    this.clearAlert();
+    this.profile.innerHTML = '';
+  }
+
+  // Display repos
+  showRepos(repos) {
+    let output = '';
+    repos.forEach(repo => {
+      output += `
+        <div class="card card-body mb-2">
+          <div clas="row">
+            <div class="col-md-6">
+              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+            </div>
+            <div class="col-md-6">
+              <span class="badge badge-primary mb-2">Stars: ${repo.stargazers_count}</span>
+              <span class="badge badge-secondary mb-2">Watchers: ${repo.watchers_count}</span>
+              <span class="badge badge-success mb-2">Forks: ${repo.forks_count}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    // Output repos
+    document.getElementById('repos').innerHTML = output;
   }
 
   // Show alert message
@@ -62,12 +92,6 @@ class UI {
     if (currentAlert) {
       currentAlert.remove();
     }
-  }
-
-  // Clear profile
-  clearProfile() {
-    this.clearAlert();
-    this.profile.innerHTML = '';
   }
 
 }
