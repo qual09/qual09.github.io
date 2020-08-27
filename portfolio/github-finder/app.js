@@ -8,6 +8,9 @@ const searchUser = document.getElementById('searchUser');
 
 // Search input event listener
 searchUser.addEventListener('keyup', (e) => {
+  // Clear profile
+  ui.clearProfile();
+
   // Get input text
   const userText = e.target.value;
 
@@ -24,8 +27,5 @@ searchUser.addEventListener('keyup', (e) => {
           ui.showRepos(data.repos);
         }
       })
-  } else {
-    // Clear profile
-    ui.clearProfile();
   }
 });
