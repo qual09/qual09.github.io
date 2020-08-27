@@ -9,6 +9,13 @@
 </head>
 
 <body>
+  <style>
+    h1,
+    h2,
+    h3 {
+      text-transform: capitalize;
+    }
+  </style>
   <!-- <nav class="navbar navbar-dark bg-primary mb-3">
     <div class="container">
       <a href="#" class="navbar-brand">Weather App</a>
@@ -19,16 +26,16 @@
     <div class="row">
       <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
         <h1 id="w-location"></h1>
-        <h3 class="text-dar" id="w-desc"></h3>
+        <h3 id="w-desc" class="text-dark"><span></span></h3>
         <h3 id="w-string"></h3>
         <img id="w-icon">
-        <ul id="details" class="list-group mt-3">
+        <ul id="details" class="list-group mt-3 mb-4">
           <li class="list-group-item" id="w-humidity"></li>
-          <li class="list-group-item" id="w-dewpoint"></li>
-          <li class="list-group-item" id="w-feels-like"></li>
+          <li class="list-group-item" id="w-pressure"></li>
+          <li class="list-group-item" id="w-clouds"></li>
           <li class="list-group-item" id="w-wind"></li>
         </ul>
-        <hr>
+
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#locModal">
           Change Location
