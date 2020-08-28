@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>PESEL Validator</title>
+
+  <style>
+    .form-control:disabled,
+    .form-control[readonly] rm-control[readonly] {
+      background-color: #f7f7f7;
+    }
+
+    #hasError {
+      color: red;
+      font-weight: bold;
+      visibility: hidden;
+    }
+
+    .errorMessage {
+      color: red;
+      display: none;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body class="bg-dark" onload="parsePesel()">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card card-body text-center mt-5">
+          <h1 class="heading pb-3">PESEL Validator</h1>
+          <form id="loan-form">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">PESEL
+                    <span id="hasError">*</span>
+                  </span>
+                </div>
+                <input type="text" id="pesel" onkeyup="parsePesel('pesel');" class="form-control" maxlength="11">
+              </div>
+              <span class="errorMessage">Invalid PESEL</span>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Date of Birth</span>
+                </div>
+                <input type="text" id="dateOfBirth" class="form-control" disabled="true" placeholder="Day-Month-Year">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Gender</span>
+                </div>
+                <input type="text" id="gender" class="form-control" disabled="true" placeholder="Male / Female">
+              </div>
+            </div>
+          </form>
+          <footer style="color: #999; font-size: 0.8em; margin-top: 10px; text-align: center;">
+            &copy; Copyright 2020 Hieu CPX. All rights reserved. </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
