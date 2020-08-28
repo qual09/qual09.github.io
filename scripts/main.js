@@ -29,8 +29,7 @@ function selectCurrentNav(content) {
 }
 
 //STICKY HEADER
-window.onscroll = () => stickyHeader();
-function stickyHeader() {
+window.onscroll = () => {
   var header = document.getElementById("stickyHeader");
   var headerPosition = document.getElementById("mainContent");
   var sticky = headerPosition.offsetTop;
