@@ -3,6 +3,8 @@ class Weather {
     this.apiKey = '1bef3f20925c870ad6b544b01b7c55cb';
     this.city = city;
     this.country = country;
+    this.defaultCity = 'Warsaw';
+    this.defaultCountry = 'PL';
   }
 
   // Featch weather from API
@@ -16,8 +18,13 @@ class Weather {
 
   // Change weather location
   changeLocation(city, country) {
-    this.city = city;
-    this.country = country;
+    if (city !== '') {
+      this.city = city;
+      this.country = country;
+    } else {
+      this.city = this.defaultCity;
+      this.country = this.defaultCountry;
+    }
   }
 
 }

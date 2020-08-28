@@ -26,7 +26,12 @@ class Storage {
   }
 
   setLocationData(city, country) {
-    localStorage.setItem('city', city);
-    localStorage.setItem('country', country);
+    if (city !== '') {
+      localStorage.setItem('city', city);
+      localStorage.setItem('country', country);
+    } else {
+      localStorage.setItem('city', this.defaultCity);
+      localStorage.setItem('country', this.defaultCountry);
+    }
   }
 }
