@@ -1,53 +1,54 @@
 // Validate PESEL
 function parsePesel() {
-  let s = document.getElementById('pesel').value;
+  let peselValue = document.getElementById('pesel').value;
 
-  // Clear current calculated values
+  // Clear current errors and calculated values
   clearData();
 
-  // Check if length is 11
-  if (s.length == 0) {
-
+  // Check if empty
+  if (peselValue.length == 0) {
     return;
   }
-  console.log(123);
-  if (setError(s.length != 11))
+
+  // Check if length is 11
+  if (setError(peselValue.length != 11))
     return;
 
   // Check if all characters are numbers
-  let aInt = new Array();
+  let peselArray = [];
   for (i = 0; i < 11; i++) {
-    aInt[i] = parseInt(s.substring(i, i + 1));
-    if (isNaN(aInt[i])) {
+    peselArray[i] = parseInt(peselValue.substring(i, i + 1));
+    if (isNaN(peselArray[i])) {
       setError(1);
       return;
     }
   }
 
   // Validate PESEL Checksum
-  let weight = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3, 1];
+  const weight = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3, 1];
   let sum = 0;
   for (i = 0; i < 11; i++)
-    sum += weight[i] * aInt[i];
+    sum += weight[i] * peselArray[i];
   if (setError((sum % 10) != 0))
     return;
 
-  // Calculate Date of Birth including XIX, XXI, XXII and XXIII century
-  let year = 1900 + aInt[0] * 10 + aInt[1];
-  if (aInt[2] >= 2 && aInt[2] < 8)
-    year += Math.floor(aInt[2] / 2) * 100;
-  if (aInt[2] >= 8)
+  // Calculate Year including XIX, XXI, XXII and XXIII century
+  let year = 1900 + peselArray[0] * 10 + peselArray[1];
+  if (peselArray[2] >= 2 && peselArray[2] < 8)
+    year += Math.floor(peselArray[2] / 2) * 100;
+  if (peselArray[2] >= 8)
     year -= 100;
+  // Calculate Month
+  let month = (peselArray[2] % 2) * 10 + peselArray[3];
+  // Calculate Day
+  let day = peselArray[4] * 10 + peselArray[5];
 
-  let month = (aInt[2] % 2) * 10 + aInt[3];
-  let day = aInt[4] * 10 + aInt[5];
-
-  // Validate Date of Birth
+  // Validate Date value
   if (setError(!checkDate(day, month, year)))
     return;
 
   // Calculate Gender
-  let gender = (aInt[9] % 2 == 1) ? 'Male' : 'Female';
+  let gender = (peselArray[9] % 2 == 1) ? 'Male' : 'Female';
 
   // Display data
   let monthStr = (month < 10 ? '0' : '') + month;
@@ -57,25 +58,26 @@ function parsePesel() {
 }
 
 // Display error
-function setError(c) {
-  document.getElementById('hasError').style.visibility = (c ? 'visible' : 'hidden');
-  document.querySelector('.errorMessage').style.display = (c ? 'block' : 'none');
-  return c;
+function setError(isValid) {
+  document.getElementById('hasError').style.visibility = (isValid ? 'visible' : 'hidden');
+  document.querySelector('.errorMessage').style.display = (isValid ? 'block' : 'none');
+  return isValid;
 }
 
 // Clear current data
 function clearData() {
+  // Error messages
   document.getElementById('hasError').style.visibility = 'hidden';
   document.querySelector('.errorMessage').style.display = 'none';
-
+  // Calculated values
   document.getElementById('dateOfBirth').value = '';
   document.getElementById('gender').value = '';
 }
 
 // Validate date
-function checkDate(d, m, y) {
-  let dt = new Date(y, m - 1, d);
-  return dt.getDate() == d &&
-    dt.getMonth() == m - 1 &&
-    dt.getFullYear() == y;
+function checkDate(day, month, year) {
+  let date = new Date(year, month - 1, day);
+  return date.getDate() == day &&
+    date.getMonth() == month - 1 &&
+    date.getFullYear() == year;
 }
