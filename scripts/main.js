@@ -1,41 +1,53 @@
-console.log("Yo Dawg!");
-console.log(location.hostname);
+console.log('Yo Dawg!');
+console.log('Welcome to', location.hostname);
 
+// TEST function
 function yo() {
   const searchCriteria = {
-    a: "aaa",
-    b: "bbb",
-    c: "bbb",
+    name: 'John',
+    surname: 'Doe',
+    age: 33,
   };
 
-  // console.log(Object.keys(searchCriteria));
+  // Method 1
+  Object.keys(searchCriteria).forEach(prop => {
+    // if (searchCriteria.hasOwnProperty(prop))
+    console.log(prop, searchCriteria[prop]);
+  });
 
+  // Method 2
   for (let prop in searchCriteria) {
     // if (searchCriteria.hasOwnProperty(prop))
     console.log(prop, searchCriteria[prop]);
-  }
+  };
 }
 
+// Load subpage
 function openContent(content) {
-  $("#mainContent").load(content + ".html");
+  $('#mainContent').load(content + '.html');
   selectCurrentNav(content);
 }
 
+// Set current navigation in menu
 function selectCurrentNav(content) {
-  document.getElementById("home").classList.remove("currentMenu");
-  // document.getElementById("blog").classList.remove("currentMenu");
-  document.getElementById("about").classList.remove("currentMenu");
-  document.getElementById(content).classList.add("currentMenu");
+  const ul = document.getElementById('navMenu');
+  Array.from(ul.children).forEach(li => {
+    if (li.children[0].id === content) {
+      li.children[0].classList.add('currentMenu');
+    } else {
+      li.children[0].classList.remove('currentMenu');
+    }
+  });
 }
 
 //STICKY HEADER
 window.onscroll = () => {
-  var header = document.getElementById("stickyHeader");
-  var headerPosition = document.getElementById("mainContent");
-  var sticky = headerPosition.offsetTop;
+  const header = document.getElementById('stickyHeader');
+  const headerPosition = document.getElementById('mainContent');
+  const sticky = headerPosition.offsetTop;
   if (window.pageYOffset > sticky) {
-    header.classList.add("stickyHeader");
+    header.classList.add('stickyHeader');
   } else {
-    header.classList.remove("stickyHeader");
+    header.classList.remove('stickyHeader');
   }
 }
