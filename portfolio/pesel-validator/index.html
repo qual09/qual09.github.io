@@ -12,8 +12,12 @@
   <title>PESEL Validator</title>
 
   <style>
-    .form-control:disabled,
-    .form-control[readonly] rm-control[readonly] {
+    input::placeholder {
+      font-style: italic;
+      opacity: 0.6 !important;
+    }
+
+    .form-control:disabled {
       background-color: #f7f7f7;
     }
 
