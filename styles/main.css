@@ -172,6 +172,7 @@ footer {
   /* background: url(../images/logo.png); */
   background-size: 100% 400%;
   border-left: 3px solid #21293d;
+  border-radius: 2px;
   /* box-shadow: 0 6px 6px rgba(10, 16, 20, .15), 0 0 52px rgba(10, 16, 20, .12); */
   display: flex;
   font-family: Verdana;
