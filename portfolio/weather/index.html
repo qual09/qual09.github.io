@@ -16,15 +16,23 @@
     h3 {
       text-transform: capitalize;
     }
+
+    img {
+      height: 45px;
+      padding-bottom: 5px;
+    }
   </style>
 
   <div class="container">
     <div class="row">
       <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
         <h1 id="w-location"></h1>
-        <h3 id="w-desc" class="text-dark"><span></span></h3>
+        <h4 id="w-time"></h4>
+        <h3 class="text-dark" style="margin-bottom: 0px">
+          <img id="w-icon">
+          <span id="w-desc"></span>
+        </h3>
         <h3 id="w-string"></h3>
-        <img id="w-icon">
         <ul id="details" class="list-group mt-3 mb-4">
           <li class="list-group-item" id="w-humidity"></li>
           <li class="list-group-item" id="w-pressure"></li>

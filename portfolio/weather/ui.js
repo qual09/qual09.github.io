@@ -1,6 +1,7 @@
 class UI {
   constructor() {
     this.location = document.getElementById('w-location');
+    this.time = document.getElementById('w-time');
     this.desc = document.getElementById('w-desc');
     this.string = document.getElementById('w-string');
     this.details = document.getElementById('w-details');
@@ -12,7 +13,17 @@ class UI {
   }
 
   paint(weather) {
+    let date = new Date();
+    date.setSeconds(date.getSeconds() + weather.timezone);
+    date.setHours(date.getHours() - 2); // BUG?
+
+    // let dateUTC = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());
+    // date = new Date(dateUTC);
+
+    date = `${date.getHours()}:${date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()}`;
+
     this.location.textContent = weather.name + ', ' + weather.sys.country;
+    this.time.textContent = date;
     this.desc.textContent = weather.weather[0].description;
     this.string.textContent = `${Math.round(weather.main.temp * 10) / 10} C / ${Math.round(((weather.main.temp * 9 / 5) + 32) * 10) / 10} F`;
     this.icon.setAttribute('src', `//openweathermap.org/img/wn/${weather.weather[0].icon}.png`);
