@@ -255,6 +255,15 @@ footer {
   line-height: 1.4em;
 }
 
+.badgeYellow {
+  background-color: #ff780a;
+  /* border: 1px dotted black; */
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8em;
+  padding: 2px 8px;
+}
+
 /* animations */
 
 @keyframes slidein {

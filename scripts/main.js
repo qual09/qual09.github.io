@@ -1,3 +1,5 @@
+// *** START TEST *** //
+
 console.log('Yo Dawg!');
 console.log('Welcome to', location.hostname);
 
@@ -21,6 +23,8 @@ function yo() {
     console.log(prop, searchCriteria[prop]);
   };
 }
+
+// *** END TEST *** //
 
 // Load subpage
 function openContent(content) {
