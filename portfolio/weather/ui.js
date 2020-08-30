@@ -25,7 +25,7 @@ class UI {
     this.location.textContent = weather.name + ', ' + weather.sys.country;
     this.time.textContent = date;
     this.desc.textContent = weather.weather[0].description;
-    this.string.textContent = `${Math.round(weather.main.temp * 10) / 10} C / ${Math.round(((weather.main.temp * 9 / 5) + 32) * 10) / 10} F`;
+    this.string.textContent = `${Math.round(weather.main.temp * 10) / 10}\u00B0 C / ${Math.round(((weather.main.temp * 9 / 5) + 32) * 10) / 10}\u00B0 F`;
     this.icon.setAttribute('src', `//openweathermap.org/img/wn/${weather.weather[0].icon}.png`);
     this.humidity.textContent = `Humidity: ${weather.main.humidity}%`;
     this.pressure.textContent = `Pressure: ${weather.main.pressure} hPa`;
