@@ -67,13 +67,6 @@ a {
   transition: 0.3s ease;
 }
 
-a:hover {
-  /* border-bottom: 2px solid black; */
-  color: #21293d !important;
-  text-decoration: underline;
-  transition: 0.3s ease;
-}
-
 em {
   font-style: italic;
 }
@@ -111,6 +104,11 @@ footer {
   font-weight: bold;
   margin-top: 20px;
   text-align: right;
+}
+
+nav a:hover {
+  color: #21293d !important;
+  transition: 0.3s ease;
 }
 
 .stickyHeader {
@@ -255,8 +253,21 @@ footer {
   line-height: 1.4em;
 }
 
+.home div ul li>a:hover {
+  text-decoration: underline;
+}
+
 .badgeYellow {
   background-color: #ff780a;
+  /* border: 1px dotted black; */
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8em;
+  padding: 2px 8px;
+}
+
+.badgeBlue {
+  background-color: #17a2b8;
   /* border: 1px dotted black; */
   border-radius: 5px;
   color: white;
