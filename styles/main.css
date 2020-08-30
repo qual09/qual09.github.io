@@ -236,6 +236,19 @@ footer {
   transition: 0.3s ease;
 }
 
+.home div:hover img {
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.home div img {
+  float: right;
+  height: auto;
+  opacity: 0.5;
+  transition: 0.3s ease;
+  width: 20%;
+}
+
 .home div ul li {
   font-size: 1.2em;
   line-height: 1.4em;
