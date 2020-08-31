@@ -11,20 +11,17 @@
 </head>
 
 <body>
-  <script>
-    $(document).ready(() => {
-      $("#mainContent").load("home.html");
-    });
-  </script>
-
   <div class="mainContainer">
+
     <!-- Logo -->
-    <div class="logo">
+    <header class="logo">
       <a href="#" onclick="javascript:openContent('home')" class="currentMenu">
         <img src="images/q09-vector-transparent.svg" alt="" />
       </a>
-      <a href="https://github.com/qual09/qual09.github.io" target="_blank">../qual09.github.io-master</a>
-    </div>
+      <a href="https://github.com/qual09/qual09.github.io" target="_blank">
+        ../qual09.github.io-master
+      </a>
+    </header>
 
     <!-- Sticky Header -->
     <nav id="stickyHeader" class="mainMenu">
@@ -52,10 +49,16 @@
     <!-- Footer -->
     <footer style="color: #999; font-size: 0.8em; margin-top: 20px; text-align: right;">
       <a href="#" onclick="javascript:yo()">
-        &copy; Copyright 2020 Hieu CPX. All rights reserved.</a>
+        &copy; Copyright 2020 Hieu CPX. All rights reserved.
+      </a>
     </footer>
 
   </div>
+  <script>
+    $(document).ready(() => {
+      $("#mainContent").load("home.html");
+    });
+  </script>
 </body>
 
 </html>
