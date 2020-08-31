@@ -236,20 +236,20 @@ nav a:hover {
 }
 
 .home div:hover img {
+  backface-visibility: hidden;
   opacity: 1;
+  transform: translateZ(0) scale(1.0, 1.0);
   transition: 0.3s ease;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 
 .home div img {
+  backface-visibility: hidden;
   float: right;
   height: auto;
   opacity: 0.7;
+  transform: translateZ(0) scale(1.0, 1.0);
   transition: 0.3s ease;
   width: 20%;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 
 .home div ul li {
