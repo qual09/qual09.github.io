@@ -2,12 +2,11 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/q09-vector-transparent.svg" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
   <title>Q09</title>
-  <link rel="stylesheet" type="text/css" href="styles/main.css" />
-  <link rel="shortcut icon" href="images/q09-vector-transparent.svg" type="image/x-icon" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="scripts/main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,7 +15,7 @@
     <!-- Logo -->
     <header class="logo">
       <a href="#" onclick="javascript:openContent('home')" class="currentMenu">
-        <img src="images/q09-vector-transparent.svg" alt="" />
+        <img src="images/q09-vector-transparent.svg" alt="logo">
       </a>
       <a href="https://github.com/qual09/qual09.github.io" target="_blank">
         ../qual09.github.io-master
@@ -28,7 +27,7 @@
       <div class="mainContainer">
         <ul id="navMenu">
           <li>
-            <a href="#" class="currentMenu" onclick="javascript:openContent('home')" id="home">Home</a>
+            <a href="#" onclick="javascript:openContent('home')" id="home" class="currentMenu">Home</a>
           </li>
           <!-- <li>
             <a href="#" onclick="javascript:openContent('blog')" id="blog">Blog</a>
@@ -54,6 +53,8 @@
     </footer>
 
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="scripts/main.js"></script>
   <script>
     $(document).ready(() => {
       $("#mainContent").load("home.html");
