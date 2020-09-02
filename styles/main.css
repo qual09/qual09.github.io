@@ -107,7 +107,7 @@ strong {
   width: auto;
 }
 
-.logo:hover {
+.logo:hover, .home div:hover {
   border-left: 3px solid #ff780a;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   transition: 0.3s ease;
@@ -197,12 +197,6 @@ nav a:hover {
   border-radius: 2px;
   /* box-shadow: 0 6px 6px rgba(10, 16, 20, .15), 0 0 52px rgba(10, 16, 20, .12); */
   padding: 20px;
-  transition: 0.3s ease;
-}
-
-.home div:hover {
-  border-left: 3px solid #ff780a;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   transition: 0.3s ease;
 }
 
