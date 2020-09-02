@@ -109,7 +109,7 @@ strong {
 
 .logo:hover {
   border-left: 3px solid #ff780a;
-  box-shadow: 0 8px 8px rgba(10, 16, 20, .24), 0 0 8px rgba(10, 16, 20, .12);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   transition: 0.3s ease;
 }
 
@@ -202,7 +202,7 @@ nav a:hover {
 
 .home div:hover {
   border-left: 3px solid #ff780a;
-  box-shadow: 0 8px 8px rgba(10, 16, 20, .24), 0 0 8px rgba(10, 16, 20, .12);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   transition: 0.3s ease;
 }
 
