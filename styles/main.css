@@ -125,11 +125,6 @@ strong {
   width: auto;
 }
 
-nav a:hover {
-  color: #21293d !important;
-  transition: 0.3s ease;
-}
-
 .stickyHeader {
   background-color: #eeeeee;
   left: 0;
@@ -141,24 +136,29 @@ nav a:hover {
   z-index: 900;
 }
 
-.mainMenu {
+nav {
   padding-left: 10px;
   transition: 0.3s ease;
 }
 
-.mainMenu a {
+nav a {
   color: #999;
   font-size: 1.2em;
 }
 
-.mainMenu ul, footer ul {
+nav a:hover {
+  color: #21293d !important;
+  transition: 0.3s ease;
+}
+
+nav ul, footer ul {
   font-weight: bold;
   list-style: none;
   margin: 16px 0;
   padding: 0px;
 }
 
-.mainMenu ul li {
+nav ul li {
   display: inline;
   margin-right: 40px;
 }
@@ -166,6 +166,7 @@ nav a:hover {
 .currentMenu {
   /* border-bottom: 2px solid black; */
   color: #21293d !important;
+  font-size: 1.3em !important;
   transition: 0.3s ease;
 }
 
