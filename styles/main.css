@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 2.4em;
   font-weight: bold;
 }
 
@@ -91,23 +91,25 @@ strong {
 
 .logo {
   align-items: center;
-  background-color: white;
   /* background: url(../images/logo.png); */
-  background-size: 100% 400%;
-  border-left: 3px solid #21293d;
-  border-radius: 2px;
-  /* box-shadow: 0 6px 6px rgba(10, 16, 20, .15), 0 0 52px rgba(10, 16, 20, .12); */
+  /* background-size: 100% 400%; */
   display: flex;
   font-family: Verdana;
   font-size: 1.1em;
   font-style: italic;
-  height: auto;
   padding: 10px 0px;
-  transition: 0.3s ease;
-  width: auto;
 }
 
-.logo:hover, .home div:hover {
+.logo, .home>div {
+  animation-duration: 0.8s;
+  animation-name: fadein;
+  background: white;
+  border-left: 3px solid #21293d;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.logo:hover, .home>div:hover {
   border-left: 3px solid #ff780a;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   transition: 0.3s ease;
@@ -189,22 +191,15 @@ nav a:hover {
   grid-template-columns: 1fr;
 }
 
-.home div {
-  animation-duration: 0.8s;
-  animation-name: fadein;
-  background: white;
-  border-left: 3px solid #21293d;
-  border-radius: 2px;
-  /* box-shadow: 0 6px 6px rgba(10, 16, 20, .15), 0 0 52px rgba(10, 16, 20, .12); */
+.home>div {
   padding: 20px;
-  transition: 0.3s ease;
 }
 
-.home div h1 {
+.home>div h1 {
   color: #21293d;
 }
 
-.home div h1::before {
+.home>div h1::before {
   background-color: #ff780a;
   content: "";
   display: inline-block;
@@ -215,12 +210,12 @@ nav a:hover {
   width: 6px;
 }
 
-.home div:hover h1::before {
+.home>div:hover h1::before {
   transform: skew(-21deg, 0);
   transition: 0.3s ease;
 }
 
-.home div img {
+.home>div img {
   backface-visibility: hidden;
   float: right;
   height: auto;
@@ -230,23 +225,23 @@ nav a:hover {
   width: 20%;
 }
 
-.home div:hover img {
+.home>div:hover img {
   backface-visibility: hidden;
   opacity: 1;
   transform: translateZ(0) scale(1.0, 1.0);
   transition: 0.3s ease;
 }
 
-.home div ul li {
+.home>div ul li {
   font-size: 1.2em;
-  line-height: 1.4em;
+  line-height: 1.45em;
 }
 
-.home div ul li>a {
+.home>div ul li>a {
   margin-right: 6px;
 }
 
-.home div ul li>a:hover {
+.home>div ul li>a:hover {
   text-decoration: underline;
 }
 
