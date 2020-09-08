@@ -277,7 +277,7 @@ nav ul li {
   margin-right: 6px;
 }
 
-.home>div ul li>a:hover {
+.home>div ul li a:hover {
   text-decoration: underline;
 }
 
