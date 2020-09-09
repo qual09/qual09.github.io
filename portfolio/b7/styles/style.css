@@ -548,7 +548,7 @@ div.arrow:active::before {
 }
 
 .container figure {
-	background-image: url(../img/warsztaty/compare/1a.jpg);
+	background-image: url(../images/warsztaty/compare/1a.jpg);
 	background-size: cover;
 	font-size: 0;
 	height: 100%;
@@ -558,7 +558,7 @@ div.arrow:active::before {
 }
 
 #compare {
-	background-image: url(../img/warsztaty/compare/1b.jpg);
+	background-image: url(../images/warsztaty/compare/1b.jpg);
 	background-size: cover;
 	bottom: 0;
 	border-right: 5px solid rgba(255, 255, 255, 0.7);
