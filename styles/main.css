@@ -115,6 +115,10 @@ strong {
   transition: 0.3s ease;
 }
 
+/* .home>div:hover {
+  transform: translateY(-2px);
+} */
+
 .logo a {
   color: #21293d;
   font-size: 1.2em;
