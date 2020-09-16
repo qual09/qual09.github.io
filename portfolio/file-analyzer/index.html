@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width: 0, initial-scale=1.0">
+  <title>Text File Analyzer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #343a40;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      padding: 0 10px;
+    }
+
+    .container {
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 40px auto 20px auto;
+      padding: 20px;
+      width: 60%;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h1,
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .doublerow {
+      border-radius: 10px;
+      display: flex;
+      margin-top: 20px;
+    }
+
+    div#analyzeFile,
+    pre#outputFile {
+      display: none;
+      border: 1px solid gray;
+      padding: 20px;
+    }
+
+    div#analyzeFile {
+      background-color: lightblue;
+      border-right: none;
+      width: auto;
+    }
+
+    pre#outputFile {
+      background-color: beige;
+      white-space: pre-wrap;
+      width: 100%;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>File Analyzer</h1>
+    <p>Upload a text file to analyze.</p>
+    <input type="file" name="inputFile" id="inputFile" placeholder="Upload a text file">
+
+    <div class="doublerow">
+      <div id="analyzeFile"></div>
+      <pre id="outputFile">File is empty.</pre>
+    </div>
+  </div>
+
+  <footer style="color: #999; font-size: 0.8em; margin-top: 10px; text-align: center;">
+    &copy; 2020 Hieu CPX. All rights reserved. </footer>
+
+  <script>
+    const analyzeFile = document.getElementById('analyzeFile');
+    const inputFile = document.getElementById('inputFile');
+    const outputFile = document.getElementById('outputFile');
+    inputFile.addEventListener('change', showFileContent);
+
+    function showFileContent() {
+      // Initialize File Reader
+      const fileReader = new FileReader();
+
+      // Read uploaded file content
+      if (this.files[0]) {
+        // in below code: this.files[0] equals inputFile.files[0]
+        fileReader.readAsText(this.files[0]);
+      }
+
+      // Function executed when readAsText() is fired
+      fileReader.onload = () => {
+        // Show file content on a website
+        if (fileReader.result)
+          outputFile.textContent = fileReader.result;
+
+        const fileContent = fileReader.result;
+        let analyzeResult = '';
+
+        // Count number of words
+        let numberOfWords = 0;
+        if (fileContent.match(/\b\S+\b/g)?.length)
+          numberOfWords = fileContent.match(new RegExp(' ', 'g'))?.length;
+        analyzeResult += '<strong>Words:</strong> ' + numberOfWords;
+
+        // Count number of letters
+        const alphabet = { 'a': 0, 'b': 0, 'c': 0, 'd': 0, 'e': 0, 'f': 0, 'g': 0, 'h': 0, 'i': 0, 'j': 0, 'k': 0, 'l': 0, 'm': 0, 'n': 0, 'o': 0, 'p': 0, 'q': 0, 'r': 0, 's': 0, 't': 0, 'u': 0, 'v': 0, 'w': 0, 'x': 0, 'y': 0, 'z': 0 };
+        analyzeResult += '<br><br><strong style="margin-bottom: 10px;">Letters:</strong><br>';
+        for (letter in alphabet) {
+          let numberOfLetters = 0;
+          if (fileContent.match(new RegExp(letter, 'g'))?.length)
+            numberOfLetters = fileContent.match(new RegExp(letter, 'g'))?.length;
+          analyzeResult += `<strong>${letter}</strong> : ${numberOfLetters} <br> `;
+        }
+
+        analyzeFile.innerHTML = analyzeResult;
+        outputFile.style.display = 'block';
+        analyzeFile.style.display = 'block';
+      }
+    }
+  </script>
+
+  <!-- <script>
+    document.getElementById('inputFile')
+      .addEventListener('change', function () {
+        const fr = new FileReader();
+        fr.onload = function () {
+          document.getElementById('outputFile')
+            .textContent = fr.result;
+        }
+        fr.readAsText(this.files[0]);
+      }) 
+  </script> -->
+
+</body>
+
+</html>
