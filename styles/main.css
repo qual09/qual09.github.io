@@ -103,7 +103,7 @@ strong {
 .logo, .home>div {
   animation-duration: 0.8s;
   animation-name: fadein;
-  background: white;
+  background-color: white;
   border-left: 3px solid #21293d;
   border-radius: 2px;
   transition: 0.3s ease;
@@ -284,6 +284,14 @@ nav ul li {
 .home>div ul li a:hover {
   text-decoration: underline;
 }
+
+/* .angular {
+  background: url(/images/angular-logo.png);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: right 20px top 20px;
+} */
 
 footer {
   color: #999;
