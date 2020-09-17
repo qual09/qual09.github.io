@@ -5,72 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width: 0, initial-scale=1.0">
   <title>Text File Analyzer</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: #343a40;
-      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    }
-
-    .container {
-      background-color: white;
-      border: 1px solid black;
-      border-radius: 10px;
-      margin: 40px auto 20px auto;
-      max-width: 1000px;
-      min-width: 400px;
-      padding: 20px;
-      width: 80%;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    h1,
-    h3 {
-      margin-bottom: 10px;
-    }
-
-    p {
-      margin-bottom: 10px;
-    }
-
-    .doublerow {
-      border-radius: 10px;
-      display: flex;
-      margin-top: 20px;
-    }
-
-    div#analyzeFile,
-    pre#outputFile {
-      display: none;
-      border: 1px solid gray;
-      padding: 20px;
-    }
-
-    div#analyzeFile {
-      background-color: lightblue;
-      border-right: none;
-      width: auto;
-    }
-
-    pre#outputFile {
-      background-color: beige;
-      white-space: pre-wrap;
-      width: 100%;
-      word-wrap: break-word;
-    }
-
-    #sample {
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -79,7 +14,6 @@
     <h1>File Analyzer</h1>
     <p>Upload a text file to analyze or <strong id="sample">click here</strong> to use a sample.</p>
     <input type="file" name="inputFile" id="inputFile" placeholder="Upload a text file">
-
     <div class="doublerow">
       <div id="analyzeFile"></div>
       <pre id="outputFile"></pre>
@@ -88,101 +22,6 @@
 
   <footer style="color: #999; font-size: 0.8em; margin: 10px 0; text-align: center;">
     &copy; 2020 Hieu CPX. All rights reserved. </footer>
-
-  <script>
-    // UI Declarations
-    const inputFile = document.getElementById('inputFile');
-    const outputFile = document.getElementById('outputFile');
-    const sample = document.getElementById('sample');
-    const analyzeFile = document.getElementById('analyzeFile');
-
-    // Evemt Listeners
-    inputFile.addEventListener('change', showFileContent);
-    sample.addEventListener('click', runSample);
-
-    // Clear UI
-    function resetUI() {
-      outputFile.textContent = 'File is empty.';
-      analyzeFile.innerHTML = '';
-      outputFile.style.display = 'none';
-      analyzeFile.style.display = 'none';
-    }
-
-    // Process the uploaded file
-    function showFileContent() {
-      resetUI();
-
-      // Initialize File Reader
-      const fileReader = new FileReader();
-
-      // Read uploaded file content
-      if (inputFile.files[0]) {
-        // in below code: this.files[0] equals inputFile.files[0]
-        fileReader.readAsText(inputFile.files[0]);
-      }
-
-      // Function executed when readAsText() is fired
-      fileReader.onload = () => {
-        // Check if file is not empty
-        if (fileReader.result) {
-          // Show file content on the website
-          outputFile.textContent = fileReader.result;
-        }
-        // Analyze file content
-        const fileContent = fileReader.result;
-        analyzeFileContent(fileContent);
-      }
-    }
-
-    // Analyze text content
-    function analyzeFileContent(fileContent) {
-      let analyzeResult = '';
-
-      // Count number of words
-      let numberOfWords = 0;
-      if (fileContent.match(/\b\S+\b/g)?.length)
-        numberOfWords = fileContent.match(new RegExp(' ', 'g'))?.length;
-      analyzeResult += '<strong>Words:</strong> ' + numberOfWords;
-
-      // Count number of letters
-      const alphabet = { 'a': 0, 'b': 0, 'c': 0, 'd': 0, 'e': 0, 'f': 0, 'g': 0, 'h': 0, 'i': 0, 'j': 0, 'k': 0, 'l': 0, 'm': 0, 'n': 0, 'o': 0, 'p': 0, 'q': 0, 'r': 0, 's': 0, 't': 0, 'u': 0, 'v': 0, 'w': 0, 'x': 0, 'y': 0, 'z': 0 };
-      analyzeResult += '<br><br><strong style="margin-bottom: 10px;">Letters:</strong><br>';
-      for (letter in alphabet) {
-        let numberOfLetters = 0;
-        if (fileContent.match(new RegExp(letter, 'g'))?.length)
-          numberOfLetters = fileContent.match(new RegExp(letter, 'g'))?.length;
-        analyzeResult += `<strong>${letter}</strong> : ${numberOfLetters} <br> `;
-      }
-
-      // Update UI
-      analyzeFile.innerHTML = analyzeResult;
-      outputFile.style.display = 'block';
-      analyzeFile.style.display = 'block';
-    }
-
-    // Demo
-    function runSample() {
-      resetUI();
-      // Sample text
-      const fileContent = `Lorem Ipsum
-        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius ullamcorper nulla, vel laoreet neque vulputate id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque at aliquet sem. In ligula enim, pulvinar vel mollis nec, malesuada ac justo. Sed venenatis sed odio at euismod. Fusce mauris tortor, ultrices in ante ac, pellentesque dapibus magna. Phasellus in magna ultrices, pretium tellus vitae, rhoncus mauris. Morbi non volutpat metus, non eleifend odio. Nunc posuere sapien ut mollis congue. Ut id velit a metus porttitor posuere. Vivamus sed leo eu tellus maximus hendrerit. Suspendisse accumsan maximus nisl non sodales. Suspendisse odio erat, scelerisque et est sed, fermentum fermentum velit. Aenean quis ornare mi.
-
-        Nam eget egestas enim. Morbi vitae lacus eu purus euismod suscipit. Quisque quis est vitae nisi ullamcorper fringilla non in dolor. Ut ultrices sem ante, id bibendum lorem efficitur ac. Morbi nec tortor eleifend, congue ipsum quis, lacinia metus. Phasellus venenatis sagittis ultricies. Integer a diam ac risus convallis vehicula. Phasellus neque ligula, ultricies eu ex et, rhoncus iaculis magna. Maecenas augue mi, semper a posuere et, dignissim non dui. Aliquam bibendum mauris sit amet neque efficitur, ac facilisis risus volutpat. Praesent malesuada sapien odio, in semper mauris luctus eu. Morbi nec turpis volutpat felis rhoncus vestibulum.
-
-        Vestibulum in dui nec est imperdiet cursus at quis ligula. Morbi viverra metus eu nisi pharetra, eget porttitor nisi feugiat. Curabitur dignissim lectus dolor. Duis porttitor mollis felis vel vulputate. Phasellus turpis massa, vulputate sit amet ipsum vel, pretium sagittis dolor. Aliquam lacinia orci at urna sodales, id scelerisque tortor pretium. Maecenas feugiat feugiat dui a placerat. Cras quis justo dolor. Ut non laoreet mi, nec ultrices lectus. Donec in enim pretium, fringilla felis eu, dapibus sapien. Mauris orci ante, ultricies eu fringilla a, placerat ac metus. Nulla nisi est, egestas nec mollis a, molestie a nulla. Nunc quis volutpat nibh.
-
-        Suspendisse potenti. Ut ornare quis felis et maximus. Phasellus consequat semper orci nec tempor. Donec augue metus, sollicitudin eu augue vitae, semper dapibus lacus. Proin tempor tempus nibh, ac ultricies massa egestas at. Morbi ac mauris quis dui efficitur feugiat vitae non quam. Suspendisse sagittis magna quis metus varius, ac tincidunt ex tempor. Suspendisse eu euismod lacus. Curabitur tristique felis metus. Sed id quam id ipsum dictum egestas non eu tellus. Etiam lectus augue, congue et venenatis sed, aliquam in lectus. Mauris iaculis felis ut velit euismod, ut tristique arcu posuere. Fusce vulputate scelerisque lacus sit amet tempus. Maecenas bibendum blandit leo.
-
-        Donec ac porta sem. Donec ut risus vehicula, imperdiet diam ut, interdum ex. Curabitur congue velit sed neque placerat, et gravida augue pellentesque. Morbi sollicitudin imperdiet est, vitae fringilla elit varius at. Morbi commodo aliquam est, interdum vehicula lacus fermentum a. Phasellus eget gravida neque. Nullam pellentesque dolor et lacus rhoncus condimentum. Pellentesque et metus sed justo lacinia auctor a ultrices augue. Phasellus id interdum elit, nec tempor leo. Mauris libero lacus, auctor vitae scelerisque ut, eleifend sed leo. Sed interdum lacus non nibh malesuada, sit amet sollicitudin lorem interdum. Donec odio purus, tempus vitae semper nec, venenatis quis dolor.
-      `;
-      // Show text content on the website
-      outputFile.textContent = fileContent;
-      // Analyze text content
-      analyzeFileContent(fileContent);
-    }
-  </script>
 
   <!-- Original Script -->
   <!-- <script>
@@ -196,6 +35,8 @@
         fr.readAsText(this.files[0]);
       }) 
   </script> -->
+
+  <script src="app.js"></script>
 
 </body>
 

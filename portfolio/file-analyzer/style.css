@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #343a40;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.container {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 40px auto 20px auto;
+  max-width: 1200px;
+  min-width: 400px;
+  padding: 20px;
+  width: 80%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1, h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.doublerow {
+  border-radius: 10px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.resultRow {
+  display: flex;
+}
+
+.resultRow>strong {
+  align-self: flex-start;
+  flex: 1;
+}
+
+.resultRow>span {
+  align-self: flex-end;
+}
+
+div#analyzeFile, pre#outputFile {
+  display: none;
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+div#analyzeFile {
+  background-color: lightblue;
+  border-right: none;
+  width: auto;
+}
+
+pre#outputFile {
+  background-color: beige;
+  white-space: pre-wrap;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+#sample {
+  cursor: pointer;
+}
