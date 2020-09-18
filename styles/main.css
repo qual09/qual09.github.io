@@ -107,6 +107,8 @@ strong {
   border-left: 3px solid #21293d;
   border-radius: 2px;
   transition: 0.3s ease;
+  /* Funky boxes */
+  /* border-radius: 255px 25px 225px 25px/25px 225px 25px 255px; */
 }
 
 .logo:hover, .home>div:hover {
