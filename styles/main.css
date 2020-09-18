@@ -53,7 +53,7 @@ strong {
   font-family: Verdana;
   font-size: 1.1em;
   font-style: italic;
-  padding: 10px 0px;
+  padding: 10px 10px;
 }
 
 .logo, .home>div {
@@ -84,6 +84,7 @@ strong {
 
 .logo img {
   height: 70px;
+  margin-right: 10px;
   width: auto;
 }
 
