@@ -10,6 +10,24 @@
   align-items: center;
 }
 
+.intro-text {
+  color: black;
+  font-family: "Heebo", sans-serif;
+  font-size: 3rem;
+  padding: 20px;
+}
+
+.hide {
+  background: white;
+  overflow: hidden;
+}
+
+.text {
+  border-bottom: 10px solid black;
+  display: inline-block;
+  transform: translateY(100%);
+}
+
 .slider {
   /* background: rgb(97, 105, 109); */
   border-bottom: 15px solid #ff780a;
@@ -21,29 +39,8 @@
   transform: translateY(100%);
 }
 
-.intro-text {
-  color: black;
-  font-family: "Heebo", sans-serif;
-  font-size: 3rem;
-  padding: 20px;
-}
-
-.text {
-  border-bottom: 10px solid black;
-}
-
-.hide {
-  background: white;
-  overflow: hidden;
-}
-
-.hide span {
-  transform: translateY(100%);
-  display: inline-block;
-}
-
 @media screen and (max-width: 600px) {
   .intro-text {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }

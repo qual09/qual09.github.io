@@ -7,5 +7,5 @@ tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
 tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 0.5 });
 
 setTimeout(() => {
-  document.querySelector('.intro').style.display = 'none';
+  document.querySelector('.intro').remove();
 }, 4000);
