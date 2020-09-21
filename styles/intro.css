@@ -1,13 +1,13 @@
 .intro {
+  align-items: center;
   background: white;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .intro-text {
@@ -31,12 +31,12 @@
 .slider {
   /* background: rgb(97, 105, 109); */
   border-bottom: 15px solid #ff780a;
+  height: 100%;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   transform: translateY(100%);
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
