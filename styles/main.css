@@ -141,18 +141,10 @@ nav ul li {
   width: 100%;
 }
 
-.dynamiContent>div {
+.home {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
-}
-
-.dynamiContent>.home {
-  grid-template-columns: 1fr 1fr;
-}
-
-.dynamiContent>.blog {
-  grid-template-columns: 1fr;
 }
 
 .home>div {
@@ -307,7 +299,7 @@ footer {
 /* Responsive */
 
 @media screen and (max-width: 800px) {
-  .dynamiContent>.home {
+  .home {
     grid-template-columns: 1fr;
   }
 }
