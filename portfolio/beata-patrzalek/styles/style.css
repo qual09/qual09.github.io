@@ -10,11 +10,11 @@
 /* Sticky Header */
 
 .stickyHeader {
-	background-color: black !important;
-	opacity: 1;
+	background-color: black;
+	padding: 10px 0;
 	position: fixed;
 	top: 0;
-	transition: 1s ease;
+	width: 100%;
 }
 
 /* MAIN CSS Q*/
@@ -25,11 +25,13 @@ html {
 
 body {
 	background-color: black;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
 }
 
 header {
 	background-color: black;
-	padding: 10px 0;
+	padding: 8px 0;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -44,18 +46,28 @@ header>nav>ul {
 
 header>nav>ul a {
 	color: white;
+	font-size: 0.95em;
+	padding-bottom: 8px;
 	text-decoration: none;
+	/* text-transform: uppercase; */
 }
 
 header>nav>ul a:hover {
-	text-decoration: underline;
+	border-bottom: 2px solid white;
+}
+
+.currentMenu {
+	border-bottom: 2px solid white;
+	/* font-weight: bold; */
 }
 
 .title {
-	font-size: 3em;
+	font-size: 3.5em;
+	font-weight: bold;
 	left: 50px;
+	line-height: 1;
 	position: fixed;
-	top: 50px;
+	top: 75px;
 	z-index: 900;
 }
 
@@ -68,16 +80,47 @@ header>nav>ul a:hover {
 	font-size: 1.8em;
 }
 
+.title3 {
+	font-size: 0.9em;
+	margin-top: 5px;
+}
+
 main {
 	background-color: white;
-	min-height: 100vh;
-	min-width: 100vw;
-	padding-top: 40px;
+	height: auto;
+	padding: 10px 0;
+	width: 100%;
 }
 
 .container {
-	background-color: white;
-	margin: 10px auto;
+	animation-duration: 0.8s;
+	animation-name: fadein;
+	/* background-color: #eeeeee; */
+	/* border-radius: 15px; */
+	margin: 0 auto;
 	min-width: 800px;
 	max-width: 1200px;
+	padding: 10px;
+}
+
+/* Animations */
+
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

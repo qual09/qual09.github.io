@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beata Patrzałek Fotografia</title>
   <link rel="icon" href="images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/slideshow.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -17,19 +18,19 @@
     <nav id="stickyHeader">
       <ul id="navMenu">
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.html" class="currentMenu">Home</a>
         </li>
         <li>
-          <a href="#" onclick="javascript:openContent('galeria')">Galeria</a>
+          <a id="galeria" href="#" onclick="javascript:openContent('galeria')">Galeria</a>
         </li>
         <li>
-          <a href="#" onclick="javascript:openContent('sesje')">Sesje zdjęciowe</a>
+          <a id="sesje" href="#" onclick="javascript:openContent('sesje')">Sesje zdjęciowe</a>
         </li>
         <li>
-          <a href="#" onclick="javascript:openContent('warsztaty')">Warsztaty</a>
+          <a id="warsztaty" href="#" onclick="javascript:openContent('warsztaty')">Warsztaty</a>
         </li>
         <li>
-          <a href="#" onclick="javascript:openContent('kontakt')">Kontakt</a>
+          <a id="kontakt" href="#" onclick="javascript:openContent('kontakt')">Kontakt</a>
         </li>
       </ul>
     </nav>
@@ -73,6 +74,9 @@
     </div>
     <div class="title2">
       <a href="index.html">PATRZAŁEK</a>
+    </div>
+    <div class="title3">
+      <a href="index.html">FOTOGRAFIA</a>
     </div>
   </div>
 

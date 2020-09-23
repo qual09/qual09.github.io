@@ -23,6 +23,8 @@ function openContent(content) {
 	document.querySelector('.slideshow').style.display = 'none';
 	document.querySelector('.title').style.display = 'none';
 	document.querySelector('#dynamiContent').style.display = 'block';
+	document.querySelector('header').style.position = 'unset';
+	document.querySelector('body').style.backgroundColor = 'white';
 }
 
 // Set current navigation in menu
