@@ -19,7 +19,11 @@ function beforeAfter() {
 function openContent(content) {
 	$('#dynamiContent').load(content + '.html');
 	selectCurrentNav(content);
+	removeLandingStyles();
+}
 
+// Remove Landing Page Styles
+function removeLandingStyles() {
 	document.querySelector('.slideshow').style.display = 'none';
 	document.querySelector('.title').style.display = 'none';
 	document.querySelector('#dynamiContent').style.display = 'block';
