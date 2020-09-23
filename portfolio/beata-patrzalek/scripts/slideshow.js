@@ -1,47 +1,44 @@
-let slideIndex = 0;
-let carouselTimeout;
-//showDivs(slideIndex);
-carousel();
+const slides = document.getElementsByClassName('mySlides');
+const dots = document.getElementsByClassName('bgDot');
+let slideIndex = 1;
+let loopSlides;
+showSlides();
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+// Select slide
+function selectSlide(n) {
+  slideIndex = n;
+  clearTimeout(loopSlides);
+  showSlides('manual');
 }
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
+// Change slide
+function changeSlide(n) {
+  slideIndex += n;
+  clearTimeout(loopSlides);
+  showSlides('manual');
 }
 
-function showDivs(n) {
+function showSlides(manual = null) {
   let i;
-  let x = document.getElementsByClassName('mySlides');
-  let dots = document.getElementsByClassName('bgDot');
-  if (n > x.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = x.length }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
+  // Hide all slides
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
   }
+  // Hide all dots
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(' bgDot-white', '');
   }
-  x[slideIndex - 1].style.display = 'block';
-  dots[slideIndex - 1].className += ' bgDot-white';
-  clearTimeout(carouselTimeout);
-  carouselTimeout = setTimeout(carousel, 9000);
-}
 
-function carousel() {
-  let i;
-  let x = document.getElementsByClassName('mySlides');
-  let dots = document.getElementsByClassName('bgDot');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(' bgDot-white', '');
-  }
-  slideIndex++;
-  if (slideIndex > x.length) { slideIndex = 1 }
-  x[slideIndex - 1].style.display = 'block';
+  // Check edge values of slide list
+  if (slideIndex > slides.length) slideIndex = 1;
+  if (slideIndex < 1) slideIndex = slides.length;
+
+  // Show slide on UI
+  slides[slideIndex - 1].style.display = 'block';
+  // Show current dot
   dots[slideIndex - 1].className += ' bgDot-white';
-  carouselTimeout = setTimeout(carousel, 5000); // Change image every 2 seconds (2000)
+
+  // Show next slide after timeout
+  if (!manual) slideIndex++;
+  loopSlides = setTimeout(showSlides, 5000);
 }
