@@ -47,7 +47,7 @@ header>nav>ul {
 header>nav>ul a {
 	color: white;
 	font-size: 0.95em;
-	padding-bottom: 8px;
+	padding: 8px 15px;
 	text-decoration: none;
 	/* text-transform: uppercase; */
 }
@@ -62,18 +62,15 @@ header>nav>ul a:hover {
 }
 
 .title {
+	color: white;
 	font-size: 3.5em;
 	font-weight: bold;
 	left: 50px;
 	line-height: 1;
 	position: fixed;
 	top: 75px;
+	user-select: none;
 	z-index: 900;
-}
-
-.title a {
-	color: white;
-	text-decoration: none;
 }
 
 .title1 {
