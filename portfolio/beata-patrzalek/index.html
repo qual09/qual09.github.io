@@ -6,107 +6,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beata Patrzałek Fotografia</title>
   <link rel="icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="styles/slideshow.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body id="home">
+<body>
 
-  <div class="mainMenuWrapper">
-    <div class="mainmenu" id="home">
-      <div class="menuElement" id="home">
-        <a href="index.html" style="color:white; font-weight: 600;">Home</a>
-      </div>
-      <div class="menuElement" id="home">
-        <a href="galeria.html">Galeria</a>
-      </div>
-      <div class="menuElement" id="home">
-        <a href="sesje.html">Sesje zdjęciowe</a>
-      </div>
-      <div class="menuElement" id="home">
-        <a href="warsztaty.html">Warsztaty</a>
-      </div>
-      <div class="menuElement" id="home">
-        <a href="omnie.html">Kontakt</a>
-      </div>
+  <!-- Menu -->
+  <header>
+    <nav id="stickyHeader">
+      <ul id="navMenu">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="#" onclick="javascript:openContent('galeria')">Galeria</a>
+        </li>
+        <li>
+          <a href="#" onclick="javascript:openContent('sesje')">Sesje zdjęciowe</a>
+        </li>
+        <li>
+          <a href="#" onclick="javascript:openContent('warsztaty')">Warsztaty</a>
+        </li>
+        <li>
+          <a href="#" onclick="javascript:openContent('kontakt')">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Slideshow -->
+  <div class="slideshow">
+    <div class="mySlides"
+      style="background: url('images/bg0.jpg') no-repeat center center fixed; background-size: cover;">
     </div>
-  </div>
-
-  <div class="mySlides"
-    style="background: url('images/bg0.jpg') no-repeat center center fixed; background-size: cover;">
-  </div>
-
-  <div class="mySlides"
-    style="background: url('images/bg1.jpg') no-repeat center center fixed; background-size: cover;">
-  </div>
-
-  <div class="mySlides"
-    style="background: url('images/bg2.jpg') no-repeat center center fixed; background-size: cover;">
-  </div>
-
-  <div class="mySlides"
-    style="background: url('images/bg3.jpg') no-repeat center center fixed; background-size: cover;">
-  </div>
-
-  <div class="mySlides"
-    style="background: url('images/bg4.jpg') no-repeat center center fixed; background-size: cover;">
-  </div>
-
-  <div class="main">
-
-    <div class="title">
-      <a href="index.html">BEATA</a>
+    <div class="mySlides"
+      style="background: url('images/bg1.jpg') no-repeat center center fixed; background-size: cover;">
     </div>
-    <div class="title title2">
-      <a href="index.html">PATRZAŁEK</a>
+    <div class="mySlides"
+      style="background: url('images/bg2.jpg') no-repeat center center fixed; background-size: cover;">
     </div>
-
+    <div class="mySlides"
+      style="background: url('images/bg3.jpg') no-repeat center center fixed; background-size: cover;">
+    </div>
+    <div class="mySlides"
+      style="background: url('images/bg4.jpg') no-repeat center center fixed; background-size: cover;">
+    </div>
     <button class="slideButton slideButtonLeft" onclick="plusDivs(-1)">&#10094;</button>
     <button class="slideButton slideButtonRight" onclick="plusDivs(1)">&#10095;</button>
-
-    <div class="socialMenu">
-      <div class="menuElement social">
-        <a href="https://www.facebook.com/beatapatrzalekfotografia/" target="_blank">
-          <img src="images/facebook.png" title="facebook" />
-        </a>
-      </div>
-      <div class="menuElement social">
-        <a href="https://www.instagram.com/beatapatrzalekphotography/" target="_blank">
-          <img src="images/instagram.png" title="instagram" />
-        </a>
-      </div>
-      <div class="menuElement social">
-        <a href="https://www.flickr.com/photos/beatapatrzalek/" target="_blank">
-          <img src="images/flickr.png" title="flickr" />
-        </a>
-      </div>
-    </div>
-
     <div class="bgswitch">
       <span class="bgDot" onclick="currentDiv(1)"></span>
       <span class="bgDot" onclick="currentDiv(2)"></span>
       <span class="bgDot" onclick="currentDiv(3)"></span>
       <span class="bgDot" onclick="currentDiv(4)"></span>
       <span class="bgDot" onclick="currentDiv(5)"></span>
+      <footer style="color: #999; font-size: 0.8em; margin-top: 30px; text-align: center;">
+        &copy; 2020 Hieu CPX. All rights reserved.
+      </footer>
     </div>
-
-    <div class="footer" id="home">
-      <span>&copy; 2020 Hieu CPX. All rights reserved.</span>
-    </div>
-
   </div>
+
+  <!-- Title -->
+  <div class="title">
+    <div class="title1">
+      <a href="index.html">BEATA</a>
+    </div>
+    <div class="title2">
+      <a href="index.html">PATRZAŁEK</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="dynamiContent" style="display: none;">
+    <!-- DYNAMIC CONTENT HERE -->
+  </main>
 
   <script src="scripts/jquery-3.4.1.js"></script>
   <script src="scripts/slideshow.js"></script>
   <script src="scripts/main.js"></script>
 
-  <!-- SLIDESHOW -->
-  <script>
-    var slideIndex = 0;
-    var carouselTimeout;
-    //showDivs(slideIndex);
-    carousel();
-  </script>
 </body>
 
 </html>

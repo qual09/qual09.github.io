@@ -1,0 +1,144 @@
+.mySlides {
+  display: none;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  animation: fadeIn 0.8s;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.mySlides div {
+  z-index: 900;
+}
+
+.slideButton {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 14px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  text-align: center;
+  text-decoration: none;
+  font-size: 2em;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: 0.3s ease;
+  text-shadow: 0 0 15px black, 0 0 10px black;
+  z-index: 900;
+}
+
+.slideButton:hover {
+  font-size: 3em;
+}
+
+.slideButton:active {
+  border: none;
+  font-size: 2.5em;
+  transition: 0.3s ease;
+}
+
+.slideButton:focus {
+  outline: none;
+}
+
+.slideButtonLeft {
+  left: 0%;
+}
+
+.slideButtonRight {
+  right: 0%;
+}
+
+.slideBox {
+  border-radius: 10%;
+  color: white;
+  font-size: 1.8em;
+  height: auto;
+  line-height: 1.2;
+  opacity: 0.8;
+  padding: 15px;
+  position: absolute;
+  width: 400px;
+}
+
+.slideBox h2 {
+  border-bottom: 1px solid white;
+  color: white;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.slideBox a {
+  color: white;
+}
+
+.bgswitch {
+  background-color: transparent;
+  bottom: 5%;
+  display: block;
+  height: auto;
+  min-height: 30px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 800;
+}
+
+.bgswitch span {
+  cursor: pointer;
+  height: 14px;
+  margin: 0 3px;
+  width: 14px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.bgDot {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.bgDot:hover {
+  background-color: white;
+  opacity: 0.7;
+}
+
+.bgDot:active {
+  background-color: white;
+  opacity: 1;
+}
+
+.bgDot-white {
+  background-color: white;
+  height: 15px !important;
+  opacity: 1;
+  width: 15px !important;
+}
+
+.bgDot-white:hover {
+  background-color: white;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
