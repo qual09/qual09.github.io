@@ -1,0 +1,21 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery img {
+  border-radius: 20px;
+  height: 185px;
+  width: 280px;
+  margin: 20px;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.gallery img:hover {
+  border-radius: 5px;
+  opacity: 1;
+  text-shadow: 0 0 15px black, 0 0 10px black;
+  transform: scale(1.03);
+}

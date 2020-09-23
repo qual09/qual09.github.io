@@ -3,7 +3,7 @@
   background-size: cover;
   height: 100%;
   width: 100%;
-  animation: fadeIn 0.8s;
+  animation: fadeIn 5s;
   position: absolute;
   top: 0;
   z-index: 100;
