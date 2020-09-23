@@ -1,8 +1,7 @@
 <img src="images/q09-vector.svg" align="right" width="150" height="150" >
 
-# qual09.github.io
+# qual09.github.io | Portfolio Projects
 
-Homepage:  
 https://qual09.github.io  
 
 <!--
