@@ -1,6 +1,7 @@
 /* SLIDER */
 
 .compare {
+  border-radius: 5px;
   height: 73.5vw;
   margin: 20px auto;
   max-height: 750px;

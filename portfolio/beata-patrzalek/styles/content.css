@@ -11,5 +11,9 @@ p {
 }
 
 li {
-  margin-left: 25px;
+  margin-left: 35px;
+}
+
+img {
+  border-radius: 5px;
 }
