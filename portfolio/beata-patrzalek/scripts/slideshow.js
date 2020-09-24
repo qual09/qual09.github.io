@@ -38,7 +38,7 @@ function showSlides(manual = null) {
   // Show current dot
   dots[slideIndex - 1].className += ' bgDot-white';
 
-  // Show next slide after timeout
+  // Show next slide after timeout / it takes double time for next slide from manual select
   if (!manual) slideIndex++;
   loopSlides = setTimeout(showSlides, 5000);
 }

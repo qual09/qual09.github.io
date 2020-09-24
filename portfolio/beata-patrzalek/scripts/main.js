@@ -1,12 +1,11 @@
 // Sticky Header
-window.onscroll = function () { stickyHeader() };
-function stickyHeader() {
-	let header = document.getElementById('stickyHeader');
-	let sticky = header.offsetTop;
+window.onscroll = () => {
+	const header = document.querySelector('header');
+	const sticky = header.offsetTop;
 	if (window.pageYOffset > sticky) {
-		header.classList.add('stickyHeader');
+		header.style.position = 'fixed';
 	} else {
-		header.classList.remove('stickyHeader');
+		header.style.position = 'unset';
 	}
 }
 
@@ -28,6 +27,7 @@ function removeLandingStyles() {
 	document.querySelector('.title').style.display = 'none';
 	document.querySelector('#dynamiContent').style.display = 'block';
 	document.querySelector('header').style.position = 'unset';
+	document.querySelector('footer').style.position = 'unset';
 	document.querySelector('body').style.backgroundColor = 'white';
 }
 
