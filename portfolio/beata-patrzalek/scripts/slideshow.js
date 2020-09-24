@@ -1,6 +1,6 @@
 const slides = document.getElementsByClassName('mySlides');
 const dots = document.getElementsByClassName('bgDot');
-let slideIndex = 1;
+let slideIndex = 0;
 let loopSlides;
 showSlides();
 
@@ -30,15 +30,17 @@ function showSlides(manual = null) {
   }
 
   // Check edge values of slide list
-  if (slideIndex > slides.length) slideIndex = 1;
-  if (slideIndex < 1) slideIndex = slides.length;
+  if (slideIndex > slides.length) slideIndex = 0;
+  if (slideIndex < 0) slideIndex = slides.length + 1;
+
+  // It takes double time for next slide from manual select
+  if (!manual) slideIndex++;
 
   // Show slide on UI
-  slides[slideIndex - 1].style.display = 'block';
+  slides[slideIndex].style.display = 'block';
   // Show current dot
-  dots[slideIndex - 1].className += ' bgDot-white';
+  dots[slideIndex].className += ' bgDot-white';
 
-  // Show next slide after timeout / it takes double time for next slide from manual select
-  if (!manual) slideIndex++;
+  // Show next slide after timeout
   loopSlides = setTimeout(showSlides, 5000);
 }
