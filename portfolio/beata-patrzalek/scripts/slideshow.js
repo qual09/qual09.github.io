@@ -1,6 +1,6 @@
 const slides = document.getElementsByClassName('mySlides');
 const dots = document.getElementsByClassName('bgDot');
-let slideIndex = 1;
+let slideIndex = 0;
 let loopSlides;
 showSlides();
 
@@ -19,6 +19,7 @@ function changeSlide(n) {
 }
 
 function showSlides(manual = null) {
+  if (!manual) slideIndex++;
   let i;
   // Hide all slides
   for (i = 0; i < slides.length; i++) {
@@ -39,6 +40,5 @@ function showSlides(manual = null) {
   dots[slideIndex - 1].className += ' bgDot-white';
 
   // Show next slide after timeout / it takes double time for next slide from manual select
-  if (!manual) slideIndex++;
   loopSlides = setTimeout(showSlides, 5000);
 }
