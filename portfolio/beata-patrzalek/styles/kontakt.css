@@ -12,5 +12,6 @@
 }
 
 .social ul li img {
+  height: auto;
   width: 30px;
 }
