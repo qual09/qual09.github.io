@@ -47,6 +47,14 @@ input#slider {
   position: relative;
   top: -100vw;
   width: 100%;
+  -webkit-appearance: none;
+}
+
+input#slider::-webkit-slider-thumb {
+  background-color: transparent;
+  height: 1px;
+  width: 1px;
+  -webkit-appearance: none;
 }
 
 #compare::before {
