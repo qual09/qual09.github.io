@@ -1,0 +1,16 @@
+.social {
+  margin-top: 10px;
+}
+
+.social ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.social ul li {
+  margin: 0 10px 0 0;
+}
+
+.social ul li img {
+  width: 30px;
+}
