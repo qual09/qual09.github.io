@@ -2,8 +2,6 @@
 
 # [qual09.github.io](https://qual09.github.io) | Portfolio Projects
 
-https://qual09.github.io  
-
 <!--
 Github Pages Guides:  
 https://pages.github.com  
