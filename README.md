@@ -2,6 +2,8 @@
 
 # [qual09.github.io](https://qual09.github.io) | Portfolio Projects
 
+Perfect is boring.
+
 <!--
 Github Pages Guides:  
 https://pages.github.com  
