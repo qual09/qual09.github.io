@@ -1,6 +1,6 @@
 <img src="images/q09-vector.svg" align="right" width="150" height="150" >
 
-# qual09.github.io | Portfolio Projects
+# [qual09.github.io](https://qual09.github.io) | Portfolio Projects
 
 https://qual09.github.io  
 
