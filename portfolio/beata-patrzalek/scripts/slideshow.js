@@ -19,7 +19,6 @@ function changeSlide(n) {
 }
 
 function showSlides(manual = null) {
-  if (!manual) slideIndex++;
   let i;
   // Hide all slides
   for (i = 0; i < slides.length; i++) {
@@ -29,6 +28,8 @@ function showSlides(manual = null) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(' bgDot-white', '');
   }
+
+  if (!manual) slideIndex++;
 
   // Check edge values of slide list
   if (slideIndex > slides.length) slideIndex = 1;
