@@ -58,8 +58,7 @@
   right: 0%;
 }
 
-.bgswitch {
-  background-color: transparent;
+.bgSwitch {
   bottom: 70px;
   position: absolute;
   text-align: center;
