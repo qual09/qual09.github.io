@@ -29,6 +29,7 @@ function showSlides(manual = null) {
     dots[i].className = dots[i].className.replace(' bgDot-white', '');
   }
 
+  // Show next slide unless slide is selected manually
   if (!manual) slideIndex++;
 
   // Check edge values of slide list
@@ -40,6 +41,6 @@ function showSlides(manual = null) {
   // Show current dot
   dots[slideIndex - 1].className += ' bgDot-white';
 
-  // Show next slide after timeout / it takes double time for next slide from manual select
+  // Show next slide after timeout
   loopSlides = setTimeout(showSlides, 5000);
 }
