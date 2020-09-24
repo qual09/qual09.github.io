@@ -57,6 +57,10 @@ input#slider::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
+input#slider:focus {
+  outline: none;
+}
+
 #compare::before {
   background: url(../images/comparision.png) no-repeat scroll 0 center transparent;
   background-size: contain;
