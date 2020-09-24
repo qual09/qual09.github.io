@@ -11,19 +11,19 @@ window.onscroll = () => {
 
 // Slider
 function beforeAfter() {
-	document.getElementById('compare').style.width = document.getElementById('slider').value + '%';
+	document.querySelector('#compare').style.width = document.querySelector('#slider').value + '%';
 }
 
 // Load Dynamic Content
 function openContent(content) {
-	$('#dynamiContent').load(content + '.html');
 	selectCurrentNav(content);
 	removeLandingStyles();
+	$('#dynamiContent').load(content + '.html');
 }
 
 // Remove Landing Page Styles
 function removeLandingStyles() {
-	document.querySelector('.slideshow').style.display = 'none';
+	document.querySelector('#slideshow').style.display = 'none';
 	document.querySelector('.title').style.display = 'none';
 	document.querySelector('#dynamiContent').style.display = 'block';
 	document.querySelector('header').style.position = 'unset';
@@ -33,7 +33,7 @@ function removeLandingStyles() {
 
 // Set current navigation in menu
 function selectCurrentNav(content) {
-	const ul = document.getElementById('navMenu');
+	const ul = document.querySelector('#navMenu');
 	Array.from(ul.children).forEach(li => {
 		if (li.children[0].id === content) {
 			li.children[0].classList.add('currentMenu');

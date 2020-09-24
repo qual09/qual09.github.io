@@ -11,7 +11,7 @@
   z-index: 100;
 }
 
-.mySlides div {
+.mySlides>div {
   z-index: 900;
 }
 
@@ -58,29 +58,6 @@
   right: 0%;
 }
 
-.slideBox {
-  border-radius: 10%;
-  color: white;
-  font-size: 1.8em;
-  height: auto;
-  line-height: 1.2;
-  opacity: 0.8;
-  padding: 15px;
-  position: absolute;
-  width: 400px;
-}
-
-.slideBox h2 {
-  border-bottom: 1px solid white;
-  color: white;
-  line-height: 1;
-  padding-bottom: 20px;
-}
-
-.slideBox a {
-  color: white;
-}
-
 .bgswitch {
   background-color: transparent;
   bottom: 70px;
@@ -115,14 +92,14 @@
   opacity: 1;
 }
 
-.bgDot-white {
+.bgDotWhite {
   background-color: white;
   opacity: 1;
   height: 20px !important;
   width: 20px !important;
 }
 
-.bgDot-white:hover {
+.bgDotWhite:hover {
   opacity: 1;
 }
 

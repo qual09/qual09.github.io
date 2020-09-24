@@ -26,7 +26,7 @@ function showSlides(manual = null) {
   }
   // Hide all dots
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(' bgDot-white', '');
+    dots[i].className = dots[i].className.replace(' bgDotWhite', '');
   }
 
   // Show next slide unless slide is selected manually
@@ -39,7 +39,7 @@ function showSlides(manual = null) {
   // Show slide on UI
   slides[slideIndex - 1].style.display = 'block';
   // Show current dot
-  dots[slideIndex - 1].className += ' bgDot-white';
+  dots[slideIndex - 1].className += ' bgDotWhite';
 
   // Show next slide after timeout
   loopSlides = setTimeout(showSlides, 5000);
