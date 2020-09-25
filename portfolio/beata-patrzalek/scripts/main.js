@@ -9,11 +9,6 @@ window.onscroll = () => {
 	}
 }
 
-// Slider
-function beforeAfter() {
-	document.querySelector('#compare').style.width = document.querySelector('#slider').value + '%';
-}
-
 // Load Dynamic Content
 function openContent(content) {
 	selectCurrentNav(content);

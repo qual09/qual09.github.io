@@ -67,11 +67,20 @@
     </tr>
   </table>
 
-  <div class="compare">
-    <figure>
-      <div id="compare"></div>
+  <div class="compareContainer">
+    <figure class="oneA">
+      <div class="oneB"></div>
     </figure>
-    <input type="range" id="slider" oninput="beforeAfter()" onchange="beforeAfter()" min="0" max="100" value="50" />
+    <input type="range" id="sliderOne" oninput="beforeAfterOne()" onchange="beforeAfterOne()" min="0" max="100"
+      value="50" />
+  </div>
+
+  <div class="compareContainer">
+    <figure class="twoA">
+      <div class="twoB"></div>
+    </figure>
+    <input type="range" id="sliderTwo" oninput="beforeAfterTwo()" onchange="beforeAfterTwo()" min="0" max="100"
+      value="50" />
   </div>
 
   <p>
@@ -83,13 +92,29 @@
 </div>
 
 <script>
+  // Slider
+  function beforeAfterOne() {
+    document.querySelector('.oneB').style.width = document.querySelector('#sliderOne').value + '%';
+  }
+  function beforeAfterTwo() {
+    document.querySelector('.twoB').style.width = document.querySelector('#sliderTwo').value + '%';
+  }
+
+  // Animation on scroll
   window.onscroll = () => {
-    const compare = document.querySelector('#compare');
-    const comparePosition = compare.offsetTop;
-    if (window.pageYOffset > comparePosition) {
-      compare.classList.add('animation');
+    const compareOne = document.querySelector('.oneB');
+    const compareOnePosition = compareOne.offsetTop;
+    if (window.pageYOffset > compareOnePosition) {
+      compareOne.classList.add('animation');
     } else {
-      compare.classList.remove('animation');
+      compareOne.classList.remove('animation');
+    }
+    const compareTwo = document.querySelector('.twoB');
+    const compareTwoPosition = compareTwo.offsetTop;
+    if (window.pageYOffset > compareTwoPosition) {
+      compareTwo.classList.add('animation');
+    } else {
+      compareTwo.classList.remove('animation');
     }
   }
 </script>
