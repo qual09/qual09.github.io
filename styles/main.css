@@ -62,6 +62,10 @@ h1 {
   font-size: 1.2em;
 }
 
+.logo a:hover {
+  text-decoration: underline;
+}
+
 .stickyHeader {
   background-color: #eeeeee;
   left: 0;
