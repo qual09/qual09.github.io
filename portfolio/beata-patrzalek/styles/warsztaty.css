@@ -32,7 +32,6 @@
   overflow: visible;
   position: absolute;
   width: 50%;
-  animation: first 2s 1 normal ease-in-out 0.1s;
 }
 
 input#slider {
@@ -71,6 +70,10 @@ input#slider:focus {
   position: relative;
   top: 0;
   width: 64px;
+}
+
+.animation {
+  animation: first 2s 1 normal ease-in-out 0.1s;
 }
 
 @keyframes first {

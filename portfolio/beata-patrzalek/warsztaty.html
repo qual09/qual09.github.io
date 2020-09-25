@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="styles/content.css">
-<link rel="stylesheet" href="styles/compare.css">
+<link rel="stylesheet" href="styles/warsztaty.css">
 
 <div class="container">
 
@@ -81,3 +81,15 @@
   </p>
 
 </div>
+
+<script>
+  window.onscroll = () => {
+    const compare = document.querySelector('#compare');
+    const comparePosition = compare.offsetTop;
+    if (window.pageYOffset > comparePosition) {
+      compare.classList.add('animation');
+    } else {
+      compare.classList.remove('animation');
+    }
+  }
+</script>
