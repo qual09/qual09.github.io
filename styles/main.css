@@ -174,7 +174,7 @@ nav ul li {
   backface-visibility: hidden;
   float: right;
   height: auto;
-  max-width: 150px;
+  max-width: 100px;
   opacity: 0.8;
   transform: translateZ(0) scale(1.0, 1.0);
   transition: 0.3s ease;
@@ -273,6 +273,16 @@ footer {
 
 .bgYellow {
   background-color: #FFCC00;
+}
+
+.singleRow {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.doubleRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Animations */
