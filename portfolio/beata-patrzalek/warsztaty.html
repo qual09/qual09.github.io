@@ -67,6 +67,7 @@
     </tr>
   </table>
 
+  <span class="one"></span>
   <div class="compareContainer">
     <figure class="oneA">
       <div class="oneB"></div>
@@ -75,6 +76,7 @@
       value="50" />
   </div>
 
+  <span class="two"></span>
   <div class="compareContainer">
     <figure class="twoA">
       <div class="twoB"></div>
@@ -103,18 +105,19 @@
   // Animation on scroll
   window.onscroll = () => {
     const compareOne = document.querySelector('.oneB');
-    const compareOnePosition = compareOne.offsetTop;
+    const compareOnePosition = document.querySelector('.one').offsetTop - compareOne.offsetHeight;
     if (window.pageYOffset > compareOnePosition) {
       compareOne.classList.add('animation');
     } else {
       compareOne.classList.remove('animation');
     }
     const compareTwo = document.querySelector('.twoB');
-    const compareTwoPosition = compareTwo.offsetTop;
+    const compareTwoPosition = document.querySelector('.two').offsetTop - compareTwo.offsetHeight;
     if (window.pageYOffset > compareTwoPosition) {
       compareTwo.classList.add('animation');
     } else {
       compareTwo.classList.remove('animation');
     }
+    console.log(window.pageYOffset, compareOnePosition, compareTwoPosition);
   }
 </script>
