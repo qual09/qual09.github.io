@@ -45,37 +45,32 @@ strong {
   font-weight: bold;
 }
 
-.logo {
-  align-items: center;
-  /* background: url(../images/logo.png); */
-  /* background-size: 100% 400%; */
-  display: flex;
-  font-family: Verdana;
-  font-size: 1.1em;
-  font-style: italic;
-  padding: 10px 10px;
-}
-
-.logo, .home>div {
+.card {
   animation-duration: 0.8s;
   animation-name: fadein;
   background-color: white;
   border-left: 3px solid #21293d;
   border-radius: 2px;
+  padding: 10px;
   transition: 0.3s ease;
   /* Funky boxes */
   /* border-radius: 255px 25px 225px 25px/25px 225px 25px 255px; */
 }
 
-.logo:hover, .home>div:hover {
+.card:hover {
   border-left: 3px solid #ff780a;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   transition: 0.3s ease;
+  transform: translateY(-1px);
 }
 
-/* .home>div:hover {
-  transform: translateY(-2px);
-} */
+.logo {
+  align-items: center;
+  display: flex;
+  font-family: Verdana;
+  font-size: 1.1em;
+  font-style: italic;
+}
 
 .logo a {
   color: #21293d;
@@ -193,18 +188,6 @@ nav ul li {
   padding-left: 5px;
 }
 
-/* Projects list */
-
-.home>div>ul.projects li {
-  margin: 8px 0;
-}
-
-/* Projects list */
-
-.home>div>ul.projects li::before {
-  content: none;
-}
-
 .home>div ul li {
   align-items: center;
   display: flex;
@@ -253,7 +236,7 @@ footer {
   text-align: right;
 }
 
-/* Tools */
+/* Utilities */
 
 .badge {
   border-radius: 5px;
