@@ -36,6 +36,7 @@ header {
 }
 
 header>nav>ul {
+	align-items: center;
 	display: flex;
 	justify-content: space-evenly;
 	list-style: none;
