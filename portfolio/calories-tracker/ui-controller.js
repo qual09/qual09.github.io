@@ -41,7 +41,6 @@ const UICtrl = (() => {
     },
 
     addListItem: (item) => {
-      console.log(item);
       // Show the list
       UICtrl.showList();
 
@@ -78,6 +77,12 @@ const UICtrl = (() => {
       document.querySelector(UISelectors.totalCaloriesTitle).style.display = 'block';
     },
 
+    addItemToForm: () => {
+      document.querySelector(UISelectors.itemNameInput).value = ItemCtrl.getCurrentItem().name;
+      document.querySelector(UISelectors.itemCaloriesInput).value = ItemCtrl.getCurrentItem().calories;
+      UICtrl.showEditState();
+    },
+
     showTotalCalories: (totalCalories) => {
       document.querySelector(UISelectors.totalCalories).textContent = totalCalories;
     },
@@ -88,6 +93,14 @@ const UICtrl = (() => {
       document.querySelector(UISelectors.daleteBtn).style.display = 'none';
       document.querySelector(UISelectors.backBtn).style.display = 'none';
       document.querySelector(UISelectors.addBtn).style.display = 'inline';
+    },
+
+    showEditState: () => {
+      UICtrl.clearInput();
+      document.querySelector(UISelectors.updateBtn).style.display = 'inline';
+      document.querySelector(UISelectors.daleteBtn).style.display = 'inline';
+      document.querySelector(UISelectors.backBtn).style.display = 'inline';
+      document.querySelector(UISelectors.addBtn).style.display = 'none';
     },
 
     getSelectors: () => {

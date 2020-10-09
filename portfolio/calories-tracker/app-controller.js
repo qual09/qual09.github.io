@@ -43,6 +43,20 @@ const App = ((ItemCtrl, UICtrl) => {
       // Get list item id (item0, item-1)
       const listId = e.target.parentNode.parentNode.id;
 
+      // Break into an array
+      const listIdArr = listId.split('-');
+
+      // Get the actual id
+      const id = parseInt(listIdArr[1]);
+
+      // Get item
+      const itemToEdit = ItemCtrl.getItemById(id);
+
+      // Set current item
+      ItemCtrl.setCurrentItem(itemToEdit);
+
+      // Add item to form
+      UICtrl.addItemToForm();
     }
 
     e.preventDefault();

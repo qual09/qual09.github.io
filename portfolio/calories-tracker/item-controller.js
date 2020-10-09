@@ -45,6 +45,25 @@ const ItemCtrl = (() => {
       return newItem;
     },
 
+    getItemById: (id) => {
+      let found = null;
+
+      // Loop through items
+      data.items.forEach(item => {
+        if (id === item.id)
+          found = item;
+      });
+      return found;
+    },
+
+    setCurrentItem: (item) => {
+      data.currentItem = item;
+    },
+
+    getCurrentItem: () => {
+      return data.currentItem;
+    },
+
     getTotalCalories: () => {
       let total = 0;
 
