@@ -3,6 +3,7 @@ const UICtrl = (() => {
   // UI elements selectors
   const UISelectors = {
     itemList: '#item-list',
+    clearAllBtn: '.right',
     addBtn: '.add-btn',
     updateBtn: '.update-btn',
     daleteBtn: '.delete-btn',
@@ -70,11 +71,13 @@ const UICtrl = (() => {
     hideList: () => {
       document.querySelector(UISelectors.itemList).style.display = 'none';
       document.querySelector(UISelectors.totalCaloriesTitle).style.display = 'none';
+      document.querySelector(UISelectors.clearAllBtn).style.display = 'none';
     },
 
     showList: () => {
       document.querySelector(UISelectors.itemList).style.display = 'block';
       document.querySelector(UISelectors.totalCaloriesTitle).style.display = 'block';
+      document.querySelector(UISelectors.clearAllBtn).style.display = 'block';
     },
 
     addItemToForm: () => {
