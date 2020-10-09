@@ -1,0 +1,2 @@
+// Initialize App
+App.init();
