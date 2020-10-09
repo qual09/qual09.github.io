@@ -4,6 +4,9 @@ const UICtrl = (() => {
   const UISelectors = {
     itemList: '#item-list',
     addBtn: '.add-btn',
+    updateBtn: '.update-btn',
+    daleteBtn: '.delete-btn',
+    backBtn: '.back-btn',
     itemNameInput: '#item-name',
     itemCaloriesInput: '#item-calories',
     totalCalories: '.total-calories',
@@ -38,16 +41,16 @@ const UICtrl = (() => {
     },
 
     addListItem: (item) => {
+      console.log(item);
       // Show the list
-      document.querySelector(UISelectors.itemList).style.display = 'block';
-      document.querySelector(UISelectors.totalCaloriesTitle).style.display = 'block';
+      UICtrl.showList();
 
       // Create li element
       const li = document.createElement('li');
       // Add class
       li.className = 'collection-item';
       // Add ID
-      li.id = `item-${item.ID}`;
+      li.id = `item-${item.id}`;
       // Add HTML
       li.innerHTML = `
         <strong>${item.name}: </strong> <em>${item.calories} Calories</em>
@@ -70,8 +73,21 @@ const UICtrl = (() => {
       document.querySelector(UISelectors.totalCaloriesTitle).style.display = 'none';
     },
 
+    showList: () => {
+      document.querySelector(UISelectors.itemList).style.display = 'block';
+      document.querySelector(UISelectors.totalCaloriesTitle).style.display = 'block';
+    },
+
     showTotalCalories: (totalCalories) => {
       document.querySelector(UISelectors.totalCalories).textContent = totalCalories;
+    },
+
+    clearEditState: () => {
+      UICtrl.clearInput();
+      document.querySelector(UISelectors.updateBtn).style.display = 'none';
+      document.querySelector(UISelectors.daleteBtn).style.display = 'none';
+      document.querySelector(UISelectors.backBtn).style.display = 'none';
+      document.querySelector(UISelectors.addBtn).style.display = 'inline';
     },
 
     getSelectors: () => {

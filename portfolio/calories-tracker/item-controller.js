@@ -1,6 +1,6 @@
 // Item Controller
 const ItemCtrl = (() => {
-  // Item Constructor
+  // Item constructor
   class Item {
     constructor(id, name, calories) {
       this.id = id;
@@ -9,7 +9,7 @@ const ItemCtrl = (() => {
     }
   }
 
-  // Data Structure / State
+  // Data structure / state
   const data = {
     items: [
       // { id: 0, name: 'Steak Dinner', calories: 1200 },
@@ -33,7 +33,7 @@ const ItemCtrl = (() => {
         ID = 0;
       }
 
-      // Calories tu number
+      // Calories to number
       calories = parseInt(calories);
 
       // Create new item
@@ -56,7 +56,7 @@ const ItemCtrl = (() => {
       // Set total calories in data structure
       data.totalCalories = total;
 
-      // Retyrb total
+      // Return total
       return data.totalCalories;
     },
 
