@@ -1,13 +1,21 @@
 // Storage Controller
+const StorageCtrl = (() => {
 
+  // Public methods
+  return {
+
+  };
+})();
 
 // Item Controller
-const ItemCtrl = (function () {
+const ItemCtrl = (() => {
   // Item Constructor
-  const Item = function (id, name, calories) {
-    this.id = id;
-    this.name = name;
-    this.calories = calories;
+  class Item {
+    constructor(id, name, calories) {
+      this.id = id;
+      this.name = name;
+      this.calories = calories;
+    }
   }
 
   // Data Structure / State
@@ -19,38 +27,57 @@ const ItemCtrl = (function () {
     ],
     currentItem: null,
     totalCalories: 0
-  }
+  };
 
   // Public methods
   return {
-    logData: function () {
-      return data;
-    }
-  }
+    getItems: () => data.items,
+    logData: () => data,
+  };
 })();
 
 
 // UI Controller
-const UICtrl = (function () {
+const UICtrl = (() => {
+  const UISelectors = {
+    itemList: '#item-list',
+  }
 
   // Public methods
   return {
+    populateItemList: (items) => {
+      let html = '';
 
-  }
+      items.forEach(item => {
+        html += `
+          <li class="collection-item" id="item-${item.id}">
+            <strong>${item.name}: </strong> <em>${item.calories} Calories</em>
+            <a href="#" class="secondary-content">
+              <i class="fa fa-pencil edit-item"></i>
+            </a>
+          </li>
+        `;
+      });
 
+      // Insert list items
+      document.querySelector(UISelectors.itemList).innerHTML = html;
+    },
+  };
 })();
 
 
 // App Controller
-const App = (function (ItemCtrl, UICtrl) {
-
+const App = ((ItemCtrl, UICtrl) => {
   // Public methods
   return {
-    init: function () {
-      console.log('Initializing App...');
-    }
-  }
+    init: () => {
+      // Fetch items from data structure
+      const items = ItemCtrl.getItems();
 
+      // Populate list with items
+      UICtrl.populateItemList(items);
+    },
+  };
 })(ItemCtrl, UICtrl);
 
 
