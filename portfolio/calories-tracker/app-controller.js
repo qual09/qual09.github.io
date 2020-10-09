@@ -5,11 +5,26 @@ const App = ((ItemCtrl, UICtrl) => {
 
   // Load event listeners
   function loadEventListeners() {
+    // Clear all items event
+    document.querySelector(UISelectors.clearAllBtn).addEventListener('click', clearAllItems);
+
     // Add item event
     document.querySelector(UISelectors.addBtn).addEventListener('click', itemAddSubmit);
 
     // Edit icon click event
     document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
+  }
+
+  // Clear all items
+  function clearAllItems(e) {
+    console.log('### clearAllItems');
+    // Clear all items from storage
+    ItemCtrl.clearAllItems();
+
+    // Clear all items in UI
+    UICtrl.clearAllItems();
+
+    e.preventDefault();
   }
 
   // Add item submit

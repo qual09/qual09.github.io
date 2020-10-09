@@ -17,7 +17,7 @@ const ItemCtrl = (() => {
       // { id: 2, name: 'Eggs', calories: 300 },
     ],
     currentItem: null,
-    totalCalories: 0
+    totalCalories: 0,
   };
 
   // Public methods
