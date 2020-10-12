@@ -41,6 +41,11 @@ const UICtrl = (() => {
       }
     },
 
+    clearAllItems: () => {
+      document.querySelector(UISelectors.itemList).innerHTML = '';
+      UICtrl.hideList();
+    },
+
     addListItem: (item) => {
       // Show the list
       UICtrl.showList();

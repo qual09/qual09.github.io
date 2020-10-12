@@ -13,6 +13,9 @@ const App = ((ItemCtrl, UICtrl) => {
 
     // Edit icon click event
     document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
+
+    // Back button click event
+    document.querySelector(UISelectors.backBtn).addEventListener('click', backClick);
   }
 
   // Clear all items
@@ -59,6 +62,9 @@ const App = ((ItemCtrl, UICtrl) => {
       // Get list item id (item0, item-1)
       const listId = e.target.parentNode.parentNode.id;
 
+      const listItem = e.target.parentNode.parentNode;
+      console.log(listItem);
+
       // Break into an array
       const listIdArr = listId.split('-');
 
@@ -74,6 +80,14 @@ const App = ((ItemCtrl, UICtrl) => {
       // Add item to form
       UICtrl.addItemToForm();
     }
+
+    e.preventDefault();
+  }
+
+  // Click back button
+  function backClick(e) {
+    UICtrl.clearEditState();
+    UICtrl.clearInput();
 
     e.preventDefault();
   }

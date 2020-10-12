@@ -24,6 +24,11 @@ const ItemCtrl = (() => {
   return {
     getItems: () => data.items,
 
+    clearAllItems: () => {
+      data.items = [];
+      data.totalCalories = 0;
+    },
+
     addItem: (name, calories) => {
       let ID;
       // Create ID
