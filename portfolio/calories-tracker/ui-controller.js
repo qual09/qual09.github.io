@@ -95,12 +95,26 @@ const UICtrl = (() => {
       document.querySelector(UISelectors.totalCalories).textContent = totalCalories;
     },
 
+    setCurrentItem: (itemElementToEdit) => {
+      // Restore styles of other items
+      Array.from(document.querySelector(UISelectors.itemList).children).forEach(element => {
+        element.style.backgroundColor = 'white';
+      });
+
+      itemElementToEdit.style.backgroundColor = 'antiquewhite';
+    },
+
     clearEditState: () => {
       UICtrl.clearInput();
       document.querySelector(UISelectors.updateBtn).style.display = 'none';
       document.querySelector(UISelectors.daleteBtn).style.display = 'none';
       document.querySelector(UISelectors.backBtn).style.display = 'none';
       document.querySelector(UISelectors.addBtn).style.display = 'inline';
+
+      // Restore styles
+      Array.from(document.querySelector(UISelectors.itemList).children).forEach(element => {
+        element.style.backgroundColor = 'white';
+      });
     },
 
     showEditState: () => {

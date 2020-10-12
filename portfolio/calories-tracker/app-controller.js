@@ -20,12 +20,16 @@ const App = ((ItemCtrl, UICtrl) => {
 
   // Clear all items
   function clearAllItems(e) {
-    console.log('### clearAllItems');
-    // Clear all items from storage
-    ItemCtrl.clearAllItems();
+    if (confirm('Are you sure?')) {
+      // Clear all items from storage
+      ItemCtrl.clearAllItems();
 
-    // Clear all items in UI
-    UICtrl.clearAllItems();
+      // Clear all items in UI
+      UICtrl.clearAllItems();
+
+      // Restore state
+      UICtrl.clearEditState();
+    }
 
     e.preventDefault();
   }
@@ -62,9 +66,6 @@ const App = ((ItemCtrl, UICtrl) => {
       // Get list item id (item0, item-1)
       const listId = e.target.parentNode.parentNode.id;
 
-      const listItem = e.target.parentNode.parentNode;
-      console.log(listItem);
-
       // Break into an array
       const listIdArr = listId.split('-');
 
@@ -76,6 +77,10 @@ const App = ((ItemCtrl, UICtrl) => {
 
       // Set current item
       ItemCtrl.setCurrentItem(itemToEdit);
+
+      // Change style
+      const itemElementToEdit = e.target.parentNode.parentNode;
+      UICtrl.setCurrentItem(itemElementToEdit);
 
       // Add item to form
       UICtrl.addItemToForm();
