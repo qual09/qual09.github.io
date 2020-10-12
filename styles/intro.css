@@ -28,8 +28,8 @@
   transform: translateY(100%);
 }
 
-.slider {
-  /* background: rgb(97, 105, 109); */
+/* .slider {
+  background: rgb(97, 105, 109);
   border-bottom: 15px solid #ff780a;
   height: 100%;
   left: 0;
@@ -37,7 +37,7 @@
   top: 0;
   transform: translateY(100%);
   width: 100%;
-}
+} */
 
 @media screen and (max-width: 600px) {
   .intro-text {
