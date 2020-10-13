@@ -67,7 +67,7 @@ const UICtrl = (() => {
     setCurrentItem: (itemElementToEdit) => {
       // Restore styles of other items
       Array.from(document.querySelector(UISelectors.itemList).children).forEach(element => {
-        element.style.backgroundColor = 'white';
+        element.style.removeProperty('backgroundColor');
       });
 
       itemElementToEdit.style.backgroundColor = 'antiquewhite';
@@ -139,7 +139,7 @@ const UICtrl = (() => {
 
       // Restore styles
       Array.from(document.querySelector(UISelectors.itemList).children).forEach(element => {
-        element.style.backgroundColor = 'white';
+        element.style.removeProperty('backgroundColor');
       });
     },
 
