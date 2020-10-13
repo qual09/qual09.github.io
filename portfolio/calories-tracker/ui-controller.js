@@ -118,7 +118,6 @@ const UICtrl = (() => {
     },
 
     showEditState: () => {
-      UICtrl.clearInput();
       document.querySelector(UISelectors.updateBtn).style.display = 'inline';
       document.querySelector(UISelectors.daleteBtn).style.display = 'inline';
       document.querySelector(UISelectors.backBtn).style.display = 'inline';

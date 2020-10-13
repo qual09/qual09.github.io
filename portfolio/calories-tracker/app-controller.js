@@ -14,6 +14,9 @@ const App = ((ItemCtrl, UICtrl) => {
     // Edit icon click event
     document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
 
+    // Update item event
+    document.querySelector(UISelectors.updateBtn).addEventListener('click', itemEditSubmit);
+
     // Back button click event
     document.querySelector(UISelectors.backBtn).addEventListener('click', backClick);
   }
@@ -85,6 +88,13 @@ const App = ((ItemCtrl, UICtrl) => {
       // Add item to form
       UICtrl.addItemToForm();
     }
+
+    e.preventDefault();
+  }
+
+  // Update item submit
+  function itemEditSubmit(e) {
+    console.log('update');
 
     e.preventDefault();
   }
