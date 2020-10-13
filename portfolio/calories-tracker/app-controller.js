@@ -5,8 +5,6 @@ const App = ((ItemCtrl, UICtrl) => {
 
   // Load event listeners
   function loadEventListeners() {
-    // Clear all items event
-    document.querySelector(UISelectors.clearAllBtn).addEventListener('click', clearAllItems);
 
     // Add item event
     document.querySelector(UISelectors.addBtn).addEventListener('click', itemAddSubmit);
@@ -25,24 +23,17 @@ const App = ((ItemCtrl, UICtrl) => {
     // Update item event
     document.querySelector(UISelectors.updateBtn).addEventListener('click', itemEditSubmit);
 
-    // Back button click event
-    document.querySelector(UISelectors.backBtn).addEventListener('click', backClick);
-  }
+    // Delete item event
+    document.querySelector(UISelectors.daleteBtn).addEventListener('click', itemDeleteSubmit);
 
-  // Clear all items
-  function clearAllItems(e) {
-    if (confirm('Are you sure?')) {
-      // Clear all items from storage
-      ItemCtrl.clearAllItems();
-
-      // Clear all items in UI
-      UICtrl.clearAllItems();
-
-      // Restore state
+    // Back button event
+    document.querySelector(UISelectors.backBtn).addEventListener('click', (e) => {
       UICtrl.clearEditState();
-    }
+      e.preventDefault();
+    });
 
-    e.preventDefault();
+    // Clear items event
+    document.querySelector(UISelectors.clearBtn).addEventListener('click', clearAllItemsClick);
   }
 
   // Add item submit
@@ -120,10 +111,46 @@ const App = ((ItemCtrl, UICtrl) => {
     e.preventDefault();
   }
 
-  // Click back button
-  function backClick(e) {
+  // Delete button event
+  function itemDeleteSubmit(e) {
+    // Get current item
+    const currentItem = ItemCtrl.getCurrentItem();
+
+    // Delete from data structure
+    ItemCtrl.deleteItem(currentItem.id);
+
+    // Delete from UI
+    UICtrl.deleteListItem(currentItem.id);
+
+    // Get total calories
+    const totalCalories = ItemCtrl.getTotalCalories();
+    // Add total calories to UI
+    UICtrl.showTotalCalories(totalCalories);
+
     UICtrl.clearEditState();
-    UICtrl.clearInput();
+
+    e.preventDefault();
+  }
+
+  // Clear items event
+  function clearAllItemsClick(e) {
+    if (confirm('Are you sure?')) {
+      // Delete all items from data structure
+      ItemCtrl.clearAllItems();
+
+      // Get total calories
+      const totalCalories = ItemCtrl.getTotalCalories();
+      // Add total calories to UI
+      UICtrl.showTotalCalories(totalCalories);
+
+      UICtrl.clearEditState();
+
+      // Remove from UI
+      UICtrl.removeItems();
+
+      // Hide list
+      UICtrl.hideList();
+    }
 
     e.preventDefault();
   }

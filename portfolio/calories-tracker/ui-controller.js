@@ -4,7 +4,7 @@ const UICtrl = (() => {
   const UISelectors = {
     itemList: '#item-list',
     listItems: '#item-list li',
-    clearAllBtn: '.right',
+    clearBtn: '.right',
     addBtn: '.add-btn',
     updateBtn: '.update-btn',
     daleteBtn: '.delete-btn',
@@ -42,11 +42,6 @@ const UICtrl = (() => {
       }
     },
 
-    clearAllItems: () => {
-      document.querySelector(UISelectors.itemList).innerHTML = '';
-      UICtrl.hideList();
-    },
-
     addListItem: (item) => {
       // Show the list
       UICtrl.showList();
@@ -69,6 +64,15 @@ const UICtrl = (() => {
       document.querySelector(UISelectors.itemList).insertAdjacentElement('beforeend', li);
     },
 
+    setCurrentItem: (itemElementToEdit) => {
+      // Restore styles of other items
+      Array.from(document.querySelector(UISelectors.itemList).children).forEach(element => {
+        element.style.backgroundColor = 'white';
+      });
+
+      itemElementToEdit.style.backgroundColor = 'antiquewhite';
+    },
+
     updateListItem: (item) => {
       let listItems = document.querySelectorAll(UISelectors.listItems);
 
@@ -89,6 +93,12 @@ const UICtrl = (() => {
       });
     },
 
+    deleteListItem: (id) => {
+      const itemID = `#item-${id}`;
+      const item = document.querySelector(itemID);
+      item.remove();
+    },
+
     clearInput: () => {
       document.querySelector(UISelectors.itemNameInput).value = '';
       document.querySelector(UISelectors.itemCaloriesInput).value = '';
@@ -97,13 +107,13 @@ const UICtrl = (() => {
     hideList: () => {
       document.querySelector(UISelectors.itemList).style.display = 'none';
       document.querySelector(UISelectors.totalCaloriesTitle).style.display = 'none';
-      document.querySelector(UISelectors.clearAllBtn).style.display = 'none';
+      document.querySelector(UISelectors.clearBtn).style.display = 'none';
     },
 
     showList: () => {
       document.querySelector(UISelectors.itemList).style.display = 'block';
       document.querySelector(UISelectors.totalCaloriesTitle).style.display = 'block';
-      document.querySelector(UISelectors.clearAllBtn).style.display = 'block';
+      document.querySelector(UISelectors.clearBtn).style.display = 'block';
     },
 
     addItemToForm: () => {
@@ -112,17 +122,12 @@ const UICtrl = (() => {
       UICtrl.showEditState();
     },
 
-    showTotalCalories: (totalCalories) => {
-      document.querySelector(UISelectors.totalCalories).textContent = totalCalories;
+    removeItems: () => {
+      document.querySelector(UISelectors.itemList).innerHTML = '';
     },
 
-    setCurrentItem: (itemElementToEdit) => {
-      // Restore styles of other items
-      Array.from(document.querySelector(UISelectors.itemList).children).forEach(element => {
-        element.style.backgroundColor = 'white';
-      });
-
-      itemElementToEdit.style.backgroundColor = 'antiquewhite';
+    showTotalCalories: (totalCalories) => {
+      document.querySelector(UISelectors.totalCalories).textContent = totalCalories;
     },
 
     clearEditState: () => {

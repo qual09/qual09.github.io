@@ -26,7 +26,6 @@ const ItemCtrl = (() => {
 
     clearAllItems: () => {
       data.items = [];
-      data.totalCalories = 0;
     },
 
     addItem: (name, calories) => {
@@ -75,6 +74,19 @@ const ItemCtrl = (() => {
         }
       });
       return found;
+    },
+
+    deleteItem: (id) => {
+      // Get ids
+      const ids = data.items.map((item) => {
+        return item.id;
+      });
+
+      // Get index
+      const index = ids.indexOf(id);
+
+      // Remove item
+      data.items.splice(index, 1);
     },
 
     setCurrentItem: (item) => {
