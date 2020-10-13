@@ -21,7 +21,7 @@ const App = ((ItemCtrl, StorageCtrl, UICtrl) => {
     document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
 
     // Update item event
-    document.querySelector(UISelectors.updateBtn).addEventListener('click', itemEditSubmit);
+    document.querySelector(UISelectors.updateBtn).addEventListener('click', itemUpdateSubmit);
 
     // Delete item event
     document.querySelector(UISelectors.daleteBtn).addEventListener('click', itemDeleteSubmit);
@@ -54,7 +54,7 @@ const App = ((ItemCtrl, StorageCtrl, UICtrl) => {
       // Add total calories to UI
       UICtrl.showTotalCalories(totalCalories);
 
-      // Store in localStorage
+      // Store in local storage
       StorageCtrl.storeItem(newItem);
 
       // Clear input fields
@@ -94,7 +94,7 @@ const App = ((ItemCtrl, StorageCtrl, UICtrl) => {
   }
 
   // Update item submit
-  function itemEditSubmit(e) {
+  function itemUpdateSubmit(e) {
     // Get item input
     const input = UICtrl.getItemInput();
 
@@ -108,6 +108,9 @@ const App = ((ItemCtrl, StorageCtrl, UICtrl) => {
     const totalCalories = ItemCtrl.getTotalCalories();
     // Add total calories to UI
     UICtrl.showTotalCalories(totalCalories);
+
+    // Update local storage
+    StorageCtrl.updateItemStorage(updatedItem);
 
     UICtrl.clearEditState();
 
@@ -130,6 +133,9 @@ const App = ((ItemCtrl, StorageCtrl, UICtrl) => {
     // Add total calories to UI
     UICtrl.showTotalCalories(totalCalories);
 
+    // Delete from local storage
+    StorageCtrl.deleteItemFromStorage(currentItem.id);
+
     UICtrl.clearEditState();
 
     e.preventDefault();
@@ -145,6 +151,9 @@ const App = ((ItemCtrl, StorageCtrl, UICtrl) => {
       const totalCalories = ItemCtrl.getTotalCalories();
       // Add total calories to UI
       UICtrl.showTotalCalories(totalCalories);
+
+      // Delete from local storage
+      StorageCtrl.clearItemsFromStorage();
 
       UICtrl.clearEditState();
 
