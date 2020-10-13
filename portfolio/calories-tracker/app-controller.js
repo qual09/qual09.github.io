@@ -1,5 +1,5 @@
 // App Controller
-const App = ((ItemCtrl, UICtrl) => {
+const App = ((ItemCtrl, StorageCtrl, UICtrl) => {
   // Get UI selectors
   const UISelectors = UICtrl.getSelectors();
 
@@ -53,6 +53,9 @@ const App = ((ItemCtrl, UICtrl) => {
       const totalCalories = ItemCtrl.getTotalCalories();
       // Add total calories to UI
       UICtrl.showTotalCalories(totalCalories);
+
+      // Store in localStorage
+      StorageCtrl.storeItem(newItem);
 
       // Clear input fields
       UICtrl.clearInput();
@@ -181,4 +184,4 @@ const App = ((ItemCtrl, UICtrl) => {
     },
   };
 
-})(ItemCtrl, UICtrl);
+})(ItemCtrl, StorageCtrl, UICtrl);
