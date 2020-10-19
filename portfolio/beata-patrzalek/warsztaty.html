@@ -109,15 +109,15 @@
     if (window.pageYOffset > compareOnePosition) {
       compareOne.classList.add('animation');
     } else {
-      compareOne.classList.remove('animation');
+      // compareOne.classList.remove('animation');
     }
     const compareTwo = document.querySelector('.twoB');
     const compareTwoPosition = document.querySelector('.two').offsetTop - compareTwo.offsetHeight;
     if (window.pageYOffset > compareTwoPosition) {
       compareTwo.classList.add('animation');
     } else {
-      compareTwo.classList.remove('animation');
+      // compareTwo.classList.remove('animation');
     }
-    console.log(window.pageYOffset, compareOnePosition, compareTwoPosition);
+    // console.log(window.pageYOffset, compareOnePosition, compareTwoPosition);
   }
 </script>

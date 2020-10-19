@@ -91,9 +91,21 @@ main {
 	animation-duration: 0.8s;
 	animation-name: fadein;
 	margin: 0 auto;
-	min-width: 800px;
+	/* min-width: 800px; */
 	max-width: 1000px;
 	padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+	header>nav>ul {
+		flex-direction: column;
+	}
+	header>nav>ul a {
+		padding: 1px 15px;
+	}
+	.title {
+		top: 175px;
+	}
 }
 
 /* Animations */
