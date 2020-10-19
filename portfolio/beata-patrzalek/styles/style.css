@@ -101,6 +101,7 @@ main {
 		flex-direction: column;
 	}
 	header>nav>ul a {
+		font-size: 1.2em;
 		padding: 1px 15px;
 	}
 	.title {
