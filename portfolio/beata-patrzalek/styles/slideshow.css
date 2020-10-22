@@ -1,19 +1,23 @@
+#slideshow {
+  z-index: 100;
+}
+
 .mySlides {
   animation: fadeIn 5s;
   display: none;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: calc(100% - 40px);
   width: 100%;
   position: absolute;
-  top: 0;
+  bottom: 0;
   z-index: 100;
 }
 
-.mySlides>div {
+/* .mySlides>div {
   z-index: 900;
-}
+} */
 
 .slideButton {
   background-color: transparent;
@@ -108,5 +112,11 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mySlides {
+    height: calc(100% - 166px);
   }
 }
