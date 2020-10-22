@@ -27,6 +27,7 @@
   opacity: 1;
   text-shadow: 0 0 15px black, 0 0 10px black;
   /* transform: scale(1.1); */
+  /* transition: 0.3s ease; */
 }
 
 @media only screen and (max-width: 650px) {
@@ -34,11 +35,7 @@
     height: auto;
   }
   .gallery img {
-    /* border-radius: 5px; */
     height: auto;
     width: 100%;
-    margin: 0px;
-    opacity: 0.8;
-    /* transition: 0.3s ease; */
   }
 }
