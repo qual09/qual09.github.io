@@ -19,6 +19,10 @@ body {
 	line-height: 1.5;
 }
 
+img {
+	width: 100%;
+}
+
 footer {
 	position: fixed;
 	bottom: 0;
@@ -93,19 +97,43 @@ main {
 	margin: 0 auto;
 	/* min-width: 800px; */
 	max-width: 1000px;
-	padding: 10px;
+	padding: 10px 20px;
+}
+
+/* Tools */
+
+.doubleRowRes {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2em;
 }
 
 @media only screen and (max-width: 600px) {
 	header>nav>ul {
 		flex-direction: column;
 	}
+	header>nav>ul>li {
+		margin-bottom: 2px;
+	}
 	header>nav>ul a {
 		font-size: 1.2em;
 		padding: 1px 15px;
 	}
+	.doubleRowRes {
+		grid-template-columns: 1fr;
+	}
 	.title {
-		top: 175px;
+		top: 205px;
+	}
+	.title1 {
+		font-size: 0.9em;
+	}
+	.title2 {
+		font-size: 0.5em;
+	}
+	.title3 {
+		font-size: 0.4em;
 	}
 }
 
