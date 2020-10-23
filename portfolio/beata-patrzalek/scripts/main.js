@@ -1,3 +1,6 @@
+// On start load default content
+$('#dynamiContent').load('home.html');
+
 // Sticky Header
 window.onscroll = () => {
 	const header = document.querySelector('header');
@@ -12,12 +15,12 @@ window.onscroll = () => {
 // Load Dynamic Content
 function openContent(content) {
 	selectCurrentNav(content);
-	removeLandingStyles();
+	removeIntroStyles();
 	$('#dynamiContent').load(content + '.html');
 }
 
 // Remove Landing Page Styles
-function removeLandingStyles() {
+function removeIntroStyles() {
 	document.querySelector('#slideshow').style.display = 'none';
 	document.querySelector('.title').style.display = 'none';
 	document.querySelector('#dynamiContent').style.display = 'block';
