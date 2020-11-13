@@ -110,6 +110,9 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
+	header {
+		padding: 8px 0 0 0;
+	}
 	header>nav>ul {
 		flex-direction: column;
 	}
