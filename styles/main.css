@@ -36,8 +36,9 @@ h1 {
   animation-duration: 0.8s;
   animation-name: fadein;
   background-color: white;
+  border: 1px solid #d1d5da;
   border-left: 3px solid #21293d;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 10px;
   transition: 0.3s ease;
   /* Funky boxes */
