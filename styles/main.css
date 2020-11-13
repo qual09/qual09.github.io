@@ -40,7 +40,7 @@ h1 {
   border-left: 3px solid #21293d;
   border-radius: 3px;
   padding: 10px;
-  transition: 0.3s ease;
+  transition: all 0.2s ease-in-out;
   /* Funky boxes */
   /* border-radius: 255px 25px 225px 25px/25px 225px 25px 255px; */
 }
@@ -49,7 +49,7 @@ h1 {
   border-left: 3px solid #ff780a;
   box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
   /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); */
-  transition: 0.3s ease;
+  transition: all 0.2s ease-in-out;
   transform: translateY(-1px);
 }
 
