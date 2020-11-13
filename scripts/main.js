@@ -43,6 +43,19 @@ function yo2() {
   });
   console.log(newSearchCriteria);
 }
+// TEST function 3
+function yo3() {
+  const arr = [
+    "Hi",
+    "Hello",
+    "Bonjour",
+  ];
+  const newArr = [
+    "Salut",
+    ...arr,
+  ];
+  console.log(newArr);
+}
 // *** END TEST *** //
 
 // Load Dynamic Content
