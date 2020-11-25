@@ -117,7 +117,7 @@ nav ul li {
 }
 
 .currentMenu {
-  /* border-bottom: 2px solid black; */
+  /* border-bottom: 2px solid #21293d; */
   color: #21293d !important;
   font-size: 1.3em !important;
   transition: 0.3s ease;

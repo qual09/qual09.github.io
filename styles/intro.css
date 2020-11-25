@@ -11,7 +11,7 @@
 }
 
 .intro-text {
-  color: black;
+  color: #21293d;
   font-family: "Heebo", sans-serif;
   font-size: 3rem;
   padding: 20px;
@@ -23,7 +23,7 @@
 }
 
 .text {
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid #ff780a;
   display: inline-block;
   transform: translateY(100%);
 }
