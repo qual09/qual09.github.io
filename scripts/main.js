@@ -1,4 +1,4 @@
-// On start load default content
+// On start load default content, yo
 openContent('home');
 
 // *** START TEST *** //
