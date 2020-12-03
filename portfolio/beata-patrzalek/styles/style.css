@@ -24,8 +24,9 @@ img {
 }
 
 footer {
-	position: fixed;
 	bottom: 0;
+	position: fixed;
+	user-select: none;
 	width: 100%;
 	z-index: 900;
 }
