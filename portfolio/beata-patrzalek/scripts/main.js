@@ -1,5 +1,5 @@
 // On start load default content
-$('#dynamiContent').load('home.html');
+$('#dynamicContent').load('home.html');
 
 // Sticky Header
 window.onscroll = () => {
@@ -16,14 +16,14 @@ window.onscroll = () => {
 function openContent(content) {
 	selectCurrentNav(content);
 	removeIntroStyles();
-	$('#dynamiContent').load(content + '.html');
+	$('#dynamicContent').load(content + '.html');
 }
 
 // Remove Landing Page Styles
 function removeIntroStyles() {
 	document.querySelector('#slideshow').style.display = 'none';
 	document.querySelector('.title').style.display = 'none';
-	document.querySelector('#dynamiContent').style.display = 'block';
+	document.querySelector('#dynamicContent').style.display = 'block';
 	document.querySelector('header').style.position = 'unset';
 	document.querySelector('footer').style.position = 'unset';
 	document.querySelector('body').style.backgroundColor = 'white';

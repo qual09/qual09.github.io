@@ -60,7 +60,7 @@ function yo3() {
 
 // Load Dynamic Content
 function openContent(content) {
-  $('#dynamiContent').load(content + '.html');
+  $('#dynamicContent').load(content + '.html');
   selectCurrentNav(content);
 }
 
@@ -79,7 +79,7 @@ function selectCurrentNav(content) {
 //STICKY HEADER
 window.onscroll = () => {
   const header = document.getElementById('stickyHeader');
-  const headerPosition = document.getElementById('dynamiContent');
+  const headerPosition = document.getElementById('dynamicContent');
   const sticky = headerPosition.offsetTop;
   if (window.pageYOffset > sticky) {
     header.classList.add('stickyHeader');
