@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Warstwa_1"
+   x="0px"
+   y="0px"
+   width="176.4px"
+   height="45.6px"
+   viewBox="0 0 176.4 45.6"
+   style="enable-background:new 0 0 176.4 45.6;"
+   xml:space="preserve"
+   sodipodi:docname="annarozanska_logo_podstawowe_kolor.svg"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"><metadata
+   id="metadata59"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs57" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1370"
+   inkscape:window-height="737"
+   id="namedview55"
+   showgrid="false"
+   inkscape:zoom="4.1723357"
+   inkscape:cx="91.076084"
+   inkscape:cy="33.105977"
+   inkscape:window-x="426"
+   inkscape:window-y="185"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="XMLID_216_"
+   inkscape:document-rotation="0" />
+<style
+   type="text/css"
+   id="style48">
+	.st0{fill:#D50B57;}
+	.st1{fill:#2B3232;}
+</style>
+<g
+   id="XMLID_252_">
+	<g
+   id="XMLID_216_">
+		<path
+   id="XMLID_222_"
+   class="st0"
+   d="M9.7,0v45.6h131h0.8h25.4V0H9.7z M165.5,44.3h-24.1h-0.8H10.9v-43h154.5V44.3z" />
+		
+	<text
+   xml:space="preserve"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5523px;line-height:0.75;font-family:Skia;-inkscape-font-specification:'Skia, @wght=1.00,wdth=1.00';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wdth' 1, 'wght' 1;text-align:center;text-anchor:middle;white-space:pre;inline-size:142.784;fill:#000000;fill-opacity:1;stroke:none"
+   x="51.17852"
+   y="17.54343"
+   id="text63"
+   transform="matrix(1.1824392,0,0,1.1824392,25.567487,0.51066848)"><tspan
+     x="51.17852"
+     y="17.54343"><tspan
+       style="font-size:22.5523px">Anna</tspan><tspan
+       y="17.54343"> </tspan></tspan><tspan
+     x="51.17852"
+     y="34.457654"><tspan
+       style="font-size:22.5523px">Różańska</tspan><tspan
+       y="34.457654"> </tspan></tspan></text></g>
+</g>
+</svg>
