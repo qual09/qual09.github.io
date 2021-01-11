@@ -20,13 +20,13 @@ function selectCurrentNav(content) {
 }
 
 //STICKY HEADER
-window.onscroll = () => {
-  const header = document.getElementById('stickyHeader');
-  const headerPosition = document.getElementById('dynamicContent');
-  const sticky = headerPosition.offsetTop;
-  if (window.pageYOffset > sticky) {
-    header.classList.add('stickyHeader');
-  } else {
-    header.classList.remove('stickyHeader');
-  }
-}
+// window.onscroll = () => {
+//   const header = document.getElementById('stickyHeader');
+//   const headerPosition = document.getElementById('dynamicContent');
+//   const sticky = headerPosition.offsetTop;
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add('stickyHeader');
+//   } else {
+//     header.classList.remove('stickyHeader');
+//   }
+// }
