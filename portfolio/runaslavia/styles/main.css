@@ -58,6 +58,8 @@ p {
   border: 2px solid salmon;
   font-size: 1.6em;
   padding: 10px 20px;
+  text-align: center;
+  width: auto;
 }
 
 .stickyHeader {
@@ -186,6 +188,12 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+  .header, nav ul {
+    flex-direction: column;
+  }
+  .header .logo {
+    width: 100%;
+  }
   nav ul li {
     margin: 0;
   }
