@@ -60,6 +60,7 @@ p {
 .header a {
   color: #21293d;
   font-size: 1.2em;
+  white-space: nowrap;
 }
 
 .header a:hover {
@@ -72,6 +73,10 @@ p {
   padding: 10px 20px;
   text-align: center;
   width: auto;
+}
+
+.header a.logo:hover {
+  text-decoration: none;
 }
 
 .stickyHeader {
@@ -89,7 +94,6 @@ p {
 nav {
   margin: 2px 0;
   transition: 0.3s ease;
-  width: 100%;
 }
 
 nav a {
@@ -130,7 +134,9 @@ nav ul li {
 }
 
 .sectionTitle {
+  display: flex;
   font-size: 1.4em;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -208,6 +214,9 @@ footer {
     flex-direction: column;
   }
   .header .logo {
+    width: 100%;
+  }
+  nav {
     width: 100%;
   }
   nav ul li {
