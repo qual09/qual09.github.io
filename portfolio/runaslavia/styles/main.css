@@ -68,6 +68,7 @@ p {
 
 .header .logo {
   border: 2px solid palevioletred;
+  border-radius: 3px;
   font-size: 1.6em;
   padding: 10px 20px;
   text-align: center;
