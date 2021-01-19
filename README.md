@@ -5,12 +5,11 @@
 Perfect is boring.
 
 <!--
-Github Pages Guides:  
-https://pages.github.com  
-https://guides.github.com/features/pages  
-https://www.youtube.com/watch?v=SKXkC4SqtRk  
-
- --- -->
+  Github Pages Guides:  
+  https://pages.github.com  
+  https://guides.github.com/features/pages  
+  https://www.youtube.com/watch?v=SKXkC4SqtRk  
+-->
 
 <!-- ![Logo](images/q09-raster.png)  -->
 
