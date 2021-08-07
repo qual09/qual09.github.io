@@ -1,0 +1,164 @@
+/* CSS reset */
+
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* MAIN CSS Q*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: black;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
+}
+
+img {
+	width: 100%;
+}
+
+footer {
+	bottom: 0;
+	position: fixed;
+	user-select: none;
+	width: 100%;
+	z-index: 900;
+}
+
+header {
+	background-color: black;
+	padding: 8px 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 900;
+}
+
+header>nav>ul {
+	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	list-style: none;
+}
+
+header>nav>ul a {
+	color: white;
+	font-size: 0.95em;
+	padding: 8px 15px;
+	text-decoration: none;
+}
+
+header>nav>ul a:hover {
+	border-bottom: 2px solid white;
+}
+
+.currentMenu {
+	border-bottom: 2px solid white;
+	font-weight: bold;
+}
+
+.title {
+	color: white;
+	font-size: 3.5em;
+	font-weight: bold;
+	left: 50px;
+	line-height: 1;
+	position: fixed;
+	top: 75px;
+	user-select: none;
+	z-index: 900;
+}
+
+.title1 {
+	font-size: 1.8em;
+}
+
+.title2 {
+	font-size: 1em;
+}
+
+.title3 {
+	font-size: 0.9em;
+	margin-top: 5px;
+}
+
+main {
+	width: 100%;
+}
+
+.container {
+	animation-duration: 0.8s;
+	animation-name: fadein;
+	margin: 0 auto;
+	/* min-width: 800px; */
+	max-width: 1000px;
+	padding: 10px 20px;
+}
+
+/* Tools */
+
+.doubleRowRes {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+	header {
+		padding: 8px 0 0 0;
+	}
+	header>nav>ul {
+		flex-direction: column;
+	}
+	header>nav>ul>li {
+		margin-bottom: 2px;
+	}
+	header>nav>ul a {
+		font-size: 1.2em;
+		padding: 1px 15px;
+	}
+	.doubleRowRes {
+		grid-template-columns: 1fr;
+	}
+	.title {
+		top: 205px;
+	}
+	.title1 {
+		font-size: 0.9em;
+	}
+	.title2 {
+		font-size: 0.5em;
+	}
+	.title3 {
+		font-size: 0.4em;
+	}
+}
+
+/* Animations */
+
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
