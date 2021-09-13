@@ -11,5 +11,4 @@ Perfect is boring.
   https://www.youtube.com/watch?v=SKXkC4SqtRk  
 -->
 
-<!-- ![Logo](images/q09-raster.png)  -->
-
+<!-- ![Logo](images/q09-raster.png) -->
