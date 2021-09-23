@@ -15,7 +15,12 @@ a {
   transition: 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -128,15 +133,21 @@ nav ul li {
   grid-template-columns: 1fr 1fr;
 }
 
-.home>div {
+.home-single {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+.home > div {
   padding: 20px;
 }
 
-.home>div h1 {
+.home > div h1 {
   color: #21293d;
 }
 
-.home>div h1::before {
+.home > div h1::before {
   background-color: #ff780a;
   content: "";
   display: inline-block;
@@ -146,60 +157,69 @@ nav ul li {
   width: 6px;
 }
 
-.home>div:hover h1::before {
+.home > div:hover h1::before {
   transform: skew(-21deg, 0);
   transition: 0.3s ease;
 }
 
-.home>div>img {
+.home > div > img {
   backface-visibility: hidden;
   float: right;
   height: auto;
   max-width: 100px;
   opacity: 0.8;
-  transform: translateZ(0) scale(1.0, 1.0);
+  transform: translateZ(0) scale(1, 1);
   transition: 0.3s ease;
   width: 20%;
 }
 
-.home>div:hover>img {
+.home > div:hover > img {
   opacity: 1;
 }
 
-.home>div>ul {
+.home > div > ul {
   list-style-type: none;
   padding-left: 5px;
 }
 
-.home>div ul li {
+.home > div > ol {
+  list-style-type: decimal;
+  padding-left: 5px;
+}
+
+.home > div ul li,
+.home > div ol li {
   align-items: center;
   display: flex;
   font-size: 1.2em;
   line-height: 1.45em;
 }
 
-.home>div ul li::before {
+.home > div ul li::before {
   background-color: #000;
   border-radius: 50%;
-  content: '';
+  content: "";
   height: 6px;
   margin-left: 10px;
   margin-right: 10px;
   width: 6px;
 }
 
-.home>div ul li>img {
+.home > div ul li > img,
+.home > div ol li > img {
   height: 40px;
   width: 40px;
   margin-right: 10px;
-  transform: translateZ(0) scale(1.0, 1.0);
+  transform: translateZ(0) scale(1, 1);
 }
 
-.home>div ul li>a {
+.home > div ul li > a,
+.home > div ol li > a {
   margin-right: 6px;
 }
 
-.home>div ul li a:hover {
+.home > div ul li a:hover,
+.home > div ol li a:hover {
   text-decoration: underline;
 }
 
@@ -238,7 +258,7 @@ footer {
 }
 
 .bgYellow {
-  background-color: #FFCC00;
+  background-color: #ffcc00;
 }
 
 .singleRow {
