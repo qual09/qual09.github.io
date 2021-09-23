@@ -26,7 +26,7 @@ h6 {
 }
 
 h1 {
-  font-size: 2.4em;
+  font-size: 2em;
 }
 
 .mainContainer {
@@ -141,6 +141,8 @@ nav ul li {
 
 .home > div {
   padding: 20px;
+  font-size: 1.2em;
+  line-height: 1.45em;
 }
 
 .home > div h1 {
@@ -190,12 +192,11 @@ nav ul li {
 .home > div ul li {
   align-items: center;
   display: flex;
-  font-size: 1.2em;
-  line-height: 1.45em;
 }
 
 .home > div ol li {
-  display: block;
+  display: list-item;
+  margin-left: 1.4em;
 }
 
 .home > div ul li::before {
