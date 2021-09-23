@@ -1,18 +1,14 @@
 <div class="home home-single">
   <div class="card">
     <img src="images/documentation.png" alt="">
+
     <h1>Pega - Configure HTTPS (for Personal Edition)</h1>
     <p>This document describes how to configure HTTPS for Pega Personal Edition v.8.6.0. in Windows 10.</p>
-    <p>Pega Cosmos React Apps requires additional �proxy�
-      application (<b>Constellation Service</b>) that communicates with pega to do UI
-      stuff. If pega app is on cloud all you need to do is provide URL to that app.
+    <p>Pega Cosmos React Apps requires additional application (<b>Constellation Service</b>) that communicates with pega
+      to do UI stuff. If pega app is on cloud all you need to do is provide URL to that app.
       Otherwise you need to download Constellation Service App and deploy it by
       yourself. In addition to this, Cosmos React requires both apps to be running
       using https, which requires additional configuration in Pega Personal Edition.</p>
-    <p>If any command line will fail, try using windows powershell
-      with admin rights. If powershell fails, try again using normal command line
-      with admin rights or git bash (requires git). I recommend making a copy of any
-      existing file before modifying it.</p>
 
     <h1>Prerequisites</h1>
     <p>Get stuff below and install it on your machine. Make sure
@@ -20,20 +16,16 @@
       automatically if running normal installations with admin rights).</p>
     <ol>
       <li>
-        <b>Pega Personal Edition v.8.6.0 </b> <a
-          href="https://community.pega.com/digital-delivery">https://community.pega.com/digital-delivery</a>
+        <a href="https://community.pega.com/digital-delivery">Pega Personal Edition v.8.6.0</a>
       </li>
       <li>
-        <b>OpenSSL</b> I used <i><span style='background:lightgrey'>choco install openssl</span></i><b>
-        </b>command line (requires chocolatey <a
-          href="https://chocolatey.org/install">https://chocolatey.org/install</a>)
+        <a href="https://community.pega.com/digital-delivery">Pega platform image access key</a>
       </li>
       <li>
-        <b>JDK</b> I used <a href="https://adoptium.net/">https://adoptium.net/</a>
+        <a href="https://docs.docker.com/get-docker/">Docker Desktop </a>
       </li>
       <li>
-        <b>Portecle</b> <a
-          href="https://sourceforge.net/projects/portecle/">https://sourceforge.net/projects/portecle</a>
+        <a href="https://code.visualstudio.com/download ">VS Code + Docker Extension</a>
       </li>
     </ol>
 
@@ -44,77 +36,13 @@
       </li>
       <li>
         Set Dynamic System Setting <i>Pega-UIEngine - <b>ConstellationSvcURL</b></i> value
-        to <a href="https://localhost:3443/constellation/"><i>https://localhost:3443/constellation/</b>
+        to <i>https://localhost:3443/constellation/</i>
       </li>
     </ol>
 
     <h1>Localhost HTTPS Setup</h1>
-    <p>Note: for all commands below if prompted, use password as
-      "changeme". If asked for an alias use "tomcat"</p>
-    <ol>
-      <li>
-        Generate
-        SSL Certificate using command line:
-        <p><span style='background:lightgrey'>keytool
-            -genkey -keyalg RSA -noprompt -alias tomcat -dname &quot;CN=localhost, OU=NA,
-            O=NA, L=NA, S=NA, C=NA&quot; -keystore C:\certs\pegalocalkeystore.jks -validity
-            9999 -storepass changeme -keypass changeme</span></p>
-      </li>
-      <li>
-        Generate .p12 file:
-        <p><span style='background:lightgrey'>keytool
-            -importkeystore -srckeystore C:\certs\pegalocalkeystore.jks -destkeystore C:\certs\pegalocalkeystore.p12
-            -deststoretype PKCS12</span></p>
-      </li>
-      <li>
-        Generate .crt file:
-        <p><span style='background:lightgrey'>openssl
-            pkcs12 -in C:\certs\pegalocalkeystore.p12 -nokeys -out C:\certs\pegalocal.crt</span></p>
-      </li>
-      <li>
-        Generate .key file:
-        <p><span style='background:lightgrey'>openssl
-            pkcs12 -in C:\certs\pegalocalkeystore.p12 -nocerts -nodes -out
-            C:\certs\pegalocal.key</span></p>
-      </li>
-      <li>
-        For
-        some reason (from my experience) certificate file in step 1 is in type of
-        pcks12. We need it in the type of jks. To do this, run a command line:
-        <p><span style='background:lightgrey'>keytool
-            -importkeystore -srckeystore pegalocalkeystore.p12 -srcstoretype pkcs12
-            -srcalias tomcat -destkeystore pegalocalkeystorenew.jks -deststoretype jks
-            -deststorepass changeme -destalias tomcat</span></p>
-      </li>
-      <li>
-        Copy
-        C:\certs\<b>pegalocalkeystorenew.jks</b> file into &lt;Personal Edition
-        Folder&gt;\tomcat\conf\ and rename it to <b>localhost-rsa.jks</b>
-      </li>
-      <li>
-        Enable
-        SSL for Tomcat used by Pega Personal Edition.
-        <p>Go into &lt;Personal Edition Folder&gt;\tomcat\conf\<b>server.xml</b>
-          file and add code:</p>
-        <p><span style='background:lightgrey'>&lt;Connector
-            protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;
-            port=&quot;8443&quot; maxThreads=&quot;200&quot; scheme=&quot;https&quot;
-            secure=&quot;true&quot; SSLEnabled=&quot;true&quot; keystoreFile=&quot;conf/localhost-rsa.jks&quot;
-            keystorePass=&quot;changeme&quot; clientAuth=&quot;false&quot;
-            sslProtocol=&quot;TLS&quot; /&gt;</span></p>
-      </li>
-      <li>
-        Using
-        <b>Portecle </b>app, import the certificate file C:\certs\<b>pegalocal.crt</b>
-        into JRE keystore &lt;Personal Edition Folder&gt;\jre1.8.XXXX\lib\security\<b>cacerts
-        </b>
-        <p>Password for cacerts file should be
-          changeit. Remember to click on save in Portecle. </p>
-      </li>
-      <li>
-        Restar Pega.
-      </li>
-    </ol>
+    <p>Follow instructions <a href="#" onclick="javascript:openContent('articles/pega-https')"
+        id="articles/pega-https">here</a>.</p>
 
     <h1>Docker Setup</h1>
     <ol>
@@ -125,7 +53,7 @@
         Provide <b>URL</b> as <a
           href="https://pega-docker.downloads.pega.com/constellationui/">https://pega-docker.downloads.pega.com/constellationui</a>
         and <b>username</b> and <b>password</b> from Prerequisites section step 2.
-        <p><i>Note: If this won�t work try using URL
+        <p><i>Note: If this won't work try using URL
             as </i><a
             href="https://pega-docker.downloads.pega.com/"><i>https://pega-docker.downloads.pega.com</i></a><i>
             or </i><a
@@ -134,13 +62,13 @@
       </li>
       <li>
         Search
-        for image <b>constellation/service:8.6.0-rc-latest</b> and right click =&gt; <b>Pull
+        for image <b>constellation/service:8.6.0-rc-latest</b> and right click => <b>Pull
           Image</b>
       </li>
       <li>
         Run container
         using command line in VS Code Terminal (if it's closed use shortcut: ctrl + ~):
-        <p><span style='background:lightgrey'>docker
+        <p><span style='background:lightskyblue'>docker
             run -p 3443:3443 -v C:\certs:/host_folder --name constellation-service
             pega-docker.downloads.pega.com/constellationui/service:8.6.0-rc-latest
             port=3443 urlPath=/constellation httpsKey=pegalocal.key httpsCert=pegalocal.crt
@@ -179,19 +107,6 @@
       <li>
         <a
           href="https://community.pega.com/knowledgebase/articles/user-experience/86/installing-constellation-using-docker">https://community.pega.com/knowledgebase/articles/user-experience/86/installing-constellation-using-docker</a>
-      </li>
-      <li>
-        <a
-          href="http://tomcat.apache.org/tomcat-7.0-doc/ssl-howto.html">http://tomcat.apache.org/tomcat-7.0-doc/ssl-howto.html</a>
-      </li>
-      <li>
-        <a
-          href="https://www.tbs-certificates.co.uk/FAQ/en/626.html">https://www.tbs-certificates.co.uk/FAQ/en/626.html</a>
-      </li>
-      <li>
-        <a
-          href="https://www.section.io/engineering-education/how-to-get-ssl-https-for-localhost/">https://www.section.io/engineering-education/how-to-get-ssl-https-for-localhost/</a>
-        (I ended up not using this method but description is very clear)
       </li>
     </ul>
 

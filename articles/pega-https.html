@@ -1,6 +1,7 @@
 <div class="home home-single">
   <div class="card">
-    <img src="images/documentation.png" alt="">
+    <img src="../images/documentation.png" alt="">
+
     <h1>Pega - Configure HTTPS (for Personal Edition)</h1>
     <p>This document describes how to configure HTTPS for Pega Personal Edition v.8.6.0. in Windows 10.</p>
     <p>If any command line will fail, try using windows powershell
@@ -18,27 +19,15 @@
           href="https://community.pega.com/digital-delivery">https://community.pega.com/digital-delivery</a>
       </li>
       <li>
-        <b>OpenSSL</b> I used <i><span style='background:lightgrey'>choco install openssl</span></i><b>
-        </b>command line (requires chocolatey <a
-          href="https://chocolatey.org/install">https://chocolatey.org/install</a>)
+        <b>OpenSSL</b> I used <i><span style='background:lightskyblue'>choco install openssl</span></i><b>
+        </b>command line (requires <a href="https://chocolatey.org/install">chocolatey</a>)
       </li>
       <li>
-        <b>JDK</b> I used <a href="https://adoptium.net/">https://adoptium.net/</a>
+        <b>JDK</b> I used <a href="https://adoptium.net/">https://adoptium.net</a>
       </li>
       <li>
-        <b>Portecle</b> <a
-          href="https://sourceforge.net/projects/portecle/">https://sourceforge.net/projects/portecle</a>
-      </li>
-    </ol>
-
-    <h1>Pega Setup</h1>
-    <ol>
-      <li>
-        Create new app with type <b>Cosmos React (early adopter)</b>
-      </li>
-      <li>
-        Set Dynamic System Setting <i>Pega-UIEngine - <b>ConstellationSvcURL</b></i> value
-        to <a href="https://localhost:3443/constellation/"><i>https://localhost:3443/constellation/</b>
+        <b>Portecle</b>
+        <a href="https://sourceforge.net/projects/portecle/">https://sourceforge.net/projects/portecle</a>
       </li>
     </ol>
 
@@ -49,25 +38,25 @@
       <li>
         Generate
         SSL Certificate using command line:
-        <p><span style='background:lightgrey'>keytool
-            -genkey -keyalg RSA -noprompt -alias tomcat -dname &quot;CN=localhost, OU=NA,
-            O=NA, L=NA, S=NA, C=NA&quot; -keystore C:\certs\pegalocalkeystore.jks -validity
+        <p><span style='background:lightskyblue'>keytool
+            -genkey -keyalg RSA -noprompt -alias tomcat -dname "CN=localhost, OU=NA,
+            O=NA, L=NA, S=NA, C=NA" -keystore C:\certs\pegalocalkeystore.jks -validity
             9999 -storepass changeme -keypass changeme</span></p>
       </li>
       <li>
         Generate .p12 file:
-        <p><span style='background:lightgrey'>keytool
+        <p><span style='background:lightskyblue'>keytool
             -importkeystore -srckeystore C:\certs\pegalocalkeystore.jks -destkeystore C:\certs\pegalocalkeystore.p12
             -deststoretype PKCS12</span></p>
       </li>
       <li>
         Generate .crt file:
-        <p><span style='background:lightgrey'>openssl
+        <p><span style='background:lightskyblue'>openssl
             pkcs12 -in C:\certs\pegalocalkeystore.p12 -nokeys -out C:\certs\pegalocal.crt</span></p>
       </li>
       <li>
         Generate .key file:
-        <p><span style='background:lightgrey'>openssl
+        <p><span style='background:lightskyblue'>openssl
             pkcs12 -in C:\certs\pegalocalkeystore.p12 -nocerts -nodes -out
             C:\certs\pegalocal.key</span></p>
       </li>
@@ -75,27 +64,31 @@
         For
         some reason (from my experience) certificate file in step 1 is in type of
         pcks12. We need it in the type of jks. To do this, run a command line:
-        <p><span style='background:lightgrey'>keytool
+        <p><span style='background:lightskyblue'>keytool
             -importkeystore -srckeystore pegalocalkeystore.p12 -srcstoretype pkcs12
             -srcalias tomcat -destkeystore pegalocalkeystorenew.jks -deststoretype jks
             -deststorepass changeme -destalias tomcat</span></p>
       </li>
       <li>
         Copy
-        C:\certs\<b>pegalocalkeystorenew.jks</b> file into &lt;Personal Edition
-        Folder&gt;\tomcat\conf\ and rename it to <b>localhost-rsa.jks</b>
+        C:\certs\<b>pegalocalkeystorenew.jks</b> file into &lt;Personal Edition Folder&gt;\tomcat\conf\ and rename it to
+        <b>localhost-rsa.jks</b>
       </li>
       <li>
         Enable
         SSL for Tomcat used by Pega Personal Edition.
         <p>Go into &lt;Personal Edition Folder&gt;\tomcat\conf\<b>server.xml</b>
           file and add code:</p>
-        <p><span style='background:lightgrey'>&lt;Connector
-            protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;
-            port=&quot;8443&quot; maxThreads=&quot;200&quot; scheme=&quot;https&quot;
-            secure=&quot;true&quot; SSLEnabled=&quot;true&quot; keystoreFile=&quot;conf/localhost-rsa.jks&quot;
-            keystorePass=&quot;changeme&quot; clientAuth=&quot;false&quot;
-            sslProtocol=&quot;TLS&quot; /&gt;</span></p>
+        <p>
+          <code style="background-color:lightskyblue;" class="language-markup">
+            &lt;Connector
+            protocol="org.apache.coyote.http11.Http11NioProtocol"
+            port="8443" maxThreads="200" scheme="https"
+            secure="true" SSLEnabled="true" keystoreFile="conf/localhost-rsa.jks"
+            keystorePass="changeme" clientAuth="false"
+            sslProtocol="TLS" /&gt;
+          </code>
+        </p>
       </li>
       <li>
         Using
@@ -105,59 +98,6 @@
         <p>Password for cacerts file should be
           changeit. Remember to click on save in Portecle. </p>
       </li>
-      <li>
-        Restar Pega.
-      </li>
-    </ol>
-
-    <h1>Docker Setup</h1>
-    <ol>
-      <li>
-        Add Pega as provider registry in VS Code.
-      </li>
-      <li>
-        Provide <b>URL</b> as <a
-          href="https://pega-docker.downloads.pega.com/constellationui/">https://pega-docker.downloads.pega.com/constellationui</a>
-        and <b>username</b> and <b>password</b> from Prerequisites section step 2.
-        <p><i>Note: If this won�t work try using URL
-            as </i><a
-            href="https://pega-docker.downloads.pega.com/"><i>https://pega-docker.downloads.pega.com</i></a><i>
-            or </i><a
-            href="https://pega-docker.downloads.pega.com/constellationui/service:8.6.0-rc-latest/"><i>https://pega-docker.downloads.pega.com/constellationui/service:8.6.0-rc-latest</i></a><i>
-            or http instead of https.</i></p>
-      </li>
-      <li>
-        Search
-        for image <b>constellation/service:8.6.0-rc-latest</b> and right click =&gt; <b>Pull
-          Image</b>
-      </li>
-      <li>
-        Run container
-        using command line in VS Code Terminal (if it's closed use shortcut: ctrl + ~):
-        <p><span style='background:lightgrey'>docker
-            run -p 3443:3443 -v C:\certs:/host_folder --name constellation-service
-            pega-docker.downloads.pega.com/constellationui/service:8.6.0-rc-latest
-            port=3443 urlPath=/constellation httpsKey=pegalocal.key httpsCert=pegalocal.crt
-            logLevel=info</span></p>
-        <p><i>Note: if next time you want to start /
-            stop the container or view logs, use <b>VS Code Docker Containers</b> section:</i></p>
-      </li>
-    </ol>
-
-    <h1>Run The App</h1>
-    <ol>
-      <li>
-        Go
-        to <a href="https://localhost:8443/prweb/PRServlet">https://localhost:8443/prweb/PRServlet</a>
-        and login.
-      </li>
-      <li>
-        Make sure you are using Pega Cosmos React app and launch web portal.
-      </li>
-      <li>
-        In
-        docker logs you should see requests with 200 statuses.
-      </li>
     </ol>
 
     <h1>References</h1>
@@ -165,14 +105,6 @@
       <li>
         <a
           href="https://collaborate.pega.com/discussion/setting-pega-cosmos-react-ui-pega-personal-edition-86">https://collaborate.pega.com/discussion/setting-pega-cosmos-react-ui-pega-personal-edition-86</a>
-      </li>
-      <li>
-        <a
-          href="https://community.pega.com/knowledgebase/articles/user-experience-cosmos-react/86/setting-constellation-service-pega-platform">https://community.pega.com/knowledgebase/articles/user-experience-cosmos-react/86/setting-constellation-service-pega-platform</a>
-      </li>
-      <li>
-        <a
-          href="https://community.pega.com/knowledgebase/articles/user-experience/86/installing-constellation-using-docker">https://community.pega.com/knowledgebase/articles/user-experience/86/installing-constellation-using-docker</a>
       </li>
       <li>
         <a
