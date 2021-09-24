@@ -44,7 +44,7 @@ code {
 
 .mainContainer {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1300px;
   /* min-width: 300px; */
   padding: 15px;
   width: 100%;
@@ -95,7 +95,7 @@ code {
 
 .stickyHeader {
   background-color: #f1f2f7;
-  left: 0;
+  /* left: 0; */
   margin: 0;
   opacity: 1;
   position: fixed;
@@ -125,6 +125,7 @@ nav ul {
   flex-wrap: wrap;
   font-weight: bold;
   list-style: none;
+  margin-bottom: 0;
   padding: 0px;
 }
 
@@ -148,6 +149,7 @@ nav ul li {
 
 .article {
   display: grid;
+  font-size: 0.9em;
   grid-gap: 20px;
   grid-template-columns: 1fr;
 }
