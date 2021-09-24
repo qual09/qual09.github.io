@@ -1,7 +1,5 @@
-<div class="home home-single">
+<div class="home article">
   <div class="card">
-    <img src="../images/documentation.png" alt="">
-
     <h1>Pega - Configure HTTPS (for Personal Edition)</h1>
     <p>This document describes how to configure HTTPS for Pega Personal Edition v.8.6.0. in Windows 10.</p>
     <p>If any command line will fail, try using windows powershell
@@ -10,16 +8,16 @@
       existing file before modifying it.</p>
 
     <h1>Prerequisites</h1>
-    <p>Get stuff below and install it on your machine. Make sure
-      environment variables (path) are set for JDK and OpenSSL (they will be set
-      automatically if running normal installations with admin rights).</p>
+    Get stuff below and install it on your machine. Make sure
+    environment variables (path) are set for JDK and OpenSSL (they will be set
+    automatically if running normal installations with admin rights).
     <ol>
       <li>
         <b>Pega Personal Edition v.8.6.0 </b> <a
           href="https://community.pega.com/digital-delivery">https://community.pega.com/digital-delivery</a>
       </li>
       <li>
-        <b>OpenSSL</b> I used <i><span style='background:lightskyblue'>choco install openssl</span></i><b>
+        <b>OpenSSL</b> I used <i><code>choco install openssl</code></i><b>
         </b>command line (requires <a href="https://chocolatey.org/install">chocolatey</a>)
       </li>
       <li>
@@ -32,55 +30,55 @@
     </ol>
 
     <h1>Localhost HTTPS Setup</h1>
-    <p>Note: for all commands below if prompted, use password as
-      "changeme". If asked for an alias use "tomcat"</p>
+    Note: for all commands below if prompted, use password as
+    "changeme". If asked for an alias use "tomcat"
     <ol>
       <li>
         Generate
         SSL Certificate using command line:
-        <p><span style='background:lightskyblue'>keytool
+        <code>
+          keytool
             -genkey -keyalg RSA -noprompt -alias tomcat -dname "CN=localhost, OU=NA,
             O=NA, L=NA, S=NA, C=NA" -keystore C:\certs\pegalocalkeystore.jks -validity
-            9999 -storepass changeme -keypass changeme</span></p>
+            9999 -storepass changeme -keypass changeme</code>
       </li>
       <li>
         Generate .p12 file:
-        <p><span style='background:lightskyblue'>keytool
+        <code>
+          keytool
             -importkeystore -srckeystore C:\certs\pegalocalkeystore.jks -destkeystore C:\certs\pegalocalkeystore.p12
-            -deststoretype PKCS12</span></p>
+            -deststoretype PKCS12</code>
       </li>
       <li>
-        Generate .crt file:
-        <p><span style='background:lightskyblue'>openssl
-            pkcs12 -in C:\certs\pegalocalkeystore.p12 -nokeys -out C:\certs\pegalocal.crt</span></p>
+        Generate .crt file:<br />
+        <code>openssl
+            pkcs12 -in C:\certs\pegalocalkeystore.p12 -nokeys -out C:\certs\pegalocal.crt</code>
       </li>
       <li>
-        Generate .key file:
-        <p><span style='background:lightskyblue'>openssl
+        Generate .key file:<br />
+        <code>openssl
             pkcs12 -in C:\certs\pegalocalkeystore.p12 -nocerts -nodes -out
-            C:\certs\pegalocal.key</span></p>
+            C:\certs\pegalocal.key</code>
       </li>
       <li>
         For
         some reason (from my experience) certificate file in step 1 is in type of
-        pcks12. We need it in the type of jks. To do this, run a command line:
-        <p><span style='background:lightskyblue'>keytool
+        pcks12. We need it in the type of jks. To do this, run a command line:<br />
+        <code>keytool
             -importkeystore -srckeystore pegalocalkeystore.p12 -srcstoretype pkcs12
             -srcalias tomcat -destkeystore pegalocalkeystorenew.jks -deststoretype jks
-            -deststorepass changeme -destalias tomcat</span></p>
+            -deststorepass changeme -destalias tomcat</code>
       </li>
       <li>
         Copy
-        C:\certs\<b>pegalocalkeystorenew.jks</b> file into &lt;Personal Edition Folder&gt;\tomcat\conf\ and rename it to
-        <b>localhost-rsa.jks</b>
+        C:\certs\<b>pegalocalkeystorenew.jks</b> file into
+        &lt;Personal Edition Folder&gt;\tomcat\conf\ and rename it to <b>localhost-rsa.jks</b>
       </li>
       <li>
-        Enable
-        SSL for Tomcat used by Pega Personal Edition.
-        <p>Go into &lt;Personal Edition Folder&gt;\tomcat\conf\<b>server.xml</b>
-          file and add code:</p>
-        <p>
-          <code style="background-color:lightskyblue;" class="language-markup">
+        Enable SSL for Tomcat used by Pega Personal Edition.
+        Go into &lt;Personal Edition Folder&gt;\tomcat\conf\<b>server.xml</b>
+        file and add code:<br />
+        <code class="language-markup">
             &lt;Connector
             protocol="org.apache.coyote.http11.Http11NioProtocol"
             port="8443" maxThreads="200" scheme="https"
@@ -88,7 +86,6 @@
             keystorePass="changeme" clientAuth="false"
             sslProtocol="TLS" /&gt;
           </code>
-        </p>
       </li>
       <li>
         Using
@@ -104,22 +101,21 @@
     <ul>
       <li>
         <a
-          href="https://collaborate.pega.com/discussion/setting-pega-cosmos-react-ui-pega-personal-edition-86">https://collaborate.pega.com/discussion/setting-pega-cosmos-react-ui-pega-personal-edition-86</a>
+          href="https://collaborate.pega.com/discussion/setting-pega-cosmos-react-ui-pega-personal-edition-86">https://pega.com/.../setting-pega-cosmos-react-ui-pega-personal-edition-86</a>
       </li>
       <li>
         <a
-          href="http://tomcat.apache.org/tomcat-7.0-doc/ssl-howto.html">http://tomcat.apache.org/tomcat-7.0-doc/ssl-howto.html</a>
+          href="http://tomcat.apache.org/tomcat-7.0-doc/ssl-howto.html">http://tomcat.apache.org/.../ssl-howto.html</a>
       </li>
       <li>
         <a
-          href="https://www.tbs-certificates.co.uk/FAQ/en/626.html">https://www.tbs-certificates.co.uk/FAQ/en/626.html</a>
+          href="https://www.tbs-certificates.co.uk/FAQ/en/626.html">https://tbs-certificates.co.uk/FAQ/...</a>
       </li>
       <li>
         <a
-          href="https://www.section.io/engineering-education/how-to-get-ssl-https-for-localhost/">https://www.section.io/engineering-education/how-to-get-ssl-https-for-localhost/</a>
+          href="https://www.section.io/engineering-education/how-to-get-ssl-https-for-localhost/">https://section.io/.../how-to-get-ssl-https-for-localhost</a>&nbsp;
         (I ended up not using this method but description is very clear)
       </li>
     </ul>
 
   </div>
-</div>

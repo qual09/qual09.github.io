@@ -1,19 +1,17 @@
-<div class="home home-single">
+<div class="home article">
   <div class="card">
-    <img src="images/documentation.png" alt="">
-
-    <h1>Pega - Configure HTTPS (for Personal Edition)</h1>
-    <p>This document describes how to configure HTTPS for Pega Personal Edition v.8.6.0. in Windows 10.</p>
-    <p>Pega Cosmos React Apps requires additional application (<b>Constellation Service</b>) that communicates with pega
+    <h1>Pega - Configure Cosmos React (for Personal Edition)</h1>
+    <p>This document describes how to configure HTTPS for Pega Personal Edition v.8.6.0. in Windows 10.<br />
+      Pega Cosmos React Apps requires additional application (<b>Constellation Service</b>) that communicates with pega
       to do UI stuff. If pega app is on cloud all you need to do is provide URL to that app.
       Otherwise you need to download Constellation Service App and deploy it by
       yourself. In addition to this, Cosmos React requires both apps to be running
       using https, which requires additional configuration in Pega Personal Edition.</p>
 
     <h1>Prerequisites</h1>
-    <p>Get stuff below and install it on your machine. Make sure
-      environment variables (path) are set for JDK and OpenSSL (they will be set
-      automatically if running normal installations with admin rights).</p>
+    Get stuff below and install it on your machine. Make sure
+    environment variables (path) are set for JDK and OpenSSL (they will be set
+    automatically if running normal installations with admin rights).
     <ol>
       <li>
         <a href="https://community.pega.com/digital-delivery">Pega Personal Edition v.8.6.0</a>
@@ -52,13 +50,12 @@
       <li>
         Provide <b>URL</b> as <a
           href="https://pega-docker.downloads.pega.com/constellationui/">https://pega-docker.downloads.pega.com/constellationui</a>
-        and <b>username</b> and <b>password</b> from Prerequisites section step 2.
-        <p><i>Note: If this won't work try using URL
-            as </i><a
-            href="https://pega-docker.downloads.pega.com/"><i>https://pega-docker.downloads.pega.com</i></a><i>
-            or </i><a
-            href="https://pega-docker.downloads.pega.com/constellationui/service:8.6.0-rc-latest/"><i>https://pega-docker.downloads.pega.com/constellationui/service:8.6.0-rc-latest</i></a><i>
-            or http instead of https.</i></p>
+        and <b>username</b> and <b>password</b> from Prerequisites section step 2.<br />
+        <i>Note: If this won't work try using URL
+          as </i><a href="https://pega-docker.downloads.pega.com/"><i>https://pega-docker.downloads.pega.com</i></a><i>
+          or </i><a
+          href="https://pega-docker.downloads.pega.com/constellationui/service:8.6.0-rc-latest/"><i>https://pega-docker.downloads.pega.com/constellationui/service:8.6.0-rc-latest</i></a><i>
+          or http instead of https.</i>
       </li>
       <li>
         Search
@@ -68,29 +65,27 @@
       <li>
         Run container
         using command line in VS Code Terminal (if it's closed use shortcut: ctrl + ~):
-        <p><span style='background:lightskyblue'>docker
+        <code>docker
             run -p 3443:3443 -v C:\certs:/host_folder --name constellation-service
             pega-docker.downloads.pega.com/constellationui/service:8.6.0-rc-latest
             port=3443 urlPath=/constellation httpsKey=pegalocal.key httpsCert=pegalocal.crt
-            logLevel=info</span></p>
-        <p><i>Note: if next time you want to start /
-            stop the container or view logs, use <b>VS Code Docker Containers</b> section:</i></p>
+            logLevel=info</code>
+        <i>Note: if next time you want to start /
+          stop the container or view logs, use <b>VS Code Docker Containers</b> section:</i>
       </li>
     </ol>
 
     <h1>Run The App</h1>
     <ol>
       <li>
-        Go
-        to <a href="https://localhost:8443/prweb/PRServlet">https://localhost:8443/prweb/PRServlet</a>
+        Go to <a href="https://localhost:8443/prweb/PRServlet">https://localhost:8443/prweb/PRServlet</a>
         and login.
       </li>
       <li>
         Make sure you are using Pega Cosmos React app and launch web portal.
       </li>
       <li>
-        In
-        docker logs you should see requests with 200 statuses.
+        In docker logs you should see requests with 200 statuses.
       </li>
     </ol>
 
@@ -98,15 +93,15 @@
     <ul>
       <li>
         <a
-          href="https://collaborate.pega.com/discussion/setting-pega-cosmos-react-ui-pega-personal-edition-86">https://collaborate.pega.com/discussion/setting-pega-cosmos-react-ui-pega-personal-edition-86</a>
+          href="https://collaborate.pega.com/discussion/setting-pega-cosmos-react-ui-pega-personal-edition-86">https://pega.com/.../setting-pega-cosmos-react-ui-pega-personal-edition-86</a>
       </li>
       <li>
         <a
-          href="https://community.pega.com/knowledgebase/articles/user-experience-cosmos-react/86/setting-constellation-service-pega-platform">https://community.pega.com/knowledgebase/articles/user-experience-cosmos-react/86/setting-constellation-service-pega-platform</a>
+          href="https://community.pega.com/knowledgebase/articles/user-experience-cosmos-react/86/setting-constellation-service-pega-platform">https://pega.com/.../setting-constellation-service-pega-platform</a>
       </li>
       <li>
         <a
-          href="https://community.pega.com/knowledgebase/articles/user-experience/86/installing-constellation-using-docker">https://community.pega.com/knowledgebase/articles/user-experience/86/installing-constellation-using-docker</a>
+          href="https://community.pega.com/knowledgebase/articles/user-experience/86/installing-constellation-using-docker">https://pega.com/.../installing-constellation-using-docker</a>
       </li>
     </ul>
 
