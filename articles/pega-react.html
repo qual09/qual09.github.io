@@ -2,9 +2,9 @@
   <div class="card">
     <h1>Pega - Configure Cosmos React (for Personal Edition)</h1>
     <p>This document describes how to configure HTTPS for Pega Personal Edition v.8.6.0. in Windows 10.<br />
-      Pega Cosmos React Apps requires additional application (<b>Constellation Service</b>) that communicates with pega
-      to do UI stuff. If pega app is on cloud all you need to do is provide URL to that app.
-      Otherwise you need to download Constellation Service App and deploy it by
+      Pega Cosmos React Apps requires additional application (<b>Constellation Service</b>)
+      that communicates with pega to do UI stuff. If pega app is on cloud all you need to do is
+      provide URL to that app. Otherwise you need to download Constellation Service App and deploy it by
       yourself. In addition to this, Cosmos React requires both apps to be running
       using https, which requires additional configuration in Pega Personal Edition.</p>
 
@@ -23,7 +23,7 @@
         <a href="https://docs.docker.com/get-docker/">Docker Desktop </a>
       </li>
       <li>
-        <a href="https://code.visualstudio.com/download ">VS Code + Docker Extension</a>
+        <a href="https://code.visualstudio.com/download ">VS Code</a> + Docker Extension
       </li>
     </ol>
 
@@ -34,7 +34,7 @@
       </li>
       <li>
         Set Dynamic System Setting <i>Pega-UIEngine - <b>ConstellationSvcURL</b></i> value
-        to <i>https://localhost:3443/constellation/</i>
+        to <code>https://localhost:3443/constellation/</code>
       </li>
     </ol>
 
@@ -58,13 +58,11 @@
           or http instead of https.</i>
       </li>
       <li>
-        Search
-        for image <b>constellation/service:8.6.0-rc-latest</b> and right click => <b>Pull
-          Image</b>
+        Search for image <b>constellation/service:8.6.0-rc-latest</b>
+        and right click => <b>Pull Image</b>
       </li>
       <li>
-        Run container
-        using command line in VS Code Terminal (if it's closed use shortcut: ctrl + ~):
+        Run container using command line:
         <code>docker
             run -p 3443:3443 -v C:\certs:/host_folder --name constellation-service
             pega-docker.downloads.pega.com/constellationui/service:8.6.0-rc-latest
