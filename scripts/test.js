@@ -1,6 +1,8 @@
 console.log('Yo Dawg!');
 console.log('Welcome to', location.hostname);
 
+yo3();
+
 // TEST function 1
 function yo() {
   const searchCriteria = {
