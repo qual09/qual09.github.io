@@ -1,5 +1,6 @@
 console.log('Yo Dawg!');
 console.log('Welcome to', location.hostname);
+
 // TEST function 1
 function yo() {
   const searchCriteria = {
@@ -18,9 +19,13 @@ function yo() {
     console.log(prop, searchCriteria[prop]);
   };
 }
+
 // TEST function 2
 function yo2() {
-  const searchCriteria = [{ key: "AAA", value: ['a', 'b', 'c'] }, { key: "BBB", value: ['x', 'y', 'z'] }];
+  const searchCriteria = [
+    { key: "AAA", value: ['a', 'b', 'c'] }, 
+    { key: "BBB", value: ['x', 'y', 'z'] },
+  ];
   console.log(searchCriteria);
   let newSearchCriteria = [];
   searchCriteria.forEach(element => {
@@ -39,6 +44,7 @@ function yo2() {
   });
   console.log(newSearchCriteria);
 }
+
 // TEST function 3
 function yo3() {
   const arr = [
