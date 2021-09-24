@@ -1,4 +1,3 @@
-// *** START TEST *** //
 console.log('Yo Dawg!');
 console.log('Welcome to', location.hostname);
 // TEST function 1
@@ -53,4 +52,3 @@ function yo3() {
   ];
   console.log(newArr);
 }
-// *** END TEST *** //
