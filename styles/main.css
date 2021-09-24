@@ -25,9 +25,9 @@ h6 {
   margin-bottom: 0.5em;
 }
 
-p,
-ol,
-ul {
+.article p,
+.article ol,
+.article ul {
   margin-bottom: 1em;
 }
 

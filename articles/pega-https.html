@@ -22,11 +22,11 @@
           rel="noopener noreferrer">chocolatey</a>)
       </li>
       <li>
-        <b>JDK</b> I used <a href="https://adoptium.net/" target="_blank"
+        <b>JDK</b> I used <a href="https://adoptium.net" target="_blank"
           rel="noopener noreferrer">https://adoptium.net</a>
       </li>
       <li>
-        <a href="https://sourceforge.net/projects/portecle/" target="_blank" rel="noopener noreferrer">Portecle</a>
+        <a href="https://sourceforge.net/projects/portecle" target="_blank" rel="noopener noreferrer">Portecle</a>
       </li>
     </ol>
 
@@ -34,19 +34,15 @@
     For all commands below if prompted, use password as "changeme". If asked for an alias use "tomcat"
     <ol>
       <li>
-        Generate SSL Certificate using command line:
-        <code>
-          keytool
-            -genkey -keyalg RSA -noprompt -alias tomcat -dname "CN=localhost, OU=NA,
-            O=NA, L=NA, S=NA, C=NA" -keystore C:\certs\pegalocalkeystore.jks -validity
-            9999 -storepass changeme -keypass changeme</code>
+        Generate SSL Certificate using command line:<br />
+        <code>keytool -genkey -keyalg RSA -noprompt -alias tomcat -dname "CN=localhost, OU=NA,
+          O=NA, L=NA, S=NA, C=NA" -keystore C:\certs\pegalocalkeystore.jks -validity
+          9999 -storepass changeme -keypass changeme</code>
       </li>
       <li>
-        Generate .p12 file:
-        <code>
-          keytool
-            -importkeystore -srckeystore C:\certs\pegalocalkeystore.jks -destkeystore C:\certs\pegalocalkeystore.p12
-            -deststoretype PKCS12</code>
+        Generate .p12 file:<br />
+        <code>keytool -importkeystore -srckeystore C:\certs\pegalocalkeystore.jks -destkeystore 
+          C:\certs\pegalocalkeystore.p12 -deststoretype PKCS12</code>
       </li>
       <li>
         Generate .crt file:<br />
@@ -55,15 +51,14 @@
       <li>
         Generate .key file:<br />
         <code>openssl pkcs12 -in C:\certs\pegalocalkeystore.p12 -nocerts -nodes -out
-            C:\certs\pegalocal.key</code>
+          C:\certs\pegalocal.key</code>
       </li>
       <li>
         For some reason (from my experience) certificate file in step 1 is in type of
         pcks12. We need it in the type of jks. To do this, run a command line:<br />
-        <code>keytool
-            -importkeystore -srckeystore pegalocalkeystore.p12 -srcstoretype pkcs12
-            -srcalias tomcat -destkeystore pegalocalkeystorenew.jks -deststoretype jks
-            -deststorepass changeme -destalias tomcat</code>
+        <code>keytool -importkeystore -srckeystore pegalocalkeystore.p12 -srcstoretype pkcs12
+          -srcalias tomcat -destkeystore pegalocalkeystorenew.jks -deststoretype jks
+          -deststorepass changeme -destalias tomcat</code>
       </li>
       <li>
         Copy C:\certs\<b>pegalocalkeystorenew.jks</b> file into
@@ -106,7 +101,7 @@
           rel="noopener noreferrer">tbs-certificates.co.uk/FAQ/...</a>
       </li>
       <li>
-        <a href="https://www.section.io/engineering-education/how-to-get-ssl-https-for-localhost/" target="_blank"
+        <a href="https://www.section.io/engineering-education/how-to-get-ssl-https-for-localhost" target="_blank"
           rel="noopener noreferrer">section.io/.../how-to-get-ssl-https-for-localhost</a>&nbsp;
         (I ended up not using this method but description is very clear)
       </li>
