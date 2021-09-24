@@ -1,6 +1,8 @@
+$color-orange: #ff780a;
+$color-black-navy: #21293d;
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -13,7 +15,6 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
@@ -53,38 +54,28 @@ code {
 }
 
 .card {
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-name: fadein;
-          animation-name: fadein;
+  animation-duration: 0.8s;
+  animation-name: fadein;
   background-color: white;
   border: 1px solid #d1d5da;
-  border-left: 3px solid #21293d;
+  border-left: 3px solid $color-black-navy;
   border-radius: 3px;
   padding: 10px;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   /* Funky boxes */
   /* border-radius: 255px 25px 225px 25px/25px 225px 25px 255px; */
 }
 
 .card:hover {
-  border-left: 3px solid #ff780a;
-  -webkit-box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
-          box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
+  border-left: 3px solid $color-orange;
+  box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
   /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); */
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .logo {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
   font-size: 1.1em;
   font-style: italic;
@@ -97,7 +88,7 @@ code {
 }
 
 .logo a {
-  color: #21293d;
+  color: $color-black-navy;
   font-size: 1.2em;
 }
 
@@ -112,7 +103,6 @@ code {
   opacity: 1;
   position: fixed;
   top: 0;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   width: 100%;
   z-index: 900;
@@ -120,7 +110,6 @@ code {
 
 nav {
   margin: 2px 0;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
@@ -130,20 +119,14 @@ nav a {
 }
 
 nav a:hover {
-  color: #21293d !important;
-  -webkit-transition: 0.3s ease;
+  color: $color-black-navy !important;
   transition: 0.3s ease;
 }
 
 nav ul {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   font-weight: bold;
   list-style: none;
   margin-bottom: 0;
@@ -157,27 +140,22 @@ nav ul li {
 
 .currentMenu {
   /* border-bottom: 2px solid $color-black-navy; */
-  color: #21293d;
+  color: $color-black-navy;
   font-size: 1.4em;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .home {
-  display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .article {
-  display: -ms-grid;
   display: grid;
   font-size: 0.8em;
   grid-gap: 20px;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 .article a {
@@ -191,37 +169,31 @@ nav ul li {
 }
 
 .home > div h1 {
-  color: #21293d;
+  color: $color-black-navy;
 }
 
 .home > div h1::before {
-  background-color: #ff780a;
+  background-color: $color-orange;
   content: "";
   display: inline-block;
   height: 28px;
   margin-right: 10px;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   width: 6px;
 }
 
 .home > div:hover h1::before {
-  -webkit-transform: skew(-21deg, 0);
-          transform: skew(-21deg, 0);
-  -webkit-transition: 0.3s ease;
+  transform: skew(-21deg, 0);
   transition: 0.3s ease;
 }
 
 .home > div > img {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   float: right;
   height: auto;
   max-width: 100px;
   opacity: 0.8;
-  -webkit-transform: translateZ(0) scale(1, 1);
-          transform: translateZ(0) scale(1, 1);
-  -webkit-transition: 0.3s ease;
+  transform: translateZ(0) scale(1, 1);
   transition: 0.3s ease;
   width: 20%;
 }
@@ -241,11 +213,7 @@ nav ul li {
 }
 
 .home > div ul li {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
 }
 
@@ -269,14 +237,14 @@ nav ul li {
   height: 40px;
   width: 40px;
   margin-right: 10px;
-  -webkit-transform: translateZ(0) scale(1, 1);
-          transform: translateZ(0) scale(1, 1);
+  transform: translateZ(0) scale(1, 1);
 }
 
 /* .home > div ul li > a,
 .home > div ol li > a {
   margin-right: 6px;
 } */
+
 .home > div ul li a:hover,
 .home > div ol li a:hover {
   text-decoration: underline;
@@ -289,6 +257,7 @@ nav ul li {
   background-color: white;
   background-position: right 20px top 20px;
 } */
+
 footer {
   color: #999;
   font-size: 0.8em;
@@ -298,6 +267,7 @@ footer {
 }
 
 /* Utilities */
+
 .badge {
   border-radius: 5px;
   color: white;
@@ -311,7 +281,7 @@ footer {
 }
 
 .bgOrange {
-  background-color: #ff780a;
+  background-color: $color-orange;
 }
 
 .bgYellow {
@@ -319,30 +289,17 @@ footer {
 }
 
 .singleRow {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 .doubleRow {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Animations */
-@-webkit-keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
+
 @keyframes slidein {
   from {
     margin-left: 100%;
@@ -351,15 +308,6 @@ footer {
   to {
     margin-left: 0%;
     width: 100%;
-  }
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
@@ -373,10 +321,10 @@ footer {
 }
 
 /* Responsive */
+
 @media screen and (max-width: 800px) {
   .home {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -385,4 +333,3 @@ footer {
     margin: 0;
   }
 }
-/*# sourceMappingURL=main.css.map */
