@@ -1,29 +1,29 @@
 import { createNoise2D } from "https://cdn.skypack.dev/simplex-noise@4.0.0";
 
-window.requestFrame = (function () {
+window.requestFrame = (() => {
   return window.requestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.mozRequestAnimationFrame ||
-    function (callback) {
+    (callback => {
       window.setTimeout(callback, 1000 / 60);
-    };
+    });
 })();
 
 const noise2D = createNoise2D();
-const canvas = document.getElementById("bg");
+const canvas = document.getElementById("paint");
 canvas.setAttribute('width', window.innerWidth);
 canvas.setAttribute('height', window.innerHeight);
 
 const context = canvas.getContext("2d");
 
 const startTime = new Date().getTime();
-const dripDist = 75;
+const dripDist = 175;
 const minSpeed = 1;
 let currentTime = 0;
 
 const dripsAmount = Math.floor(canvas.width / dripDist) + 2;
 
-const colors = ['#56EEF4', '#FF7000', '#A7ACD9'];
+const colors = ['#add2ff', '#fdff6d', '#ff8868'];
 let waves = [];
 let currentWave = undefined;
 
