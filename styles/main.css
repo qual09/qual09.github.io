@@ -53,12 +53,12 @@ code {
 }
 
 .card {
+  -webkit-animation-name: fadein;
   -webkit-animation-duration: 0.8s;
   animation-duration: 0.8s;
-  -webkit-animation-name: fadein;
   animation-name: fadein;
   background-color: white;
-  border: 1px solid #d1d5da;
+  border: 1px transparent;
   border-left: 3px solid #21293d;
   border-radius: 3px;
   padding: 10px;
