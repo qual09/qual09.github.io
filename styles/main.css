@@ -61,6 +61,7 @@ code {
   border: 1px transparent;
   border-left: 3px solid #21293d;
   border-radius: 3px;
+  opacity: 0.95;
   padding: 10px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
