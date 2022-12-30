@@ -70,7 +70,7 @@ function render() {
       linePoints.push(linePoint);
 
       //Check if any drip cross canvas height * [modifier]
-      if (linePoint.y > (canvas.height * 1.5) && !waves[i].isDone) {
+      if (linePoint.y > (canvas.height * 1.3) && !waves[i].isDone) {
         waves[i].isDone = true;
       }
     }
