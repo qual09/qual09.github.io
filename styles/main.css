@@ -17,6 +17,13 @@ a {
   transition: 0.3s ease;
 }
 
+code {
+  background-color: #d1d5da;
+  display: inline-block;
+  margin: 0.3em 0;
+  padding: 0.1em 0.5em;
+}
+
 h1,
 h2,
 h3,
@@ -27,6 +34,10 @@ h6 {
   margin-bottom: 0.5em;
 }
 
+h1 {
+  font-size: 2em;
+}
+
 img {
   animation: float 6s ease infinite;
 }
@@ -35,17 +46,6 @@ img {
 .article ol,
 .article ul {
   margin-bottom: 1em;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-code {
-  background-color: #d1d5da;
-  display: inline-block;
-  margin: 0.3em 0;
-  padding: 0.1em 0.5em;
 }
 
 .mainContainer {
