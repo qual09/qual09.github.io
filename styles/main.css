@@ -27,6 +27,10 @@ h6 {
   margin-bottom: 0.5em;
 }
 
+img {
+  animation: float 6s ease infinite;
+}
+
 .article p,
 .article ol,
 .article ul {
@@ -186,17 +190,17 @@ nav ul li {
   color: royalblue;
 }
 
-.home > div {
+.home>div {
   padding: 20px;
   font-size: 1.2em;
   line-height: 1.45em;
 }
 
-.home > div h1 {
+.home>div h1 {
   color: #21293d;
 }
 
-.home > div h1::before {
+.home>div h1::before {
   background-color: #ff780a;
   content: "";
   display: inline-block;
@@ -207,14 +211,14 @@ nav ul li {
   width: 6px;
 }
 
-.home > div:hover h1::before {
+.home>div:hover h1::before {
   -webkit-transform: skew(-21deg, 0);
   transform: skew(-21deg, 0);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
-.home > div > img {
+.home>div>img {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   float: right;
@@ -228,21 +232,21 @@ nav ul li {
   width: 20%;
 }
 
-.home > div:hover > img {
+.home>div:hover>img {
   opacity: 1;
 }
 
-.home > div > ul {
+.home>div>ul {
   list-style-type: none;
   padding-left: 5px;
 }
 
-.home > div > ol {
+.home>div>ol {
   list-style-type: decimal;
   padding-left: 5px;
 }
 
-.home > div ul li {
+.home>div ul li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -251,12 +255,12 @@ nav ul li {
   display: flex;
 }
 
-.home > div ol li {
+.home>div ol li {
   display: list-item;
   margin-left: 1.4em;
 }
 
-.home > div ul li::before {
+.home>div ul li::before {
   background-color: #000;
   border-radius: 50%;
   content: "";
@@ -266,8 +270,8 @@ nav ul li {
   width: 6px;
 }
 
-.home > div ul li > img,
-.home > div ol li > img {
+.home>div ul li>img,
+.home>div ol li>img {
   height: 40px;
   width: 40px;
   margin-right: 10px;
@@ -279,8 +283,8 @@ nav ul li {
 .home > div ol li > a {
   margin-right: 6px;
 } */
-.home > div ul li a:hover,
-.home > div ol li a:hover {
+.home>div ul li a:hover,
+.home>div ol li a:hover {
   text-decoration: underline;
 }
 
@@ -341,16 +345,19 @@ footer {
     margin-left: 100%;
     width: 300%;
   }
+
   to {
     margin-left: 0%;
     width: 100%;
   }
 }
+
 @keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
   }
+
   to {
     margin-left: 0%;
     width: 100%;
@@ -361,6 +368,7 @@ footer {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -370,8 +378,23 @@ footer {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(-3px);
+  }
+
+  50% {
+    transform: translatey(3px);
+  }
+
+  100% {
+    transform: translatey(-3px);
   }
 }
 
@@ -388,4 +411,5 @@ footer {
     margin: 0;
   }
 }
+
 /*# sourceMappingURL=main.css.map */
