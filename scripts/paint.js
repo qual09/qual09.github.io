@@ -23,7 +23,8 @@ let currentTime = 0;
 
 const dripsAmount = Math.floor(canvas.width / dripDist) + 2;
 
-const colors = ['#add2ff', '#fdff6d', '#ff8868'];
+// const colors = ['#add2ff', '#fdff6d', '#ff8868'];
+const colors = ["#2980B9", "#FF6138", "#FFBE53"];
 let waves = [];
 let currentWave = undefined;
 
