@@ -30,3 +30,7 @@ window.onscroll = () => {
     header.classList.remove('stickyHeader');
   }
 }
+
+// Other Variables
+const currentYear = new Date().getFullYear();
+document.getElementById('js-year').innerHTML = currentYear;
