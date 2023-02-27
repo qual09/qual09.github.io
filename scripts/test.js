@@ -1,10 +1,13 @@
 console.log('Yo Dawg!');
 console.log('Welcome to', location.hostname);
 
-yo3();
+// TEST
+function yo() {
+  console.log('yo');
+}
 
 // TEST function 1
-function yo() {
+function yo1() {
   const searchCriteria = {
     name: 'John',
     surname: 'Doe',
@@ -25,7 +28,7 @@ function yo() {
 // TEST function 2
 function yo2() {
   const searchCriteria = [
-    { key: "AAA", value: ['a', 'b', 'c'] }, 
+    { key: "AAA", value: ['a', 'b', 'c'] },
     { key: "BBB", value: ['x', 'y', 'z'] },
   ];
   console.log(searchCriteria);
