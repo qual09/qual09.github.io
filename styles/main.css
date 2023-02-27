@@ -54,6 +54,7 @@ img {
   margin: 0 auto;
   max-width: 1300px;
   /* min-width: 300px; */
+  padding: 0 10px;
   width: 100%;
 }
 
@@ -73,6 +74,10 @@ header>.main-container>.logo {
   font-size: 1.1em;
   font-style: italic;
   height: 80px;
+}
+
+.logo-text {
+  display: block;
 }
 
 header>.main-container>.logo a:hover {
@@ -362,12 +367,20 @@ footer {
 
 /* Responsive */
 @media screen and (max-width: 800px) {
+  nav ul li {
+    margin-left: 5px;
+  }
+
   .home {
     grid-template-columns: 1fr;
   }
+
+  .logo-text {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   nav ul li {
     margin: 0;
   }
