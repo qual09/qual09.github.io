@@ -8,6 +8,14 @@
     integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ=="
     crossorigin="anonymous" />
   <title>Chuck Norris Jokes Generator</title>
+  <style>
+    .joke {
+      border: 1px solid #888;
+      border-radius: 4px;
+      display: none;
+      padding: 15px;
+    }
+  </style>
 </head>
 
 <body>
@@ -16,17 +24,14 @@
     <h2>Chuck Norris Jokes Generator</h2>
     <form>
       <div>
-        <label for="number">Number of jokes</label>
-        <input type="number" id="number">
-      </div>
-      <div>
-        <button class="get-jokes">Get Jokes</button>
+        <button class="get-jokes">Get a Joke</button>
       </div>
     </form>
-    <ul class="jokes"></ul>
+    <p class="joke"></p>
 
-    <footer style="color: #999; font-size: 0.8em; margin: 10px; text-align: left;">
-      &copy; 2020 Hieu CPX. All rights reserved. </footer>
+    <footer style="color: #999; font-size: 0.8em; margin: 10px 0; text-align: left;">
+      &copy; <span id="js-year"></span> Hieu CPX. All rights reserved.
+    </footer>
   </div>
 
   <script src="app.js"></script>

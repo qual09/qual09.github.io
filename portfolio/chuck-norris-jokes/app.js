@@ -1,36 +1,29 @@
+// Button click
 document.querySelector('.get-jokes').addEventListener('click', getJokes);
 
 function getJokes(e) {
-  // console.log('Getting jokes...');
-
-  const number = document.querySelector('input[type="number"]').value;
-
   const xhr = new XMLHttpRequest();
-
-  xhr.open('GET', '//api.icndb.com/jokes/random/' + number, true);
-
+  xhr.open('GET', '//api.chucknorris.io/jokes/random', true);
   xhr.onload = function () {
     if (this.status === 200) {
       const response = JSON.parse(this.responseText);
-
       let output = '';
-
-      if (response.type === 'success') {
-        response.value.forEach(joke => {
-          output += `
-            <li>${joke.joke}</li>
-          `;
-        });
-
+      if (response.value) {
+        output += `
+          <span>${response.value}</span>
+        `;
       } else {
-        output += '<li>Something went wrong</li>';
+        output += '<span>Something went wrong</span>';
       }
-
-      document.querySelector('.jokes').innerHTML = output;
+      const joke = document.querySelector('.joke');
+      joke.innerHTML = output;
+      joke.style.display = 'block';
     }
   }
-
   xhr.send();
-
   e.preventDefault();
 }
+
+// Other Variables
+const currentYear = new Date().getFullYear();
+document.getElementById('js-year').innerHTML = currentYear;
