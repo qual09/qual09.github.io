@@ -81,3 +81,7 @@ function checkDate(day, month, year) {
     date.getMonth() == month - 1 &&
     date.getFullYear() == year;
 }
+
+// Other Variables
+const currentYear = new Date().getFullYear();
+document.getElementById('js-year').innerHTML = currentYear;
