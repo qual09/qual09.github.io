@@ -1,6 +1,7 @@
 .intro {
   align-items: center;
   background: white;
+  cursor: default;
   display: flex;
   height: 100%;
   justify-content: center;
