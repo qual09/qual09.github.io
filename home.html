@@ -46,11 +46,13 @@
 	document.getElementById('text-navigation').addEventListener('mouseover', (event) => {
 		const navMenu = document.getElementById('navMenu');
 		const windowWidth = window.innerWidth;
+		// Set font size
 		if (windowWidth > 600) {
 			navMenu.style.fontSize = '1.3em';
 		} else {
 			navMenu.style.fontSize = '1.1em';
 		}
+		// Set color
 		const navLinks = document.querySelectorAll('nav a');
 		navLinks.forEach(nav => {
 			nav.style.color = '#ed6a00';
@@ -59,10 +61,12 @@
 
 	document.getElementById('text-navigation').addEventListener('mouseout', (event) => {
 		const navMenu = document.getElementById('navMenu');
-		navMenu.style.fontSize = '1em';
+		// Revert font size
+		navMenu.style.fontSize = null;
+		// Revert color
 		const navLinks = document.querySelectorAll('nav a');
 		navLinks.forEach(nav => {
-			nav.style.color = 'black';
+			nav.style.color = null;
 		});
 	});
 </script>
