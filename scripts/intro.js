@@ -11,7 +11,11 @@ timeline.to(".intro", { y: "-100%", duration: 1, delay: 1.5 }, "-=1");
 // timeline.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 0.5 });
 
 setTimeout(() => {
+  mainWrapper.style.display = 'block';
+}, 2600);
+
+setTimeout(() => {
   document.querySelector('.intro').remove();
   document.querySelector('.slider').remove();
-  mainWrapper.style.display = 'block';
-}, 2800);
+}, 3000);
+
