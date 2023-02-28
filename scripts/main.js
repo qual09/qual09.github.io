@@ -11,7 +11,8 @@ function openContent(content) {
 function selectCurrentNav(content) {
   const ul = document.getElementById('navMenu');
   Array.from(ul.children).forEach(li => {
-    if (li.children[0].id === content) {
+    const menuElement = li.children[0].id;
+    if (content.startsWith(menuElement)) {
       li.children[0].classList.add('currentMenu');
     } else {
       li.children[0].classList.remove('currentMenu');
