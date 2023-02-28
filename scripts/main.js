@@ -1,5 +1,5 @@
 // On start load default content, yo
-openContent('projects');
+openContent('home');
 
 // Load Dynamic Content
 function openContent(content) {
