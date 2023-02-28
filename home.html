@@ -51,10 +51,18 @@
 		} else {
 			navMenu.style.fontSize = '1.1em';
 		}
+		const navLinks = document.querySelectorAll('nav a');
+		navLinks.forEach(nav => {
+			nav.style.color = '#ed6a00';
+		});
 	});
 
 	document.getElementById('text-navigation').addEventListener('mouseout', (event) => {
 		const navMenu = document.getElementById('navMenu');
 		navMenu.style.fontSize = '1em';
+		const navLinks = document.querySelectorAll('nav a');
+		navLinks.forEach(nav => {
+			nav.style.color = 'black';
+		});
 	});
 </script>

@@ -142,7 +142,7 @@ nav a {
 }
 
 .currentMenu, nav a:hover {
-  color: #ed6a00;
+  color: #ed6a00 !important;
   transition: 0.3s ease;
 }
 
