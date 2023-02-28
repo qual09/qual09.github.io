@@ -1,12 +1,11 @@
 <div class="home">
 	<div>
 		<h1>hello there</h1>
-		<p>use the <span id="text-navigation">navigation</span><br>
+		<p class="home-p">use the <span id="text-navigation">navigation</span><br>
 			to see other
 			<a href="#"
 				onclick="javascript:openContent('projects')"
-				id="projects"
-				style="color: #ed6a00;">stuff</a>
+				class="text-stuff">stuff</a>
 		</p>
 	</div>
 </div>
@@ -16,12 +15,23 @@
 		margin-bottom: 0.2em;
 	}
 
-	p {
+	.home>div p {
 		line-height: 1.2em;
 	}
 
-	a:hover {
+	#text-navigation {
+		transition: 0.3s ease;
+	}
+
+	.text-stuff {
+		color: #ed6a00;
+	}
+
+	.text-stuff:hover,
+	#text-navigation:hover {
 		text-decoration: underline;
+		letter-spacing: 1px;
+		transition: 0.3s ease;
 	}
 
 	.home {
@@ -29,7 +39,7 @@
 		animation-name: fadein;
 		font-size: 4.8em;
 		margin: 10px auto;
-		transition: 0.2s ease;
+		transition: 0.3s ease;
 		text-align: center;
 	}
 

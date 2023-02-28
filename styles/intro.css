@@ -15,7 +15,7 @@
   color: #21293d;
   font-family: "Heebo", sans-serif;
   font-size: 3rem;
-  padding: 20px;
+  padding: 0 20px 50px 20px;
 }
 
 .hide {
@@ -24,8 +24,10 @@
 }
 
 .text {
-  border-bottom: 10px solid #ff780a;
+  border-bottom: 0.1em solid #ff780a;
   display: inline-block;
+  margin-bottom: 0.2em;
+  padding-bottom: 0.07em;
   transform: translateY(100%);
 }
 

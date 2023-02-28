@@ -93,7 +93,12 @@ header>.main-container>nav {
 header img {
   height: 50px;
   margin-right: 10px;
+  transition: 0.3s ease;
   width: auto;
+}
+
+header img:hover {
+  height: 60px;
 }
 
 header a {
@@ -128,7 +133,6 @@ nav ul {
   flex-wrap: wrap;
   list-style: none;
   margin-bottom: 0;
-  padding: 10px 0;
 }
 
 nav ul li {
@@ -145,6 +149,7 @@ nav a {
 .currentMenu, nav a:hover {
   color: #ed6a00;
   transition: 0.3s ease;
+  letter-spacing: 1px;
 }
 
 .card {
@@ -189,6 +194,9 @@ nav a {
 .home>div {
   padding: 20px;
   font-size: 1.2em;
+}
+
+.home>div p {
   line-height: 1.45em;
 }
 
@@ -198,10 +206,10 @@ nav a {
 
 .home>div h1::before {
   background-color: #ff780a;
-  content: "";
+  content: " ";
   display: inline-block;
-  height: 28px;
-  margin-right: 10px;
+  height: 0.7em;
+  margin-right: 0.2em;
   transition: 0.3s ease;
   width: 6px;
 }
@@ -249,7 +257,7 @@ nav a {
 .home>div ul li::before {
   background-color: #000;
   border-radius: 50%;
-  content: "";
+  content: " ";
   height: 6px;
   margin-left: 10px;
   margin-right: 10px;
