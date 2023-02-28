@@ -17,7 +17,7 @@
 	}
 
 	p {
-		line-height: 1em;
+		line-height: 1.2em;
 	}
 
 	a:hover {
@@ -27,7 +27,7 @@
 	.home {
 		animation-duration: 0.8s;
 		animation-name: fadein;
-		font-size: 4.5em;
+		font-size: 4.8em;
 		margin: 10px auto;
 		transition: 0.2s ease;
 		text-align: center;
@@ -40,6 +40,16 @@
 
 	#text-navigation {
 		text-decoration: underline;
+	}
+
+	@media screen and (max-width: 800px) {
+		p {
+			line-height: 1.1em;
+		}
+
+		.home {
+			font-size: 3em;
+		}
 	}
 </style>
 
