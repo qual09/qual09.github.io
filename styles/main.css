@@ -128,7 +128,7 @@ nav ul {
   flex-wrap: wrap;
   list-style: none;
   margin-bottom: 0;
-  padding: 0px;
+  padding: 10px 0;
 }
 
 nav ul li {

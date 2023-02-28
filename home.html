@@ -1,7 +1,7 @@
 <div class="home">
 	<div>
 		<h1>hello there</h1>
-		<p>use the navigation<br>
+		<p>use the <span id="text-navigation">navigation</span><br>
 			to see other
 			<a href="#"
 				onclick="javascript:openContent('projects')"
@@ -16,12 +16,26 @@
 		margin-bottom: 0.1em;
 	}
 
+	a:hover {
+		text-decoration: underline;
+	}
+
 	.home {
 		animation-duration: 0.8s;
 		animation-name: fadein;
-		font-size: 5em;
-		margin: 50px auto;
+		font-size: 4.5em;
+		margin: 10px auto;
 		transition: 0.2s ease;
 		text-align: center;
 	}
+
+	.home>div {
+		line-height: unset;
+	}
+
+	#text-navigation {
+		text-decoration: underline;
+	}
 </style>
+
+<script src="scripts/home.js"></script>
