@@ -235,8 +235,8 @@ nav a {
 }
 
 .home>div>ul {
-  list-style-type: none;
-  padding-left: 5px;
+  list-style-type: disc;
+  padding-left: 1em;
 }
 
 .home>div>ol {
@@ -244,24 +244,9 @@ nav a {
   padding-left: 5px;
 }
 
-.home>div ul li {
-  align-items: center;
-  display: flex;
-}
-
 .home>div ol li {
   display: list-item;
   margin-left: 1.4em;
-}
-
-.home>div ul li::before {
-  background-color: #000;
-  border-radius: 50%;
-  content: " ";
-  height: 6px;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 6px;
 }
 
 .home>div ul li>img,
