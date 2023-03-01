@@ -92,7 +92,6 @@ header>.main-container>nav {
 
 header img {
   height: 50px;
-  margin-right: 10px;
   transition: 0.3s ease;
   width: auto;
 }
@@ -104,6 +103,10 @@ header img:hover {
 header a {
   color: #21293d;
   font-size: 1.2em;
+}
+
+header .logo-text {
+  margin-left: 10px;
 }
 
 .stickyHeader {
@@ -209,7 +212,7 @@ nav a:hover {
   background-color: #ff780a;
   content: " ";
   display: inline-block;
-  height: 0.7em;
+  height: 0.72em;
   margin-right: 0.2em;
   transition: 0.3s ease;
   width: 6px;
@@ -343,15 +346,15 @@ footer {
 
 @keyframes float {
   0% {
-    transform: translatey(-1px);
+    transform: translatey(-2px);
   }
 
   50% {
-    transform: translatey(1px);
+    transform: translatey(2px);
   }
 
   100% {
-    transform: translatey(-1px);
+    transform: translatey(-2px);
   }
 }
 
