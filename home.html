@@ -12,26 +12,28 @@
 
 <style>
 	.home-section {
+		line-height: unset;
 		user-select: none;
 	}
 
-	h1 {
+	.home-section>h1 {
+		line-height: 1em;
 		margin-bottom: 0.2em;
 	}
 
 	.home>div p {
-		line-height: 1.2em;
+		line-height: 1.1em;
 	}
 
-	#text-navigation {
+	.home-section>#text-navigation {
 		transition: 0.3s ease;
 	}
 
-	.text-stuff {
+	.home-p>.text-stuff {
 		color: #ed6a00;
 	}
 
-	.text-stuff:hover,
+	.home-p>.text-stuff:hover,
 	#text-navigation:hover {
 		text-decoration: underline;
 		letter-spacing: 1px;
@@ -45,10 +47,6 @@
 		margin: 10px auto;
 		transition: 0.3s ease;
 		text-align: center;
-	}
-
-	.home>div {
-		line-height: unset;
 	}
 
 	#text-navigation {
