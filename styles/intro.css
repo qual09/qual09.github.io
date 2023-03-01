@@ -8,6 +8,7 @@
   left: 0;
   position: fixed;
   top: 0;
+  user-select: none;
   width: 100%;
 }
 
