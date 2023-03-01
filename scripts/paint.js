@@ -35,7 +35,7 @@ if (colors.length > 0) {
 }
 
 function resizeCanvas() {
-  canvas.setAttribute('width', window.innerWidth);
+  // canvas.setAttribute('width', window.innerWidth);
   canvas.setAttribute('height', window.innerHeight);
 }
 
