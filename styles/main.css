@@ -244,7 +244,7 @@ nav a:hover {
   padding-left: 1em;
 }
 
-.home>div>ul>li{
+.home>div>ul>li {
   margin-bottom: 0.3em;
 }
 
@@ -378,6 +378,10 @@ footer {
 @media screen and (max-width: 600px) {
   nav ul li {
     margin: 0;
+  }
+
+  .home>div>img {
+    max-width: 70px;
   }
 }
 
