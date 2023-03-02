@@ -60,6 +60,7 @@ img {
 
 header {
   background: transparent;
+  user-select: none;
 }
 
 header>.main-container {
@@ -288,6 +289,7 @@ footer {
   font-weight: bold;
   padding: 20px 0;
   text-align: right;
+  user-select: none;
 }
 
 /* Utilities */
