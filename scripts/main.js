@@ -18,6 +18,9 @@ function selectCurrentNav(content) {
       li.children[0].classList.remove('currentMenu');
     }
   });
+  if ($(window).width() < 601) {
+    hamburger();
+  }
 }
 
 function hamburger() {
@@ -40,6 +43,15 @@ window.onscroll = () => {
     header.classList.remove('stickyHeader');
   }
 }
+
+// On window resize
+addEventListener("resize", (event) => { });
+onresize = (event) => {
+  const windowWidth = $(window).width();
+  if (windowWidth > 600) {
+    document.querySelector('.hamburger-menu').style.display = 'none';
+  }
+};
 
 // Other Variables
 const currentYear = new Date().getFullYear();

@@ -427,6 +427,10 @@ footer {
     display: block;
   }
 
+  .hamburger-menu {
+    display: none;
+  }
+
   .home>div>img {
     max-width: 70px;
   }
