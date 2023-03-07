@@ -93,7 +93,7 @@ header>.main-container>nav {
   height: 80px;
 }
 
-header img {
+.logo img {
   height: 50px;
   transition: 0.3s ease;
   width: auto;
@@ -101,6 +101,12 @@ header img {
 
 .logo img:hover {
   height: 60px;
+  transition: 0.3s ease;
+}
+
+.logo img:active {
+  height: 40px;
+  transition: 0.2s ease;
 }
 
 header a {
@@ -165,6 +171,11 @@ nav a:hover {
 
 .hamburger-icon svg {
   transition: 0.3s ease;
+}
+
+.hamburger-icon svg:active {
+  transform: translateY(4px);
+  transition: 0.1s ease;
 }
 
 .hamburger-menu {
