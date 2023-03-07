@@ -53,6 +53,25 @@ onresize = (event) => {
   }
 };
 
+// On click outside hamburger
+$(window).click(() => {
+  if ($(window).width() <= mobileWidth) {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    if (hamburgerMenu.style.display == 'block') {
+      // Hide hamburger menu
+      hamburger();
+    }
+  }
+});
+
+$('.hamburger-menu').click(event => {
+  event.stopPropagation();
+});
+
+$('.hamburger-icon').click(event => {
+  event.stopPropagation();
+});
+
 // Other Variables
 const currentYear = new Date().getFullYear();
 document.getElementById('js-year').innerHTML = currentYear;
