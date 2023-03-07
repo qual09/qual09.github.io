@@ -74,7 +74,7 @@
 			navMenu.style.fontSize = '1.3em';
 		} else {
 			navMenu.style.fontSize = '1.1em';
-			document.querySelector('.hamburger-icon img').style.width = '70px';
+			document.querySelector('.hamburger-icon svg').style.width = '70px';
 		}
 		// Set color
 		const navLinks = document.querySelectorAll('nav a');
@@ -87,7 +87,7 @@
 		const navMenu = document.getElementById('navMenu');
 		// Revert font size
 		navMenu.style.fontSize = null;
-		document.querySelector('.hamburger-icon img').style.width = '36px';
+		document.querySelector('.hamburger-icon svg').style.width = '36px';
 		// Revert color
 		const navLinks = document.querySelectorAll('nav a');
 		navLinks.forEach(nav => {

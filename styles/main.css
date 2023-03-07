@@ -163,9 +163,8 @@ nav a:hover {
   margin-right: 1em;
 }
 
-.hamburger-icon img {
-  height: auto;
-  width: 36px;
+.hamburger-icon svg {
+  transition: 0.3s ease;
 }
 
 .hamburger-menu {
