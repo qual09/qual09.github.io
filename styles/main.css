@@ -170,6 +170,12 @@ nav a:hover {
 }
 
 .hamburger-icon svg {
+  fill: black;
+  transition: 0.6s ease;
+}
+
+.hamburger-icon svg:hover {
+  fill: #ed6a00;
   transition: 0.3s ease;
 }
 
