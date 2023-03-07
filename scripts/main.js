@@ -1,3 +1,5 @@
+const mobileWidth = 600;
+
 // On start load default content, yo
 openContent('home');
 
@@ -18,11 +20,9 @@ function selectCurrentNav(content) {
       li.children[0].classList.remove('currentMenu');
     }
   });
-  if ($(window).width() < 601) {
-    hamburger();
-  }
 }
 
+// Toggle Hamburger menu
 function hamburger() {
   const hamburgerMenu = document.querySelector('.hamburger-menu');
   if (hamburgerMenu.style.display === 'block') {
@@ -48,7 +48,7 @@ window.onscroll = () => {
 addEventListener("resize", (event) => { });
 onresize = (event) => {
   const windowWidth = $(window).width();
-  if (windowWidth > 600) {
+  if (windowWidth > mobileWidth) {
     document.querySelector('.hamburger-menu').style.display = 'none';
   }
 };

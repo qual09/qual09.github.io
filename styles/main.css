@@ -169,7 +169,7 @@ nav a:hover {
 }
 
 .hamburger-menu {
-  animation-duration: 0.2s;
+  animation-duration: 0.4s;
   animation-name: fadein;
   display: none;
   margin: 0 auto;
@@ -185,7 +185,7 @@ nav a:hover {
   border-radius: 5px;
   color: white;
   margin: 10px;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .hamburger-menu>nav>ul {
@@ -425,10 +425,6 @@ footer {
 
   .hamburger-icon {
     display: block;
-  }
-
-  .hamburger-menu {
-    display: none;
   }
 
   .home>div>img {

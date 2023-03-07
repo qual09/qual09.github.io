@@ -65,23 +65,23 @@
     <!-- Hamburger Menu -->
     <div class="hamburger-menu">
       <nav>
-        <span class="hamburger-icon">
+        <span class="hamburger-icon" style="position: absolute; right:0; margin-right: 26px;">
           <a href="#" onclick="javascript:hamburger()" id="hamburger">
             <img src="images/hamburger.svg" alt="">
           </a>
         </span>
         <ul>
           <li>
-            <a href="#" onclick="javascript:openContent('projects')" id="projects">projects</a>
+            <a href="#" onclick="javascript:openContent('projects'), hamburger()" id="projects">projects</a>
           </li>
           <li>
-            <a href="#" onclick="javascript:openContent('articles')" id="articles">articles</a>
+            <a href="#" onclick="javascript:openContent('articles'), hamburger()" id="articles">articles</a>
           </li>
           <li>
-            <a href="#" onclick="javascript:openContent('resources')" id="resources">resources</a>
+            <a href="#" onclick="javascript:openContent('resources'), hamburger()" id="resources">resources</a>
           </li>
           <li>
-            <a href="#" onclick="javascript:openContent('about')" id="about">about</a>
+            <a href="#" onclick="javascript:openContent('about'), hamburger()" id="about">about</a>
           </li>
         </ul>
       </nav>
