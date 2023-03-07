@@ -20,6 +20,15 @@ function selectCurrentNav(content) {
       li.children[0].classList.remove('currentMenu');
     }
   });
+  const ulBurger = document.getElementById('hamburger-nav');
+  Array.from(ulBurger.children).forEach(li => {
+    const menuElement = li.children[0].id;
+    if (content.startsWith(menuElement)) {
+      li.children[0].classList.add('currentMenu');
+    } else {
+      li.children[0].classList.remove('currentMenu');
+    }
+  });
 }
 
 // Toggle Hamburger menu
@@ -36,21 +45,22 @@ function hamburger() {
 
 //STICKY HEADER
 window.onscroll = () => {
-  const header = document.getElementById('stickyHeader');
-  const headerPosition = document.getElementById('dynamicContent');
-  const sticky = headerPosition.offsetTop;
-  if (window.pageYOffset > sticky) {
-    header.classList.add('stickyHeader');
-  } else {
-    header.classList.remove('stickyHeader');
+  if ($(window).width() > mobileWidth) {
+    const header = document.getElementById('stickyHeader');
+    const headerPosition = document.getElementById('dynamicContent');
+    const sticky = headerPosition.offsetTop;
+    if (window.pageYOffset > sticky) {
+      header.classList.add('stickyHeader');
+    } else {
+      header.classList.remove('stickyHeader');
+    }
   }
 }
 
 // On window resize
 addEventListener("resize", (event) => { });
 onresize = (event) => {
-  const windowWidth = $(window).width();
-  if (windowWidth > mobileWidth) {
+  if ($(window).width() > mobileWidth) {
     document.querySelector('.hamburger-menu').classList.add('hidden');
     document.querySelector('.hamburger-menu').classList.remove('visible');
   }

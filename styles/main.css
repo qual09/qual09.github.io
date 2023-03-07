@@ -20,6 +20,7 @@ code {
   display: inline-block;
   margin: 0.3em 0;
   padding: 0.1em 0.5em;
+  word-break: break-word;
 }
 
 h1,
@@ -114,17 +115,15 @@ header .logo-text {
 .stickyHeader {
   background-color: #f1f2f7;
   height: auto !important;
+  justify-content: flex-end;
   left: 0;
   margin: 0;
+  padding-right: 2em;
   position: fixed;
   top: 0;
   transition: 0.3s ease;
   width: 100%;
   z-index: 900;
-}
-
-.stickyHeader ul {
-  justify-content: flex-end;
 }
 
 nav {
@@ -178,8 +177,9 @@ nav a:hover {
 }
 
 .hamburger-menu>nav {
-  background-color: white;
-  /* border: 1px solid #ccc; */
+  background-color: #fff;
+  border-left: 3px solid #ed6a00;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   color: white;
   margin: 10px;
@@ -429,10 +429,6 @@ footer {
 
   #navMenu {
     display: none;
-  }
-
-  .stickyHeader {
-    display: none !important;
   }
 
   .hamburger-icon {

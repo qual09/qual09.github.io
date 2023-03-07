@@ -10,12 +10,6 @@
   <link rel="stylesheet" type="text/css" href="styles/paint.css">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
   <title>Q09 | Portfolio Projects</title>
-  <!-- <style>
-    .intro,
-    .slider {
-      display: none;
-    }
-  </style> -->
 </head>
 
 <body>
@@ -23,7 +17,8 @@
   <canvas id="paint"></canvas>
 
   <div class="main-wrapper">
-    <!-- Logo -->
+
+    <!-- Header -->
     <header>
       <div class="main-container">
         <div class="logo">
@@ -60,32 +55,31 @@
           </div>
         </nav>
       </div>
+      <!-- Hamburger Menu -->
+      <div class="hamburger-menu hidden">
+        <nav>
+          <span class="hamburger-icon" style="position: absolute; right:0; margin-right: 26px;">
+            <a href="#" onclick="javascript:hamburger()" id="hamburger">
+              <img src="images/hamburger.svg" alt="">
+            </a>
+          </span>
+          <ul id="hamburger-nav">
+            <li>
+              <a href="#" onclick="javascript:openContent('projects'), hamburger()" id="projects">projects</a>
+            </li>
+            <li>
+              <a href="#" onclick="javascript:openContent('articles'), hamburger()" id="articles">articles</a>
+            </li>
+            <li>
+              <a href="#" onclick="javascript:openContent('resources'), hamburger()" id="resources">resources</a>
+            </li>
+            <li>
+              <a href="#" onclick="javascript:openContent('about'), hamburger()" id="about">about</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
-    <!-- Hamburger Menu -->
-    <div class="hamburger-menu hidden">
-      <nav>
-        <span class="hamburger-icon" style="position: absolute; right:0; margin-right: 26px;">
-          <a href="#" onclick="javascript:hamburger()" id="hamburger">
-            <img src="images/hamburger.svg" alt="">
-          </a>
-        </span>
-        <ul>
-          <li>
-            <a href="#" onclick="javascript:openContent('projects'), hamburger()" id="projects">projects</a>
-          </li>
-          <li>
-            <a href="#" onclick="javascript:openContent('articles'), hamburger()" id="articles">articles</a>
-          </li>
-          <li>
-            <a href="#" onclick="javascript:openContent('resources'), hamburger()" id="resources">resources</a>
-          </li>
-          <li>
-            <a href="#" onclick="javascript:openContent('about'), hamburger()" id="about">about</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
 
     <!-- Main -->
     <main class="main-container" id="dynamicContent">
