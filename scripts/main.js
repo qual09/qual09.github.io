@@ -25,10 +25,12 @@ function selectCurrentNav(content) {
 // Toggle Hamburger menu
 function hamburger() {
   const hamburgerMenu = document.querySelector('.hamburger-menu');
-  if (hamburgerMenu.style.display === 'block') {
-    hamburgerMenu.style.display = 'none';
+  if (hamburgerMenu.classList.contains('visible')) {
+    hamburgerMenu.classList.add('hidden');
+    hamburgerMenu.classList.remove('visible');
   } else {
-    hamburgerMenu.style.display = 'block';
+    hamburgerMenu.classList.add('visible');
+    hamburgerMenu.classList.remove('hidden');
   }
 }
 
@@ -49,7 +51,8 @@ addEventListener("resize", (event) => { });
 onresize = (event) => {
   const windowWidth = $(window).width();
   if (windowWidth > mobileWidth) {
-    document.querySelector('.hamburger-menu').style.display = 'none';
+    document.querySelector('.hamburger-menu').classList.add('hidden');
+    document.querySelector('.hamburger-menu').classList.remove('visible');
   }
 };
 
@@ -57,7 +60,7 @@ onresize = (event) => {
 $(window).click(() => {
   if ($(window).width() <= mobileWidth) {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
-    if (hamburgerMenu.style.display == 'block') {
+    if (hamburgerMenu.classList.contains('visible')) {
       // Hide hamburger menu
       hamburger();
     }

@@ -48,6 +48,7 @@ img {
 
 .main-wrapper {
   width: 100%;
+  z-index: 0;
 }
 
 .main-container {
@@ -169,9 +170,6 @@ nav a:hover {
 }
 
 .hamburger-menu {
-  animation-duration: 0.4s;
-  animation-name: fadein;
-  display: none;
   margin: 0 auto;
   position: absolute;
   top: 0;
@@ -356,6 +354,20 @@ footer {
 .doubleRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.visible {
+  max-height: unset;
+  opacity: 1;
+  transition: 0.3s ease;
+  z-index: 100;
+}
+
+.hidden {
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: -100;
 }
 
 /* Animations */
