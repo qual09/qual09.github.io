@@ -99,7 +99,7 @@ header img {
   width: auto;
 }
 
-header img:hover {
+.logo img:hover {
   height: 60px;
 }
 
