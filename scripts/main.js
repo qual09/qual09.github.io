@@ -20,6 +20,15 @@ function selectCurrentNav(content) {
   });
 }
 
+function hamburger() {
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  if (hamburgerMenu.style.display === 'block') {
+    hamburgerMenu.style.display = 'none';
+  } else {
+    hamburgerMenu.style.display = 'block';
+  }
+}
+
 //STICKY HEADER
 window.onscroll = () => {
   const header = document.getElementById('stickyHeader');

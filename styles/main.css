@@ -157,6 +157,41 @@ nav a:hover {
   letter-spacing: 1px;
 }
 
+.hamburger-icon {
+  display: none;
+  text-align: right;
+  margin-right: 1em;
+}
+
+.hamburger-icon img {
+  height: auto;
+  width: 36px;
+}
+
+.hamburger-menu {
+  animation-duration: 0.2s;
+  animation-name: fadein;
+  display: none;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 901;
+}
+
+.hamburger-menu>nav {
+  background-color: white;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+.hamburger-menu>nav>ul {
+  flex-direction: column;
+}
+
 .card {
   animation-duration: 0.8s;
   animation-name: fadein;
@@ -378,6 +413,18 @@ footer {
 @media screen and (max-width: 600px) {
   nav ul li {
     margin: 0;
+  }
+
+  #navMenu {
+    display: none;
+  }
+
+  .stickyHeader {
+    display: none !important;
+  }
+
+  .hamburger-icon {
+    display: block;
   }
 
   .home>div>img {
