@@ -63,6 +63,9 @@ onresize = (event) => {
   if ($(window).width() > mobileWidth) {
     document.querySelector('.hamburger-menu').classList.add('hidden');
     document.querySelector('.hamburger-menu').classList.remove('visible');
+  } else {
+    const header = document.getElementById('stickyHeader');
+    header.classList.remove('stickyHeader');
   }
 };
 
