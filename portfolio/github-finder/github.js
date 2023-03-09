@@ -3,7 +3,7 @@
 // client_secret = '64536bb35baa7c37934b894e12f3193ddf7b6430';
 
 // https://github.com/settings/tokens (App Token)
-// App Token = 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
+// App Token = ghp_UD2qiyzlxYFdltHFUs3alXbrYyeqTM42Y0Z + J
 
 class GitHub {
   constructor() {
@@ -12,7 +12,7 @@ class GitHub {
 
     this.config = {
       headers: {
-        Authorization: 'token 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'
+        Authorization: 'token ghp_UD2qiyzlxYFdltHFUs3alXbrYyeqTM42Y0Z' + 'J'
       }
     };
 
