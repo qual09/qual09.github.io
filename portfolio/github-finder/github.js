@@ -2,8 +2,8 @@
 // client_id = 'e2c2f9d1e052d1d24dd0';
 // client_secret = '64536bb35baa7c37934b894e12f3193ddf7b6430';
 
-// https://github.com/settings/tokens
-// App Token = 7e80a6cc2369c2514abbf7acf159fb3d7d11f6ae
+// https://github.com/settings/tokens (App Token)
+// App Token = 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
 
 class GitHub {
   constructor() {
@@ -12,7 +12,7 @@ class GitHub {
 
     this.config = {
       headers: {
-        Authorization: 'token 7e80a6cc2369c2514abbf7acf159fb3d7d11f6ae'
+        Authorization: 'token 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'
       }
     };
 
